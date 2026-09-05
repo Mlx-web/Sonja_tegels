@@ -1,0 +1,4 @@
+node_modules/
+.env
+data/contact.json
+package-lock.json

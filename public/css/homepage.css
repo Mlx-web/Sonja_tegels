@@ -39,7 +39,7 @@ a {
 /* ---------- Header, doorlopend op elke pagina ---------- */
 
 header.site-top {
-  padding: 40px 32px;
+  padding: 22px 32px;
   border-bottom: 2px solid var(--ink);
   view-transition-name: site-header;
 }
@@ -59,7 +59,7 @@ header.site-top {
   font-family: 'Fraunces', Georgia, serif;
   font-optical-sizing: auto;
   font-variation-settings: 'WONK' 1, 'SOFT' 0;
-  font-size: 2.6rem;
+  font-size: 1.5rem;
   font-weight: 750;
   letter-spacing: -0.01em;
 }
@@ -150,7 +150,7 @@ main.home-main {
   flex: 1 1 auto;
   min-height: 0;
   max-width: 700px;
-  aspect-ratio: 1.5 / 1;
+  aspect-ratio: 1.15 / 1;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
@@ -185,7 +185,7 @@ main.home-main {
   }
 
   .site-name {
-    font-size: 2rem;
+    font-size: 1.3rem;
   }
 }
 
@@ -444,31 +444,51 @@ main.home-main {
 }
 
 .tile-hero--compact .tile-hero-inner {
-  flex-direction: column;
-  align-items: stretch;
+  align-items: flex-start;
   padding: 32px 32px 40px;
 }
 
-.tile-hero-top {
-  display: flex;
-  align-items: center;
-  gap: 32px;
-  margin-bottom: 32px;
-}
-
-.tile-hero--compact .tile-hero-image {
+.tile-hero-media {
   flex: 0 0 auto;
-  width: min(200px, 22%);
+  width: min(340px, 36%);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
 }
 
-.tile-hero--compact .tile-hero-text .pijler {
-  margin-top: 6px;
+.tile-hero-media .tile-hero-image {
+  width: 100%;
+}
+
+.tile-hero-media .pijler {
+  display: block;
+  font-family: 'Fraunces', Georgia, serif;
+  font-optical-sizing: auto;
+  font-variation-settings: 'WONK' 1, 'SOFT' 0;
+  font-size: clamp(1.5rem, 2.4vw, 2.1rem);
+  font-weight: 750;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+
+.tile-hero-media .sub {
+  display: block;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+.tile-hero-media .lead {
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
 /* Tegel-kaartjes die binnen een hero-band liggen, staan op wit/beige
    in plaats van in dezelfde kleur als de band eromheen — anders
    verdwijnen ze erin. */
 .tile-hero .offer-grid {
+  flex: 1 1 auto;
+  min-width: 0;
   margin: 0;
 }
 
@@ -478,14 +498,16 @@ main.home-main {
 }
 
 @media (max-width: 720px) {
-  .tile-hero-top {
+  .tile-hero--compact .tile-hero-inner {
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
 
-  .tile-hero--compact .tile-hero-image {
-    width: min(60%, 260px);
+  .tile-hero-media {
+    width: 100%;
+    max-width: 320px;
+    align-items: center;
   }
 }
 
@@ -507,9 +529,25 @@ main.home-main {
 }
 
 .offer-card {
-  padding: 28px 26px;
+  padding: 22px 20px;
   border-radius: var(--tile-radius);
-  line-height: 1.55;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.16);
+  transform: rotate(-0.8deg);
+  transition: transform 0.2s ease;
+}
+
+.offer-grid .offer-card:nth-child(even) {
+  transform: rotate(0.8deg);
+}
+
+.offer-card:hover {
+  transform: rotate(0deg);
+}
+
+.offer-grid .offer-card--wide {
+  transform: rotate(-0.4deg);
 }
 
 .offer-card--wide {
@@ -517,11 +555,11 @@ main.home-main {
 }
 
 .offer-card h3 {
-  margin: 0 0 10px;
+  margin: 0 0 8px;
   font-family: 'Fraunces', Georgia, serif;
   font-optical-sizing: auto;
   font-variation-settings: 'WONK' 1, 'SOFT' 0;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   font-weight: 750;
 }
 
@@ -535,6 +573,15 @@ main.home-main {
 
 .offer-card a {
   font-weight: 600;
+}
+
+.card-cta-right {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-cta-right .btn-dark {
+  align-self: flex-end;
 }
 
 .btn-dark {
@@ -591,52 +638,6 @@ main.home-main {
 }
 
 /* ---------- Content-pagina's (tegel-pagina's, Over Sonja, Contact) ---------- */
-
-blockquote.pull-quote {
-  margin: 32px 0;
-  padding: 4px 0 4px 24px;
-  border-left: 3px solid var(--accent);
-  font-family: 'Fraunces', Georgia, serif;
-  font-optical-sizing: auto;
-  font-variation-settings: 'WONK' 1, 'SOFT' 0;
-  font-size: 1.3rem;
-  font-style: italic;
-  line-height: 1.4;
-}
-
-blockquote.pull-quote cite {
-  display: block;
-  margin-top: 10px;
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 0.78rem;
-  font-style: normal;
-  color: var(--ink-soft);
-}
-
-.timeline {
-  margin: 24px 0;
-  padding: 0;
-  list-style: none;
-}
-
-.timeline li {
-  display: flex;
-  gap: 20px;
-  padding: 12px 0;
-  border-top: 1px solid rgba(34, 32, 28, 0.15);
-}
-
-.timeline li:last-child {
-  border-bottom: 1px solid rgba(34, 32, 28, 0.15);
-}
-
-.timeline .year {
-  flex: 0 0 auto;
-  min-width: 88px;
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 0.85rem;
-  color: var(--ink-soft);
-}
 
 .section-heading {
   margin: 40px 0 4px;
@@ -741,23 +742,6 @@ blockquote.pull-quote cite {
   max-width: 640px;
 }
 
-.portrait-placeholder {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 180px;
-  height: 180px;
-  margin: 24px 0;
-  border: 1px dashed var(--ink-soft);
-  border-radius: var(--tile-radius);
-  text-align: center;
-  padding: 16px;
-  font-family: 'Public Sans', sans-serif;
-  font-size: 0.85rem;
-  font-style: italic;
-  color: var(--ink-soft);
-}
-
 .back-link {
   display: inline-block;
   margin-bottom: 28px;
@@ -823,8 +807,8 @@ footer.site-bottom {
   max-width: 1100px;
   margin: 0 auto;
   padding: 24px 32px 56px;
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 0.78rem;
+  font-family: 'Public Sans', sans-serif;
+  font-size: 0.85rem;
   color: var(--ink-soft);
   line-height: 1.6;
   view-transition-name: site-footer;

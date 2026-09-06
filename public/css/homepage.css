@@ -473,9 +473,16 @@ main.home-main {
 
 .tile-hero-media .sub {
   display: block;
+  margin: 0;
   font-family: 'IBM Plex Mono', monospace;
   font-size: 0.85rem;
   opacity: 0.8;
+}
+
+.tile-hero-media .sub-quote {
+  font-family: 'Public Sans', -apple-system, sans-serif;
+  font-size: 0.95rem;
+  opacity: 1;
 }
 
 .tile-hero-media .lead {
@@ -807,11 +814,20 @@ footer.site-bottom {
   max-width: 1100px;
   margin: 0 auto;
   padding: 24px 32px 56px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  flex-wrap: wrap;
   font-family: 'Public Sans', sans-serif;
   font-size: 0.85rem;
   color: var(--ink-soft);
   line-height: 1.6;
   view-transition-name: site-footer;
+}
+
+footer.site-bottom p {
+  margin: 0;
 }
 
 footer.site-bottom a {

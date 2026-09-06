@@ -72,6 +72,24 @@ header.site-top {
   color: var(--accent);
 }
 
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.header-back {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  text-decoration: none;
+}
+
+.header-back:hover {
+  color: var(--accent);
+}
+
 .nav-cta {
   flex-shrink: 0;
   display: inline-block;
@@ -98,16 +116,72 @@ main {
 }
 
 /* ---------- Homepage: tegel-grid ---------- */
+/* Op desktop moeten de 4 tegels altijd in één keer op het scherm passen,
+   zonder scrollen — daarom krijgt de homepage (via .home-body/.home-main)
+   een eigen, hoogte-bewuste layout in plaats van de gewone main-padding. */
 
+body.home-body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+main.home-main {
+  flex: 1 1 auto;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px 32px 16px;
+}
+
+/* .grid krijgt via flex precies de ruimte die overblijft na header,
+   footer en de placeholder-note (dus altijd correct, ook als die van
+   hoogte veranderen) — en leidt daar zelf, via aspect-ratio, een eigen
+   breedte uit af. Zo blijft het rooster passen zonder scrollen, én
+   blijven de tegels zichzelf (niet te plat), met max-width als
+   bovengrens op grote schermen. */
 .grid {
+  flex: 1 1 auto;
+  min-height: 0;
+  max-width: 700px;
+  aspect-ratio: 1.5 / 1;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 28px;
+  grid-template-rows: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.home-main .placeholder-note {
+  flex: 0 0 auto;
+  width: 100%;
+  max-width: 700px;
+  margin-top: 16px;
 }
 
 @media (max-width: 720px) {
+  body.home-body {
+    display: block;
+    min-height: 0;
+  }
+
+  main.home-main {
+    display: block;
+    padding: 56px 32px 96px;
+  }
+
   .grid {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: none;
+    aspect-ratio: auto;
+    max-width: none;
+    height: auto;
   }
 
   .site-name {
@@ -127,6 +201,15 @@ main {
   transform: rotate(0deg);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   box-shadow: 0 2px 0 rgba(0, 0, 0, 0.15);
+}
+
+/* Op desktop bepaalt de grid-rij de hoogte van de tegel (zie hierboven,
+   .grid), niet een vaste verhouding — anders wint de aspect-ratio het
+   van de opgelegde grid-hoogte en past het rooster niet op het scherm. */
+@media (min-width: 721px) {
+  .tile {
+    aspect-ratio: auto;
+  }
 }
 
 .tile:hover {
@@ -169,7 +252,7 @@ main {
   font-family: 'Fraunces', Georgia, serif;
   font-optical-sizing: auto;
   font-variation-settings: 'WONK' 1, 'SOFT' 0;
-  font-size: 1.45rem;
+  font-size: clamp(0.95rem, 2.6vh, 1.45rem);
   font-weight: 750;
   line-height: 1.15;
 }
@@ -178,7 +261,7 @@ main {
   display: block;
   margin-top: 6px;
   font-family: 'IBM Plex Mono', monospace;
-  font-size: 0.78rem;
+  font-size: clamp(0.6rem, 1vh, 0.78rem);
   letter-spacing: 0.01em;
   color: rgba(255, 255, 255, 0.85);
 }
@@ -352,6 +435,59 @@ main {
   view-transition-name: hero-img-vakgenoten;
 }
 
+/* Compacte variant: plaatje links, titel + aanbod ernaast in dezelfde
+   kolom — allemaal binnen dezelfde gekleurde band, zodat je meteen
+   zowel de tegel-identiteit als het aanbod ziet, hoger in beeld en
+   zonder te scrollen. */
+.tile-hero.tile-hero--compact {
+  min-height: 0;
+}
+
+.tile-hero--compact .tile-hero-inner {
+  align-items: flex-start;
+  padding: 32px 32px 40px;
+}
+
+.tile-hero-content {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  min-width: 0;
+}
+
+.tile-hero--compact .tile-hero-image {
+  width: min(220px, 26%);
+}
+
+.tile-hero--compact .tile-hero-text .pijler {
+  margin-top: 6px;
+}
+
+/* Tegel-kaartjes die binnen een hero-band liggen, staan op wit/beige
+   in plaats van in dezelfde kleur als de band eromheen — anders
+   verdwijnen ze erin. */
+.tile-hero .offer-grid {
+  margin: 0;
+}
+
+.tile-hero .offer-grid .offer-card {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+@media (max-width: 720px) {
+  .tile-hero--compact .tile-hero-inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .tile-hero--compact .tile-hero-image {
+    width: min(60%, 260px);
+  }
+}
+
 /* ---------- Aanbod-tegels: dezelfde grid-taal als de homepage, met
    tekst op een gekleurde achtergrond en de beige pagina-achtergrond
    ertussen ---------- */
@@ -373,6 +509,10 @@ main {
   padding: 28px 26px;
   border-radius: var(--tile-radius);
   line-height: 1.55;
+}
+
+.offer-card--wide {
+  grid-column: 1 / -1;
 }
 
 .offer-card h3 {
@@ -579,6 +719,23 @@ blockquote.pull-quote cite {
 
 .page-intro {
   max-width: 640px;
+}
+
+.portrait-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 180px;
+  height: 180px;
+  margin: 24px 0;
+  border: 1px dashed var(--ink-soft);
+  border-radius: var(--tile-radius);
+  text-align: center;
+  padding: 16px;
+  font-family: 'Public Sans', sans-serif;
+  font-size: 0.85rem;
+  font-style: italic;
+  color: var(--ink-soft);
 }
 
 .back-link {

@@ -80,14 +80,22 @@ header.site-top {
 }
 
 .header-back {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 0.85rem;
-  color: var(--ink-soft);
+  flex-shrink: 0;
+  display: inline-block;
+  padding: 12px 22px;
+  background: var(--ink);
+  color: var(--paper);
   text-decoration: none;
+  font-family: 'Public Sans', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 999px;
+  transition: transform 0.2s ease, background 0.2s ease;
 }
 
 .header-back:hover {
-  color: var(--accent);
+  background: var(--accent);
+  transform: translateY(-2px);
 }
 
 .nav-cta {
@@ -767,15 +775,15 @@ main.home-main {
   font-family: 'Fraunces', Georgia, serif;
   font-optical-sizing: auto;
   font-variation-settings: 'WONK' 1, 'SOFT' 0;
-  font-size: 2.4rem;
+  font-size: 1.5rem;
   font-weight: 750;
   letter-spacing: -0.01em;
 }
 
 .page-sub {
   margin: 0 0 32px;
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 0.85rem;
+  font-family: 'Public Sans', sans-serif;
+  font-size: 0.95rem;
   color: var(--ink-soft);
 }
 

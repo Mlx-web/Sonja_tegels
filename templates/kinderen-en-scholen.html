@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="view-transition" content="same-origin">
+<title>Voor kinderen &amp; scholen | Sonja van der Arend</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,SOFT,WONK,wght@9..144,0,1,600..900&family=Public+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/homepage.css">
+</head>
+<body>
+
+<header class="site-top">
+  <div class="header-row">
+    <h1 class="site-name"><a href="over-mij.html">Sonja van der Arend</a></h1>
+    <div class="header-actions">
+      <a class="header-back" href="index.html">&larr; Terug naar homepage</a>
+      <a class="nav-cta" href="contact.html">Aanmelden &amp; Contact</a>
+    </div>
+  </div>
+</header>
+
+<section class="tile-hero tile-hero--kinderen tile-hero--compact">
+  <div class="tile-hero-inner">
+    <div class="tile-hero-media">
+      <span class="pijler">{{{pijler}}}</span>
+      <img class="tile-hero-image" src="images/tegels/kinderen-en-scholen.jpg" alt="">
+      <span class="sub">{{{sub}}}</span>
+    </div>
+
+    <div class="offer-grid offer-grid--kinderen">
+{{#each cards}}
+        <div class="offer-card">
+          <h3>{{{title}}}</h3>
+{{#each body}}
+          <p>
+            {{{this}}}
+          </p>
+{{/each}}
+{{#if linkUrl}}
+          <p>
+            &rarr; <a href="{{linkUrl}}">{{{linkText}}}</a>
+          </p>
+{{/if}}
+        </div>
+{{/each}}
+    </div>
+  </div>
+</section>
+
+<footer class="site-bottom">
+  <p>Sonja van der Arend werkt onder Stichting Schrijfplezier (facturatie).</p>
+  <div class="footer-links">
+    <a href="privacy.html">Privacy</a>
+    <a href="login.html">Beheer</a>
+  </div>
+</footer>
+
+</body>
+</html>

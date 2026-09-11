@@ -1,0 +1,36 @@
+{
+  "pijler": "Over mij",
+  "subLine1": "Schrijfdocent en coach, schrijver",
+  "subLine2": "Voorheen bestuurskundig onderzoeker",
+  "intro": "Ik heb mijn werk gemaakt van samen schrijven en mensen laten schrijven. In 2023 rondde ik de opleiding Docent Creatief Schrijven af bij Dactylus, de academie voor schrijfdocenten. Ik help mensen om door samen te schrijven zich dieper en als mens te kunnen verbinden met zichzelf, de wereld, hun werk en anderen.",
+  "publicatiesTitle": "Publicaties",
+  "publicaties": [
+    {
+      "title": "Pleitbezorgers, procesmanagers en participanten. Interactief beleid en de rolverdeling tussen overheid en burgers in de Nederlandse democratie",
+      "rest": " (Eburon, 2007): proefschrift."
+    },
+    {
+      "title": "Een otter in Brussel",
+      "rest": " (Landwerk, 2013), een waterkwaliteitsroman."
+    },
+    {
+      "title": "De nevengeul van Kampvoort",
+      "rest": " (Landwerk, 2016), een participatieroman."
+    },
+    {
+      "title": "Beter dan nul",
+      "rest": " (Landwerk, 2016), over duurzaam bouwen."
+    }
+  ],
+  "projectenTitle": "Eerdere projecten",
+  "projecten": [
+    {
+      "label": "Veerkracht",
+      "description": "een boekje met 36 korte verhalen van 20 plezierschrijvers uit Randwijk en Wageningen, over het Lexkesveer, het pontje tussen beide dorpen. Sonja begeleidde als schrijfcoach het schrijfproces van de cursisten bij de Schrijfclub; aan de Randwijkse kant co&ouml;rdineerde Yoeke Nagel het proces en deed de eindredactie. Illustraties door Annet Konijn, vormgeving door Buro Bl&ucirc;n, foto's door Jan Prins."
+    },
+    {
+      "label": "Beleidsfeuilleton",
+      "description": "een verhaal in afleveringen, geschreven samen met medewerkers van een organisatie in de watersector."
+    }
+  ]
+}

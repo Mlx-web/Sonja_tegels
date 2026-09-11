@@ -5,26 +5,17 @@ contactForm.addEventListener('submit', async (e) => {
   e.preventDefault();
   contactNote.hidden = true;
 
-  const body = {
-    name: document.getElementById('contact-name').value,
-    email: document.getElementById('contact-email').value,
-    category: document.getElementById('contact-category').value,
-    text: document.getElementById('contact-text').value,
-  };
+  const formData = new URLSearchParams(new FormData(contactForm)).toString();
 
   try {
-    const res = await fetch('/api/contact', {
+    const res = await fetch('/', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(body),
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: formData,
     });
-    const data = await res.json();
 
     if (!res.ok) {
-      contactNote.className = 'contact-note error';
-      contactNote.textContent = data.error || 'Versturen mislukt.';
-      contactNote.hidden = false;
-      return;
+      throw new Error('Versturen mislukt.');
     }
 
     contactForm.reset();

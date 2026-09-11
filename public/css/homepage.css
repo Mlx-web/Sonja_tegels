@@ -11,6 +11,7 @@
   --tile-kinderen: #f5c518;
   --tile-organisaties: #3f47b0;
   --tile-vakgenoten: #1e7a46;
+  --tile-overmij: #8c82d6;
 }
 
 /* Duidelijk zichtbare duur voor de View Transition (homepage-tegel die
@@ -377,6 +378,10 @@ main.home-main {
   opacity: 0.8;
 }
 
+.tile-hero-text .sub:not(:last-child) {
+  margin-bottom: 4px;
+}
+
 .tile-hero-text .lead {
   max-width: 480px;
   font-size: 1.1rem;
@@ -443,6 +448,16 @@ main.home-main {
   view-transition-name: hero-img-vakgenoten;
 }
 
+.tile-hero--overmij {
+  background: var(--tile-overmij);
+  color: #fff;
+  min-height: 0;
+}
+
+.tile-hero--overmij .tile-hero-image {
+  width: min(420px, 42%);
+}
+
 /* Compacte variant: plaatje links, titel + aanbod ernaast in dezelfde
    kolom — allemaal binnen dezelfde gekleurde band, zodat je meteen
    zowel de tegel-identiteit als het aanbod ziet, hoger in beeld en
@@ -482,9 +497,9 @@ main.home-main {
 .tile-hero-media .sub {
   display: block;
   margin: 0;
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 0.85rem;
-  opacity: 0.8;
+  font-family: 'Public Sans', -apple-system, sans-serif;
+  font-size: 0.95rem;
+  opacity: 0.85;
 }
 
 .tile-hero-media .sub-quote {
@@ -567,6 +582,12 @@ main.home-main {
 
 .offer-card--wide {
   grid-column: 1 / -1;
+}
+
+.offer-card-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
 .offer-card h3 {
@@ -804,16 +825,19 @@ main.home-main {
   font-size: 1.05rem;
 }
 
-.stub-cta {
-  margin-top: 40px;
-  padding: 24px;
-  background: rgba(196, 86, 46, 0.08);
-  border-radius: var(--tile-radius);
+.page-body ul {
+  margin: 16px 0;
+  padding-left: 20px;
 }
 
-.stub-cta a {
-  font-weight: 600;
-  color: var(--accent);
+.page-body li {
+  line-height: 1.6;
+  font-size: 1.05rem;
+  margin-bottom: 10px;
+}
+
+.page-body li:last-child {
+  margin-bottom: 0;
 }
 
 /* ---------- Footer, doorlopend op elke pagina ---------- */

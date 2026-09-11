@@ -862,6 +862,11 @@ footer.site-bottom p {
   margin: 0;
 }
 
+.footer-links {
+  display: flex;
+  gap: 16px;
+}
+
 footer.site-bottom a {
   color: var(--ink-soft);
   text-decoration: underline;

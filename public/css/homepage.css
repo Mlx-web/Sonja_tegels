@@ -216,6 +216,17 @@ main.home-main.home-main--split {
 .binnenkort-card {
   border-radius: var(--tile-radius);
   padding: 18px 20px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.16);
+  transform: rotate(-0.8deg);
+  transition: transform 0.2s ease;
+}
+
+.home-split-right .binnenkort-card:nth-of-type(even) {
+  transform: rotate(0.8deg);
+}
+
+.binnenkort-card:hover {
+  transform: rotate(0deg);
 }
 
 .binnenkort-card h3 {

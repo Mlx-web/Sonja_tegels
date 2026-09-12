@@ -24,29 +24,12 @@ export default defineType({
             defineField({
               name: 'rest',
               title: 'Rest van de zin',
-              description: 'Bijvoorbeeld: " (Landwerk, 2013), een waterkwaliteitsroman." Let op de spatie aan het begin en de punt aan het eind.',
-              type: 'string',
+              description: 'Bijvoorbeeld: " (Landwerk, 2013): een waterkwaliteitsroman over ..." Let op de spatie of dubbele punt aan het begin en de punt aan het eind.',
+              type: 'text',
+              rows: 3,
             }),
           ],
           preview: {select: {title: 'title'}},
-        },
-      ],
-    }),
-    defineField({name: 'projectenTitle', title: 'Kopje: Eerdere projecten', type: 'string'}),
-    defineField({
-      name: 'projecten',
-      title: 'Eerdere projecten',
-      description: 'Voeg toe, verwijder of versleep om de volgorde te wijzigen.',
-      type: 'array',
-      of: [
-        {
-          type: 'object',
-          name: 'project',
-          fields: [
-            defineField({name: 'label', title: 'Naam project', type: 'string', validation: (rule) => rule.required()}),
-            defineField({name: 'description', title: 'Omschrijving', type: 'text', rows: 4}),
-          ],
-          preview: {select: {title: 'label'}},
         },
       ],
     }),

@@ -24,12 +24,12 @@
 
 <main>
   <div class="page-intro">
-    <h2 class="page-title">{{{pageTitle}}}</h2>
+    <h2 class="page-title">{{pageTitle}}</h2>
   </div>
 
   <div class="page-body">
     <p>
-      {{{intro}}}
+      {{intro}}
     </p>
 
     <form id="contact-form" class="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
@@ -60,7 +60,7 @@
         <label for="contact-text">Bericht</label>
         <textarea id="contact-text" name="text" rows="6" maxlength="2000" required></textarea>
       </div>
-      <button type="submit" class="contact-submit">{{{submitText}}}</button>
+      <button type="submit" class="contact-submit">{{submitText}}</button>
       <p id="contact-note" class="contact-note" hidden></p>
     </form>
   </div>

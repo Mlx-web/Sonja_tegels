@@ -25,9 +25,9 @@
 <section class="tile-hero tile-hero--overmij">
   <div class="tile-hero-inner">
     <div class="tile-hero-text">
-      <span class="pijler">{{{pijler}}}</span>
-      <span class="sub">{{{subLine1}}}</span>
-      <span class="sub">{{{subLine2}}}</span>
+      <span class="pijler">{{pijler}}</span>
+      <span class="sub">{{subLine1}}</span>
+      <span class="sub">{{subLine2}}</span>
     </div>
     <img class="tile-hero-image" src="images/tegels/over-mij.jpg" alt="Sonja van der Arend">
   </div>
@@ -36,23 +36,23 @@
 <main>
   <div class="page-body">
     <p>
-      {{{intro}}}
+      {{intro}}
     </p>
 
-    <h3 class="section-heading">{{{publicatiesTitle}}}</h3>
+    <h3 class="section-heading">{{publicatiesTitle}}</h3>
     <ul>
 {{#each publicaties}}
       <li>
-        <em>{{{title}}}</em>{{{rest}}}
+        <em>{{title}}</em>{{rest}}
       </li>
 {{/each}}
     </ul>
 
-    <h3 class="section-heading">{{{projectenTitle}}}</h3>
+    <h3 class="section-heading">{{projectenTitle}}</h3>
     <ul>
 {{#each projecten}}
       <li>
-        <strong>{{{label}}}</strong>: {{{description}}}
+        <strong>{{label}}</strong>: {{description}}
       </li>
 {{/each}}
     </ul>

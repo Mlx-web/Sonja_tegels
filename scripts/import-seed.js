@@ -1,9 +1,32 @@
 require('dotenv').config();
+const crypto = require('crypto');
 const fs = require('fs');
 const path = require('path');
 const {createClient} = require('@sanity/client');
 
 const SEED_DIR = path.join(__dirname, '..', 'sanity', 'seed-data');
+
+// Sanity vereist dat elk object in een array-veld een unieke `_key` heeft,
+// anders kan de Studio de lijst niet bewerken ("Missing keys").
+function addKeys(value) {
+  if (Array.isArray(value)) {
+    return value.map((item) => {
+      const withKeys = addKeys(item);
+      if (withKeys && typeof withKeys === 'object' && !Array.isArray(withKeys)) {
+        return {_key: crypto.randomUUID(), ...withKeys};
+      }
+      return withKeys;
+    });
+  }
+  if (value && typeof value === 'object') {
+    const result = {};
+    for (const [key, val] of Object.entries(value)) {
+      result[key] = addKeys(val);
+    }
+    return result;
+  }
+  return value;
+}
 
 async function main() {
   const projectId = process.env.SANITY_PROJECT_ID;
@@ -21,7 +44,7 @@ async function main() {
   for (const file of files) {
     const pageName = file.replace(/\.json$/, '');
     const type = `${pageName}Page`;
-    const data = JSON.parse(fs.readFileSync(path.join(SEED_DIR, file), 'utf8'));
+    const data = addKeys(JSON.parse(fs.readFileSync(path.join(SEED_DIR, file), 'utf8')));
     const doc = {_id: type, _type: type, ...data};
     await client.createOrReplace(doc);
     console.log(`Geïmporteerd: ${type}`);

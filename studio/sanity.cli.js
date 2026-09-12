@@ -5,4 +5,5 @@ export default defineCliConfig({
     projectId: 'tdtq8qo7',
     dataset: 'production',
   },
+  studioHost: 'sonjavanderarend',
 })

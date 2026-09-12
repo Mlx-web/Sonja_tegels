@@ -18,7 +18,8 @@
         "Op 16 oktober om 16:30 uur in de bibliotheek (bblthk)."
       ],
       "linkText": "Aanmelden via bblthk.nl/agenda",
-      "linkUrl": "https://bblthk.nl/agenda"
+      "linkUrl": "https://bblthk.nl/agenda",
+      "binnenkort": true
     },
     {
       "title": "Vrijland - creatief met democratie (groep 5–8)",

@@ -1,5 +1,12 @@
 import {defineField, defineType} from 'sanity'
 
+const binnenkortField = defineField({
+  name: 'binnenkort',
+  title: 'Toon ook op de homepage onder "Binnenkort"',
+  type: 'boolean',
+  initialValue: false,
+})
+
 const cardField = defineField({
   name: 'extraCards',
   title: 'Extra kaartjes',
@@ -14,6 +21,7 @@ const cardField = defineField({
         defineField({name: 'body', title: 'Tekst', type: 'array', of: [{type: 'text', rows: 3}]}),
         defineField({name: 'linkText', title: 'Linktekst (optioneel)', type: 'string'}),
         defineField({name: 'linkUrl', title: 'Link-URL (optioneel)', type: 'url'}),
+        binnenkortField,
       ],
       preview: {select: {title: 'title'}},
     },
@@ -40,6 +48,7 @@ export default defineType({
         defineField({name: 'agendaLinkText', title: 'Linktekst agenda', type: 'string'}),
         defineField({name: 'agendaUrl', title: 'Link-URL agenda', type: 'url'}),
         defineField({name: 'closing', title: 'Slotzin', type: 'text', rows: 2}),
+        binnenkortField,
       ],
     }),
     defineField({
@@ -55,6 +64,7 @@ export default defineType({
           of: [{type: 'text', rows: 2}],
         }),
         defineField({name: 'ctaText', title: 'Knoptekst', type: 'string'}),
+        binnenkortField,
       ],
     }),
     defineField({
@@ -66,6 +76,7 @@ export default defineType({
         defineField({name: 'intro', title: 'Introtekst', type: 'text', rows: 3}),
         defineField({name: 'englishNote', title: 'Engelse toelichting (cursief)', type: 'text', rows: 2}),
         defineField({name: 'times', title: 'Tijden en locatie', type: 'text', rows: 2}),
+        binnenkortField,
       ],
     }),
     defineField({
@@ -76,6 +87,7 @@ export default defineType({
         defineField({name: 'title', title: 'Titel', type: 'string'}),
         defineField({name: 'intro', title: 'Introtekst', type: 'text', rows: 3}),
         defineField({name: 'closing', title: 'Slotzin', type: 'text', rows: 2}),
+        binnenkortField,
       ],
     }),
     cardField,

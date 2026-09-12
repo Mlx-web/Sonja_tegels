@@ -19,7 +19,8 @@
   </div>
 </header>
 
-<main class="home-main">
+<main class="home-main{{#if binnenkort}} home-main--split{{/if}}">
+  <div class="home-split-left">
   <div class="grid">
 
     <a class="tile tile--schrijven" href="schrijven-voor-iedereen.html" aria-label="Schrijven voor Iedereen">
@@ -59,6 +60,19 @@
   <p class="placeholder-note">
     {{placeholderNote}}
   </p>
+  </div>
+{{#if binnenkort}}
+  <div class="home-split-right">
+    <h3 class="section-heading">Binnenkort</h3>
+{{#each binnenkort}}
+    <div class="binnenkort-card" style="background: {{color}}; color: {{textColor}};">
+      <h3>{{title}}</h3>
+      <p>{{summary}}</p>
+      <p>&rarr; <a href="{{linkUrl}}">{{linkText}}</a></p>
+    </div>
+{{/each}}
+  </div>
+{{/if}}
 </main>
 
 <footer class="site-bottom">

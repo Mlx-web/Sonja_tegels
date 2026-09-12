@@ -1,5 +1,12 @@
 import {defineField, defineType} from 'sanity'
 
+const binnenkortField = defineField({
+  name: 'binnenkort',
+  title: 'Toon ook op de homepage onder "Binnenkort"',
+  type: 'boolean',
+  initialValue: false,
+})
+
 const cardField = defineField({
   name: 'extraCards',
   title: 'Extra kaartjes',
@@ -14,6 +21,7 @@ const cardField = defineField({
         defineField({name: 'body', title: 'Tekst', type: 'array', of: [{type: 'text', rows: 3}]}),
         defineField({name: 'linkText', title: 'Linktekst (optioneel)', type: 'string'}),
         defineField({name: 'linkUrl', title: 'Link-URL (optioneel)', type: 'url'}),
+        binnenkortField,
       ],
       preview: {select: {title: 'title'}},
     },
@@ -34,6 +42,7 @@ export default defineType({
       fields: [
         defineField({name: 'title', title: 'Titel', type: 'string'}),
         defineField({name: 'body', title: 'Tekst', type: 'text', rows: 3}),
+        binnenkortField,
       ],
     }),
     defineField({
@@ -43,6 +52,7 @@ export default defineType({
       fields: [
         defineField({name: 'title', title: 'Titel', type: 'string'}),
         defineField({name: 'body', title: 'Tekst', type: 'text', rows: 3}),
+        binnenkortField,
       ],
     }),
     defineField({
@@ -72,6 +82,7 @@ export default defineType({
           ],
         }),
         defineField({name: 'closing', title: 'Slotzin', type: 'text', rows: 2}),
+        binnenkortField,
       ],
     }),
     defineField({
@@ -81,6 +92,7 @@ export default defineType({
       fields: [
         defineField({name: 'title', title: 'Titel', type: 'string'}),
         defineField({name: 'body', title: 'Tekst', type: 'text', rows: 3}),
+        binnenkortField,
       ],
     }),
     defineField({
@@ -90,6 +102,7 @@ export default defineType({
       fields: [
         defineField({name: 'title', title: 'Titel', type: 'string'}),
         defineField({name: 'body', title: 'Tekst', type: 'text', rows: 3}),
+        binnenkortField,
       ],
     }),
     cardField,

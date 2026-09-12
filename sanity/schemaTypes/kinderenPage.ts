@@ -37,6 +37,12 @@ export default defineType({
             }),
             defineField({name: 'linkText', title: 'Linktekst (optioneel)', type: 'string'}),
             defineField({name: 'linkUrl', title: 'Link-URL (optioneel)', type: 'url'}),
+            defineField({
+              name: 'binnenkort',
+              title: 'Toon ook op de homepage onder "Binnenkort"',
+              type: 'boolean',
+              initialValue: false,
+            }),
           ],
           preview: {
             select: {title: 'title'},

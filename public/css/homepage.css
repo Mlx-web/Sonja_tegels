@@ -1,5 +1,6 @@
 :root {
   --paper: #fbf6ec;
+  --paper-alt: #f0ebe0;
   --ink: #22201c;
   --ink-soft: #5b564c;
   --accent: #c4562e;
@@ -173,6 +174,66 @@ main.home-main {
   margin-top: 16px;
 }
 
+/* Variant met een "Binnenkort"-kolom naast de tegels: de linkerkolom
+   herhaalt precies de opbouw die .home-main zonder deze variant zelf
+   had (vandaar dezelfde flex/aspect-ratio-aanpak), de rechterkolom
+   krijgt een neutrale, van het creme afwijkende ondergrond in plaats
+   van een scheidingslijn. */
+main.home-main.home-main--split {
+  flex-direction: row;
+  align-items: stretch;
+  gap: 32px;
+}
+
+.home-split-left {
+  flex: 1 1 auto;
+  min-height: 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.home-main--split .grid {
+  width: 100%;
+}
+
+.home-split-right {
+  flex: 0 0 320px;
+  background: var(--paper-alt);
+  border-radius: var(--tile-radius);
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  overflow-y: auto;
+}
+
+.home-split-right .section-heading {
+  margin-top: 0;
+}
+
+.binnenkort-card {
+  border-radius: var(--tile-radius);
+  padding: 18px 20px;
+}
+
+.binnenkort-card h3 {
+  margin: 0 0 8px;
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 1.1rem;
+}
+
+.binnenkort-card p {
+  margin: 0 0 8px;
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+.binnenkort-card p:last-child {
+  margin-bottom: 0;
+}
+
 @media (max-width: 720px) {
   body.home-body {
     display: block;
@@ -191,6 +252,19 @@ main.home-main {
     aspect-ratio: auto;
     max-width: none;
     height: auto;
+  }
+
+  main.home-main.home-main--split {
+    display: block;
+  }
+
+  .home-split-left {
+    display: block;
+  }
+
+  .home-split-right {
+    margin-top: 32px;
+    overflow-y: visible;
   }
 
   .site-name {

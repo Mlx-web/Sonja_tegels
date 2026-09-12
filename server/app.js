@@ -62,35 +62,9 @@ app.get('/api/session', (req, res) => {
 });
 
 // ---- Contactformulier: Aanmelden & Contact ----
-// Iedereen mag een aanvraag insturen zonder in te loggen; alleen de
-// beheerder kan de binnengekomen aanvragen lezen.
-
-const CONTACT_CATEGORIES = ['schrijfclub', 'school', 'organisatie', 'overig'];
-const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-app.post('/api/contact', asyncHandler(async (req, res) => {
-  const { name, email, category, text } = req.body || {};
-  if (!name || !name.trim()) {
-    return res.status(400).json({ error: 'Vul je naam in.' });
-  }
-  if (!email || !EMAIL_PATTERN.test(email.trim())) {
-    return res.status(400).json({ error: 'Vul een geldig e-mailadres in.' });
-  }
-  if (!CONTACT_CATEGORIES.includes(category)) {
-    return res.status(400).json({ error: 'Kies waar je bericht over gaat.' });
-  }
-  if (!text || !text.trim()) {
-    return res.status(400).json({ error: 'Vul een bericht in.' });
-  }
-
-  const message = await contact.addMessage({
-    name: name.trim().slice(0, 80),
-    email: email.trim().slice(0, 200),
-    category,
-    text: text.trim().slice(0, 2000),
-  });
-  res.status(201).json({ ok: true, id: message.id });
-}));
+// Het contactformulier op de site verstuurt rechtstreeks naar Netlify
+// Forms (data-netlify="true"). Hier lezen we alleen de binnengekomen
+// aanvragen uit, voor de wachtwoord-beveiligde berichtenpagina.
 
 app.get('/api/contact', requireAuth, asyncHandler(async (req, res) => {
   res.json(await contact.getAllMessages());

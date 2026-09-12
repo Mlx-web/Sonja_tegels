@@ -28,6 +28,7 @@ const CONTACT_CATEGORY_LABELS = {
   schrijfclub: 'Schrijfclub / inloopsessie',
   school: 'School',
   organisatie: 'Organisatie',
+  vakgenoten: 'Vakgenoten',
   overig: 'Overig',
 };
 

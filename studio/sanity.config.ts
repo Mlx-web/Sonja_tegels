@@ -7,8 +7,8 @@ export default defineConfig({
   name: 'default',
   title: 'Sonja van der Arend — website beheer',
 
-  projectId: process.env.SANITY_STUDIO_PROJECT_ID || '',
-  dataset: process.env.SANITY_STUDIO_DATASET || 'production',
+  projectId: 'tdtq8qo7',
+  dataset: 'production',
 
   plugins: [structureTool(), visionTool()],
 

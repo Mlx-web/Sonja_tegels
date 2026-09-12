@@ -1,1 +1,1 @@
-module.exports = process.env.USE_NETLIFY_BLOBS === 'true' ? require('./contact.blobs') : require('./contact.local');
+module.exports = process.env.NETLIFY_API_TOKEN ? require('./contact.netlify-forms') : require('./contact.local');

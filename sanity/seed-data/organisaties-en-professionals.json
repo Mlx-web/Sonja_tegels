@@ -1,0 +1,32 @@
+{
+  "pijler": "Organisaties & Professionals",
+  "lead": "Als voormalig bestuurskundig onderzoeker combineert Sonja haar kennis van beleid en organisaties met haar schrijverschap. Ze helpt professionals en organisaties om via fictie en schrijven dichter bij hun eigen werk en samenwerking te komen.",
+  "wur": {
+    "title": "Schrijfworkshops WUR",
+    "body": "Voor promovendi en medewerkers van Wageningen University & Research: fictietechnieken als hulpmiddel om losser en directer te leren schrijven."
+  },
+  "huisarts": {
+    "title": "Schrijfworkshops huisartsopleiders",
+    "body": "Voor opleiders van de huisartsopleiding Utrecht, tijdens hun scholingsdagen, inmiddels tweemaal gegeven. Ze schrijven een verhaal over hun werk als huisarts en huisartsopleider."
+  },
+  "beleidsromans": {
+    "title": "Beleidsromans",
+    "intro": "Een beleidsroman is een roman rond een concreet beleidsvraagstuk, gemaakt met input van de mensen die erbij betrokken zijn: fictie die laat zien hoe beleid in de praktijk tot stand komt. Onderzoek naar samenwerking, ervaringen en besluitvorming dat niet in een la, maar op het nachtkastje belandt.",
+    "booksIntro": "Drie beleidsromans: ",
+    "books": [
+      {"title": "Een otter in Brussel", "year": "2013", "description": "over de Europese Kaderrichtlijn Water, in opdracht van STOWA"},
+      {"title": "De nevengeul van Kampvoort", "year": "2016", "description": "over burgerparticipatie bij het rivierproject Ruimte voor de Rivier"},
+      {"title": "Beter dan nul", "year": "2016", "description": "over energieneutraal bouwen, uitgegeven via Platform31"}
+    ],
+    "closing": "Denk je dat dit voor jouw organisatie iets is? Neem contact op om de mogelijkheden te bespreken."
+  },
+  "beleidsfeuilleton": {
+    "title": "Beleidsfeuilleton",
+    "body": "Een beleidsfeuilleton is een verhaal dat in afleveringen verschijnt, geschreven samen met medewerkers van een organisatie. Eerder geschreven voor een organisatie in de watersector."
+  },
+  "andereIdeeen": {
+    "title": "Andere ideeën?",
+    "body": "Heb je een ander idee voor je organisatie? Neem contact op met Sonja om de mogelijkheden te bespreken."
+  },
+  "extraCards": []
+}

@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="view-transition" content="same-origin">
-<title>Privacyverklaring | Sonja van der Arend</title>
+<title>Over mij | Sonja van der Arend</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,SOFT,WONK,wght@9..144,0,1,600..900&family=Public+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -22,50 +22,38 @@
   </div>
 </header>
 
-<main>
-  <div class="page-intro">
-    <h2 class="page-title">Privacyverklaring</h2>
+<section class="tile-hero tile-hero--overmij">
+  <div class="tile-hero-inner">
+    <div class="tile-hero-text">
+      <span class="pijler">{{pijler}}</span>
+      <span class="sub">{{subLine1}}</span>
+      <span class="sub">{{subLine2}}</span>
+    </div>
+    <img class="tile-hero-image" src="images/tegels/over-mij.jpg" alt="Sonja van der Arend">
   </div>
+</section>
 
+<main>
   <div class="page-body">
     <p>
-      Sonja van der Arend, werkend onder Stichting Schrijfplezier, is verantwoordelijk voor de gegevens die
-      via het contactformulier op deze website worden verzameld.
+      {{intro}}
     </p>
 
-    <h3 class="section-heading">Welke gegevens</h3>
-    <p>
-      Via het contactformulier worden je naam, e-mailadres, de categorie van je bericht en de inhoud van je
-      bericht verzameld.
-    </p>
-
-    <h3 class="section-heading">Waarom</h3>
-    <p>
-      Deze gegevens worden gebruikt om te reageren op jouw aanvraag of bericht.
-    </p>
-
-    <h3 class="section-heading">Bewaartermijn</h3>
-    <p>
-      Berichten worden bewaard zolang nodig is om je aanvraag af te handelen, en daarna verwijderd.
-    </p>
-
-    <h3 class="section-heading">Delen met derden</h3>
-    <p>
-      Het contactformulier wordt technisch verwerkt via Netlify, de hostingpartij van deze website. Verder
-      worden gegevens niet gedeeld met derden.
-    </p>
-
-    <h3 class="section-heading">Jouw rechten</h3>
-    <p>
-      Je hebt het recht om je gegevens in te zien, te corrigeren of te laten verwijderen. Neem hiervoor
-      contact op via het <a href="contact.html">contactformulier</a>.
-    </p>
+    <h3 class="section-heading">{{publicatiesTitle}}</h3>
+    <ul>
+{{#each publicaties}}
+      <li>
+        <em>{{title}}</em>{{rest}}
+      </li>
+{{/each}}
+    </ul>
   </div>
 </main>
 
 <footer class="site-bottom">
   <p>Sonja van der Arend werkt onder Stichting Schrijfplezier (facturatie).</p>
   <div class="footer-links">
+    <a href="privacy.html">Privacy</a>
     <a href="login.html">Berichten</a>
     <a href="https://sonjavanderarend.sanity.studio/" target="_blank" rel="noopener">Beheer</a>
   </div>

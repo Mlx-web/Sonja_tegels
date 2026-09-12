@@ -1,0 +1,18 @@
+{
+  "pijler": "Vakgenoten",
+  "sub": "Verdieping en gelijkwaardige uitwisseling met andere schrijfdocenten.",
+  "workshops": {
+    "title": "Workshops voor vakgenoten",
+    "body": "Workshops worden niet volgens een vast rooster gegeven, maar incidenteel, als de gelegenheid zich voordoet. Heb je zelf een idee of suggestie voor een workshop, of wil je samen met mij een workshop geven?",
+    "linkText": "Laat het weten"
+  },
+  "eerdereWorkshops": {
+    "title": "Eerdere workshops",
+    "items": [
+      {"label": "Ontwerpatelier", "description": "samen schrijfoefeningen bedenken en maken, het gereedschap van een schrijfdocent."},
+      {"label": "Schrijfoefeningen", "description": "concrete oefeningen die je direct in je eigen lessen kunt gebruiken."},
+      {"label": "Humor in de schrijfcursus", "description": "hoe humor het schrijfplezier en de schrijflust vergroot."}
+    ]
+  },
+  "extraCards": []
+}

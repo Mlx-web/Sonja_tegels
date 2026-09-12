@@ -73,7 +73,7 @@ header.site-top {
   color: var(--accent);
 }
 
-.header-actions {
+.header-left {
   display: flex;
   align-items: center;
   gap: 18px;

@@ -1,6 +1,5 @@
 :root {
   --paper: #fbf6ec;
-  --paper-alt: #f0ebe0;
   --ink: #22201c;
   --ink-soft: #5b564c;
   --accent: #c4562e;
@@ -125,10 +124,7 @@ main {
   padding: 56px 32px 96px;
 }
 
-/* ---------- Homepage: tegel-grid ---------- */
-/* Op desktop moeten de 4 tegels altijd in één keer op het scherm passen,
-   zonder scrollen — daarom krijgt de homepage (via .home-body/.home-main)
-   een eigen, hoogte-bewuste layout in plaats van de gewone main-padding. */
+/* ---------- Homepage: tegels + gekoppelde "Binnenkort"-kaartjes ---------- */
 
 body.home-body {
   display: flex;
@@ -139,7 +135,6 @@ body.home-body {
 
 main.home-main {
   flex: 1 1 auto;
-  min-height: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -147,20 +142,7 @@ main.home-main {
   max-width: 1100px;
   width: 100%;
   margin: 0 auto;
-  padding: 20px 32px 16px;
-}
-
-/* De tegels bepalen zelf hun (vierkante) vorm via aspect-ratio op .tile;
-   .grid volgt daaruit vanzelf in hoogte, in plaats van te rekken naar de
-   resterende ruimte — dat laatste zou bij een langer "Binnenkort"-paneel
-   de tegels uitrekken. */
-.grid {
-  flex: 0 0 auto;
-  max-width: 700px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  gap: 20px;
+  padding: 48px 32px 64px;
 }
 
 .home-main .placeholder-note {
@@ -170,57 +152,110 @@ main.home-main {
   margin-top: 16px;
 }
 
-/* Variant met een "Binnenkort"-kolom naast de tegels: de linkerkolom
-   herhaalt precies de opbouw die .home-main zonder deze variant zelf
-   had (vandaar dezelfde flex/aspect-ratio-aanpak), de rechterkolom
-   krijgt een neutrale, van het creme afwijkende ondergrond in plaats
-   van een scheidingslijn. */
-main.home-main.home-main--split {
-  flex-direction: row;
-  align-items: stretch;
-  gap: 32px;
-}
-
-.home-split-left {
-  flex: 1 1 auto;
-  min-height: 0;
-  min-width: 0;
-  display: flex;
-  flex-direction: column;
+/* Vier tegels in een 2x2-rooster. Doelgroepen met "Binnenkort"-kaartjes
+   krijgen een smallere kolom naast hun eigen tegel (links bij Schrijven/
+   Organisaties, rechts bij Kinderen/Vakgenoten); een doelgroep zonder
+   kaartjes laat die kolom gewoon leeg (.tile-cards:empty), de tegels
+   blijven zelf altijd de dominante, vierkante vorm via aspect-ratio. */
+.home-tiles-wrap {
+  display: grid;
+  grid-template-columns: minmax(0, 220px) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 220px);
+  grid-template-areas:
+    'cards-schrijven tile-schrijven tile-kinderen cards-kinderen'
+    'cards-organisaties tile-organisaties tile-vakgenoten cards-vakgenoten';
+  column-gap: 28px;
+  row-gap: 32px;
   align-items: center;
-}
-
-.home-main--split .grid {
   width: 100%;
 }
 
-.home-split-right {
-  flex: 0 0 420px;
-  min-height: 0;
-  background: var(--paper-alt);
-  border-radius: var(--tile-radius);
-  padding: 24px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  align-content: start;
-  gap: 14px;
-  overflow-y: auto;
+.tile--schrijven {
+  grid-area: tile-schrijven;
 }
 
-.home-split-right .section-heading {
-  grid-column: 1 / -1;
-  margin-top: 0;
+.tile--kinderen {
+  grid-area: tile-kinderen;
+}
+
+.tile--organisaties {
+  grid-area: tile-organisaties;
+}
+
+.tile--vakgenoten {
+  grid-area: tile-vakgenoten;
+}
+
+.tile-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.tile-cards:empty {
+  display: none;
+}
+
+.tile-cards--schrijven {
+  grid-area: cards-schrijven;
+}
+
+.tile-cards--kinderen {
+  grid-area: cards-kinderen;
+}
+
+.tile-cards--organisaties {
+  grid-area: cards-organisaties;
+}
+
+.tile-cards--vakgenoten {
+  grid-area: cards-vakgenoten;
+}
+
+.tile-card-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Kaartjes links van hun tegel (Schrijven, Organisaties): kaartje en
+   lijntje omdraaien, zodat het lijntje weer richting de tegel wijst. */
+.tile-cards--left .tile-card-row {
+  flex-direction: row-reverse;
+}
+
+.tile-connector {
+  flex: 0 0 auto;
+  width: 40px;
+  height: 28px;
+  overflow: visible;
+}
+
+.tile-connector path {
+  fill: none;
+  stroke: var(--ink);
+  stroke-width: 1.3;
+  stroke-linecap: round;
+  opacity: 0.55;
+}
+
+/* Elke lijn is los getekend (geen gedeeld/splitsend pad) en wisselt licht
+   van welving af, voor een speels, handgetekend ritme bij twee kaartjes
+   naast dezelfde tegel. */
+.tile-card-row:nth-of-type(even) .tile-connector {
+  transform: scaleY(-1);
 }
 
 .binnenkort-card {
+  flex: 1 1 auto;
+  min-width: 0;
   border-radius: var(--tile-radius);
-  padding: 16px 18px;
+  padding: 14px 16px;
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.16);
   transform: rotate(-0.8deg);
   transition: transform 0.2s ease;
 }
 
-.home-split-right .binnenkort-card:nth-of-type(even) {
+.tile-card-row:nth-of-type(even) .binnenkort-card {
   transform: rotate(0.8deg);
 }
 
@@ -228,20 +263,38 @@ main.home-main.home-main--split {
   transform: rotate(0deg);
 }
 
+.binnenkort-card .binnenkort-label {
+  margin: 0 0 4px;
+  font-family: 'Public Sans', sans-serif;
+  font-size: 0.66rem;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  opacity: 0.6;
+}
+
 .binnenkort-card h3 {
   margin: 0 0 6px;
   font-family: 'Fraunces', Georgia, serif;
-  font-size: 0.98rem;
+  font-size: 0.95rem;
+  line-height: 1.25;
 }
 
 .binnenkort-card p {
   margin: 0 0 6px;
-  font-size: 0.82rem;
+  font-size: 0.8rem;
   line-height: 1.5;
 }
 
 .binnenkort-card p:last-child {
   margin-bottom: 0;
+}
+
+@media (max-width: 900px) {
+  .home-tiles-wrap {
+    grid-template-columns: minmax(0, 180px) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 180px);
+    column-gap: 18px;
+  }
 }
 
 @media (max-width: 720px) {
@@ -255,27 +308,27 @@ main.home-main.home-main--split {
     padding: 56px 32px 96px;
   }
 
-  .grid {
-    display: flex;
+  .home-tiles-wrap {
+    display: block;
+  }
+
+  .tile {
+    margin-bottom: 20px;
+  }
+
+  .tile-cards {
+    margin-bottom: 28px;
+  }
+
+  .tile-card-row,
+  .tile-cards--left .tile-card-row {
     flex-direction: column;
-    grid-template-columns: none;
-    aspect-ratio: auto;
-    max-width: none;
-    height: auto;
+    align-items: stretch;
+    gap: 6px;
   }
 
-  main.home-main.home-main--split {
-    display: block;
-  }
-
-  .home-split-left {
-    display: block;
-  }
-
-  .home-split-right {
-    grid-template-columns: 1fr;
-    margin-bottom: 32px;
-    overflow-y: visible;
+  .tile-connector {
+    display: none;
   }
 
   .site-name {

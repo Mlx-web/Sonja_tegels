@@ -62,6 +62,7 @@ function binnenkortItem(card, pageName, {summaryField = 'body', linkTextField = 
     linkUrl: card.linkUrl || pageUrl,
     color: TILE_COLOR[pageName],
     textColor: TILE_TEXT_COLOR[pageName],
+    doelgroep: pageName,
   };
 }
 
@@ -77,13 +78,13 @@ function homepageBinnenkortItem(item) {
     linkUrl: item.linkUrl || pageUrl,
     color: TILE_COLOR[pageName],
     textColor: TILE_TEXT_COLOR[pageName],
+    doelgroep: pageName,
   };
 }
 
 // Verzamelt alle "Binnenkort"-kaartjes: zowel de vaste pagina-kaartjes die
 // zichzelf hebben aangevinkt, als de kaartjes die rechtstreeks op de
-// homepage zijn aangemaakt. Kaartjes met dezelfde doelgroep (kleur) staan
-// zoveel mogelijk bij elkaar.
+// homepage zijn aangemaakt.
 async function getBinnenkortItems(indexContent) {
   const items = [];
 
@@ -125,10 +126,20 @@ async function getBinnenkortItems(indexContent) {
     items.push(homepageBinnenkortItem(item));
   }
 
-  // Zelfde doelgroep (kleur) liever naast elkaar in het rooster.
-  items.sort((a, b) => (a.color || '').localeCompare(b.color || ''));
-
   return items;
+}
+
+// Groepeert de "Binnenkort"-kaartjes per doelgroep, zodat de homepage-
+// template ze direct naast de bijbehorende tegel kan tonen (tileX.items).
+function groupByDoelgroep(items) {
+  const byDoelgroep = {};
+  for (const pageName of Object.keys(PAGE_URL)) {
+    byDoelgroep[pageName] = [];
+  }
+  for (const item of items) {
+    if (byDoelgroep[item.doelgroep]) byDoelgroep[item.doelgroep].push(item);
+  }
+  return byDoelgroep;
 }
 
 // Kaartjes die op de homepage zijn aangemaakt met doelgroep `pageName`
@@ -160,7 +171,11 @@ async function buildPage(pageName) {
   }
 
   if (pageName === 'index') {
-    content.binnenkort = await getBinnenkortItems(content);
+    const byDoelgroep = groupByDoelgroep(await getBinnenkortItems(content));
+    content.tileSchrijven.items = byDoelgroep['schrijven-voor-iedereen'];
+    content.tileKinderen.items = byDoelgroep['kinderen-en-scholen'];
+    content.tileOrganisaties.items = byDoelgroep['organisaties-en-professionals'];
+    content.tileVakgenoten.items = byDoelgroep.vakgenoten;
   } else if (PAGE_URL[pageName]) {
     await withHomepageBinnenkort(content, pageName);
   }

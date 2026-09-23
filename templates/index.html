@@ -19,21 +19,8 @@
   </div>
 </header>
 
-<main class="home-main{{#if binnenkort}} home-main--split{{/if}}">
-{{#if binnenkort}}
-  <div class="home-split-right">
-    <h3 class="section-heading">Binnenkort</h3>
-{{#each binnenkort}}
-    <div class="binnenkort-card" style="background: {{color}}; color: {{textColor}};">
-      <h3>{{title}}</h3>
-      <p>{{summary}}</p>
-      <p>&rarr; <a href="{{linkUrl}}">{{linkText}}</a></p>
-    </div>
-{{/each}}
-  </div>
-{{/if}}
-  <div class="home-split-left">
-  <div class="grid">
+<main class="home-main">
+  <div class="home-tiles-wrap">
 
     <a class="tile tile--schrijven" href="schrijven-voor-iedereen.html" aria-label="Schrijven voor Iedereen">
       <img src="images/tegels/schrijven-voor-iedereen.jpg" alt="">
@@ -42,6 +29,19 @@
         <span class="sub">{{tileSchrijven.sub}}</span>
       </div>
     </a>
+    <div class="tile-cards tile-cards--schrijven tile-cards--left">
+{{#each tileSchrijven.items}}
+      <div class="tile-card-row">
+        <svg class="tile-connector" viewBox="0 0 40 28" aria-hidden="true"><path d="M2,14 C 12,4 20,24 38,14" /></svg>
+        <div class="binnenkort-card" style="background: {{color}}; color: {{textColor}};">
+          <p class="binnenkort-label">Binnenkort</p>
+          <h3>{{title}}</h3>
+          <p>{{summary}}</p>
+          <p>&rarr; <a href="{{linkUrl}}">{{linkText}}</a></p>
+        </div>
+      </div>
+{{/each}}
+    </div>
 
     <a class="tile tile--kinderen" href="kinderen-en-scholen.html" aria-label="Voor kinderen en scholen">
       <img src="images/tegels/kinderen-en-scholen.jpg" alt="">
@@ -50,6 +50,19 @@
         <span class="sub">{{tileKinderen.sub}}</span>
       </div>
     </a>
+    <div class="tile-cards tile-cards--kinderen tile-cards--right">
+{{#each tileKinderen.items}}
+      <div class="tile-card-row">
+        <svg class="tile-connector" viewBox="0 0 40 28" aria-hidden="true"><path d="M2,14 C 12,4 20,24 38,14" /></svg>
+        <div class="binnenkort-card" style="background: {{color}}; color: {{textColor}};">
+          <p class="binnenkort-label">Binnenkort</p>
+          <h3>{{title}}</h3>
+          <p>{{summary}}</p>
+          <p>&rarr; <a href="{{linkUrl}}">{{linkText}}</a></p>
+        </div>
+      </div>
+{{/each}}
+    </div>
 
     <a class="tile tile--organisaties" href="organisaties-en-professionals.html" aria-label="Organisaties en professionals">
       <img src="images/tegels/organisaties-en-professionals.jpg" alt="">
@@ -58,6 +71,19 @@
         <span class="sub">{{tileOrganisaties.sub}}</span>
       </div>
     </a>
+    <div class="tile-cards tile-cards--organisaties tile-cards--left">
+{{#each tileOrganisaties.items}}
+      <div class="tile-card-row">
+        <svg class="tile-connector" viewBox="0 0 40 28" aria-hidden="true"><path d="M2,14 C 12,4 20,24 38,14" /></svg>
+        <div class="binnenkort-card" style="background: {{color}}; color: {{textColor}};">
+          <p class="binnenkort-label">Binnenkort</p>
+          <h3>{{title}}</h3>
+          <p>{{summary}}</p>
+          <p>&rarr; <a href="{{linkUrl}}">{{linkText}}</a></p>
+        </div>
+      </div>
+{{/each}}
+    </div>
 
     <a class="tile tile--vakgenoten" href="vakgenoten.html" aria-label="Vakgenoten">
       <img src="images/tegels/vakgenoten.jpg" alt="">
@@ -66,8 +92,20 @@
         <span class="sub">{{tileVakgenoten.sub}}</span>
       </div>
     </a>
+    <div class="tile-cards tile-cards--vakgenoten tile-cards--right">
+{{#each tileVakgenoten.items}}
+      <div class="tile-card-row">
+        <svg class="tile-connector" viewBox="0 0 40 28" aria-hidden="true"><path d="M2,14 C 12,4 20,24 38,14" /></svg>
+        <div class="binnenkort-card" style="background: {{color}}; color: {{textColor}};">
+          <p class="binnenkort-label">Binnenkort</p>
+          <h3>{{title}}</h3>
+          <p>{{summary}}</p>
+          <p>&rarr; <a href="{{linkUrl}}">{{linkText}}</a></p>
+        </div>
+      </div>
+{{/each}}
+    </div>
 
-  </div>
   </div>
 </main>
 

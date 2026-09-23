@@ -71,7 +71,7 @@ header.site-top {
 }
 
 .site-name a:hover {
-  color: var(--accent);
+  color: var(--tile-overmij);
 }
 
 .header-left {
@@ -96,7 +96,7 @@ header.site-top {
 }
 
 .header-back:hover {
-  background: var(--accent);
+  background: var(--tile-overmij);
   transform: translateY(-2px);
 }
 

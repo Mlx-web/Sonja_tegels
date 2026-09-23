@@ -14,7 +14,10 @@
 
 <header class="site-top">
   <div class="header-row">
-    <h1 class="site-name"><a href="over-mij.html">Sonja van der Arend</a></h1>
+    <div class="header-left">
+      <a class="header-overmij" href="over-mij.html">Over mij</a>
+      <h1 class="site-name">Sonja van der Arend</h1>
+    </div>
     <a class="nav-cta" href="contact.html">Aanmelden &amp; Contact</a>
   </div>
 </header>
@@ -31,15 +34,14 @@
           <span class="sub">{{tileSchrijven.sub}}</span>
         </div>
       </a>
-      <div class="tile-satellites tile-satellites--left tile-satellites--row1">
+      <div class="tile-satellites tile-satellites--left">
 {{#each tileSchrijven.items}}
         <div class="tile-satellite">
           <svg class="tile-connector" viewBox="0 0 60 26" aria-hidden="true"><path d="M0,14 C 16,5 32,21 60,13" /></svg>
           <div class="binnenkort-card" style="background: {{color}}; color: {{textColor}};">
             <p class="binnenkort-label">Binnenkort</p>
             <h3>{{title}}</h3>
-            <p class="binnenkort-summary">{{summary}}</p>
-            <p>&rarr; <a href="{{linkUrl}}">{{linkText}}</a></p>
+            <p class="binnenkort-summary">{{summary}} <a href="{{linkUrl}}">{{linkText}}</a></p>
           </div>
         </div>
 {{/each}}
@@ -54,15 +56,14 @@
           <span class="sub">{{tileKinderen.sub}}</span>
         </div>
       </a>
-      <div class="tile-satellites tile-satellites--right tile-satellites--row1">
+      <div class="tile-satellites tile-satellites--right">
 {{#each tileKinderen.items}}
         <div class="tile-satellite">
-          <svg class="tile-connector" viewBox="0 0 60 26" aria-hidden="true"><path d="M0,14 C 16,5 32,21 60,13" /></svg>
+          <svg class="tile-connector" viewBox="0 0 60 26" aria-hidden="true">{{#if @first}}<path d="M0,12 C 20,23 40,4 60,15" />{{else}}<path d="M0,15 C 22,4 46,22 60,12" />{{/if}}</svg>
           <div class="binnenkort-card" style="background: {{color}}; color: {{textColor}};">
             <p class="binnenkort-label">Binnenkort</p>
             <h3>{{title}}</h3>
-            <p class="binnenkort-summary">{{summary}}</p>
-            <p>&rarr; <a href="{{linkUrl}}">{{linkText}}</a></p>
+            <p class="binnenkort-summary">{{summary}} <a href="{{linkUrl}}">{{linkText}}</a></p>
           </div>
         </div>
 {{/each}}
@@ -77,15 +78,14 @@
           <span class="sub">{{tileOrganisaties.sub}}</span>
         </div>
       </a>
-      <div class="tile-satellites tile-satellites--left tile-satellites--row2">
+      <div class="tile-satellites tile-satellites--left">
 {{#each tileOrganisaties.items}}
         <div class="tile-satellite">
-          <svg class="tile-connector" viewBox="0 0 60 26" aria-hidden="true"><path d="M0,14 C 16,5 32,21 60,13" /></svg>
+          <svg class="tile-connector" viewBox="0 0 60 26" aria-hidden="true"><path d="M0,13 C 14,24 44,3 60,14" /></svg>
           <div class="binnenkort-card" style="background: {{color}}; color: {{textColor}};">
             <p class="binnenkort-label">Binnenkort</p>
             <h3>{{title}}</h3>
-            <p class="binnenkort-summary">{{summary}}</p>
-            <p>&rarr; <a href="{{linkUrl}}">{{linkText}}</a></p>
+            <p class="binnenkort-summary">{{summary}} <a href="{{linkUrl}}">{{linkText}}</a></p>
           </div>
         </div>
 {{/each}}
@@ -100,15 +100,14 @@
           <span class="sub">{{tileVakgenoten.sub}}</span>
         </div>
       </a>
-      <div class="tile-satellites tile-satellites--right tile-satellites--row2">
+      <div class="tile-satellites tile-satellites--right">
 {{#each tileVakgenoten.items}}
         <div class="tile-satellite">
-          <svg class="tile-connector" viewBox="0 0 60 26" aria-hidden="true"><path d="M0,14 C 16,5 32,21 60,13" /></svg>
+          <svg class="tile-connector" viewBox="0 0 60 26" aria-hidden="true"><path d="M0,14 C 18,22 38,6 60,12" /></svg>
           <div class="binnenkort-card" style="background: {{color}}; color: {{textColor}};">
             <p class="binnenkort-label">Binnenkort</p>
             <h3>{{title}}</h3>
-            <p class="binnenkort-summary">{{summary}}</p>
-            <p>&rarr; <a href="{{linkUrl}}">{{linkText}}</a></p>
+            <p class="binnenkort-summary">{{summary}} <a href="{{linkUrl}}">{{linkText}}</a></p>
           </div>
         </div>
 {{/each}}

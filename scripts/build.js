@@ -51,15 +51,27 @@ function summarize(value) {
   return value || '';
 }
 
+// Homepage-kaartjes tonen alleen de eerste zin (voor een kort, compact
+// kaartje) — de volledige tekst staat al op de doelgroep-pagina zelf, één
+// klik verderop via de "Meer info"-link.
+function firstSentence(value) {
+  const text = summarize(value).trim();
+  const match = text.match(/^.*?[.!?](?=\s|$)/);
+  return match ? match[0] : text;
+}
+
 // Voor de vaste, aan een pagina gebonden kaartjes (bv. Waga Write Club) die
-// zelf zijn aangevinkt met "Toon ook op de homepage onder Binnenkort".
-function binnenkortItem(card, pageName, {summaryField = 'body', linkTextField = 'linkText'} = {}) {
+// zelf zijn aangevinkt met "Toon ook op de homepage onder Binnenkort". Het
+// homepage-kaartje linkt altijd naar de eigen doelgroep-pagina (waar de
+// volledige tekst en de eigenlijke link, bv. naar het aanmeldformulier,
+// wél staan) — niet naar de linkUrl van het kaartje zelf.
+function binnenkortItem(card, pageName, {summaryField = 'body'} = {}) {
   const pageUrl = PAGE_URL[pageName];
   return {
     title: card.title,
-    summary: summarize(card[summaryField]),
-    linkText: card[linkTextField] || 'Meer info',
-    linkUrl: card.linkUrl || pageUrl,
+    summary: firstSentence(card[summaryField]),
+    linkText: 'Meer info',
+    linkUrl: pageUrl,
     color: TILE_COLOR[pageName],
     textColor: TILE_TEXT_COLOR[pageName],
     doelgroep: pageName,
@@ -73,9 +85,9 @@ function homepageBinnenkortItem(item) {
   const pageUrl = PAGE_URL[pageName];
   return {
     title: item.title,
-    summary: summarize(item.body),
-    linkText: item.linkText || 'Meer info',
-    linkUrl: item.linkUrl || pageUrl,
+    summary: firstSentence(item.body),
+    linkText: 'Meer info',
+    linkUrl: pageUrl,
     color: TILE_COLOR[pageName],
     textColor: TILE_TEXT_COLOR[pageName],
     doelgroep: pageName,
@@ -94,7 +106,7 @@ async function getBinnenkortItems(indexContent) {
       items.push(binnenkortItem(schrijven.schrijfclub, 'schrijven-voor-iedereen', {summaryField: 'intro'}));
     }
     if (schrijven.waga && schrijven.waga.binnenkort) {
-      items.push(binnenkortItem(schrijven.waga, 'schrijven-voor-iedereen', {summaryField: 'lines', linkTextField: 'ctaText'}));
+      items.push(binnenkortItem(schrijven.waga, 'schrijven-voor-iedereen', {summaryField: 'lines'}));
     }
     if (schrijven.writeHere && schrijven.writeHere.binnenkort) {
       items.push(binnenkortItem(schrijven.writeHere, 'schrijven-voor-iedereen', {summaryField: 'intro'}));

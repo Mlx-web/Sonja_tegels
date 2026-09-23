@@ -31,7 +31,7 @@ export default defineType({
       name: 'binnenkort',
       title: 'Binnenkort',
       description:
-        'Nieuwe activiteiten of aankondigingen. Kies bij elk kaartje de doelgroep: het krijgt dan automatisch de kleur van die doelgroep, en het kaartje verschijnt ook vanzelf op die doelgroep-pagina zelf — je hoeft het daar niet apart aan te maken.',
+        'Nieuwe activiteiten of aankondigingen. Kies bij elk kaartje de doelgroep: het krijgt dan automatisch de kleur van die doelgroep, en het kaartje verschijnt ook vanzelf op die doelgroep-pagina zelf — je hoeft het daar niet apart aan te maken. Let op: op de homepage zelf toont het kaartje alleen de eerste zin van de tekst (met een "Meer info"-link naar de doelgroep-pagina); de volledige tekst die je hier typt verschijnt pas op die doelgroep-pagina.',
       type: 'array',
       of: [
         {
@@ -49,20 +49,23 @@ export default defineType({
             defineField({
               name: 'body',
               title: 'Tekst',
-              description: 'Elke regel wordt een eigen alinea.',
+              description:
+                'Elke regel wordt een eigen alinea. Typ hier de volledige tekst — op de homepage verschijnt automatisch alleen de eerste zin, de volledige tekst zie je terug op de doelgroep-pagina.',
               type: 'array',
               of: [{type: 'text', rows: 3}],
             }),
             defineField({
               name: 'linkText',
-              title: 'Linktekst (optioneel)',
-              description: 'Leeg laten voor "Meer info", met een link naar de doelgroep-pagina.',
+              title: 'Linktekst op de doelgroep-pagina (optioneel)',
+              description:
+                'Voor het volledige kaartje op de doelgroep-pagina zelf. Leeg laten voor "Meer info". Op de homepage staat altijd gewoon "Meer info", met een link naar de doelgroep-pagina.',
               type: 'string',
             }),
             defineField({
               name: 'linkUrl',
-              title: 'Link-URL (optioneel)',
-              description: 'Leeg laten om naar de doelgroep-pagina zelf te linken.',
+              title: 'Link-URL op de doelgroep-pagina (optioneel)',
+              description:
+                'Voor het volledige kaartje op de doelgroep-pagina zelf, bijvoorbeeld een extern aanmeldformulier. Leeg laten om naar niets te linken.',
               type: 'url',
             }),
           ],

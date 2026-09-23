@@ -120,6 +120,52 @@ body.page-vakgenoten .nav-cta:hover {
   background: var(--tile-vakgenoten);
 }
 
+/* Op mobiel: "Terug naar homepage" bij de naam, "Over mij" bij
+   "Aanmelden & Contact" — niet allebei bovenaan samen met de naam. Op de
+   homepage (geen "Terug"-knop) staat de naam dan alleen op de eerste
+   regel. */
+@media (max-width: 720px) {
+  .header-row {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-areas:
+      'back name'
+      'overmij cta';
+    row-gap: 12px;
+    column-gap: 12px;
+  }
+
+  .header-left {
+    display: contents;
+  }
+
+  .header-back {
+    grid-area: back;
+    justify-self: start;
+  }
+
+  .site-name {
+    grid-area: name;
+    justify-self: start;
+  }
+
+  .header-overmij {
+    grid-area: overmij;
+    justify-self: start;
+  }
+
+  .nav-cta {
+    grid-area: cta;
+    justify-self: start;
+  }
+
+  body.home-body .header-row {
+    grid-template-areas:
+      'name name'
+      'overmij cta';
+  }
+}
+
 main {
   max-width: 1100px;
   margin: 0 auto;

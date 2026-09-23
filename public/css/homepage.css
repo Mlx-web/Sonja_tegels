@@ -142,7 +142,9 @@ main.home-main {
   max-width: 1100px;
   width: 100%;
   margin: 0 auto;
-  padding: 48px 32px 64px;
+  /* Extra ruimte boven: de kaartjes bij de bovenste tegelrij groeien
+     omhoog (zie .tile-satellites--row1), dus hier moet ruimte voor zijn. */
+  padding: 130px 32px 48px;
 }
 
 .home-main .placeholder-note {
@@ -152,102 +154,89 @@ main.home-main {
   margin-top: 16px;
 }
 
-/* Vier tegels in een 2x2-rooster. Doelgroepen met "Binnenkort"-kaartjes
-   krijgen een smallere kolom naast hun eigen tegel (links bij Schrijven/
-   Organisaties, rechts bij Kinderen/Vakgenoten); een doelgroep zonder
-   kaartjes laat die kolom gewoon leeg (.tile-cards:empty), de tegels
-   blijven zelf altijd de dominante, vierkante vorm via aspect-ratio. */
+/* De vier doelgroeptegels vormen samen een eigen, strak 2x2-rooster (één
+   herkenbaar groot vierkant, het hart van de homepage). De "Binnenkort"-
+   kaartjes hangen daar als losse satellieten omheen: position:absolute,
+   dus ze hebben geen invloed op de afmetingen van het rooster zelf — de
+   tegels blijven daardoor altijd gelijk en dicht bij elkaar staan, ongeacht
+   hoeveel kaartjes er bij een doelgroep horen. */
 .home-tiles-wrap {
-  display: grid;
-  grid-template-columns: minmax(0, 220px) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 220px);
-  grid-template-areas:
-    'cards-schrijven tile-schrijven tile-kinderen cards-kinderen'
-    'cards-organisaties tile-organisaties tile-vakgenoten cards-vakgenoten';
-  column-gap: 28px;
-  row-gap: 32px;
-  align-items: center;
+  position: relative;
   width: 100%;
+  max-width: 500px;
 }
 
-.tile--schrijven {
-  grid-area: tile-schrijven;
+.tile-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 26px;
 }
 
-.tile--kinderen {
-  grid-area: tile-kinderen;
+.tile-cell {
+  position: relative;
 }
 
-.tile--organisaties {
-  grid-area: tile-organisaties;
-}
-
-.tile--vakgenoten {
-  grid-area: tile-vakgenoten;
-}
-
-.tile-cards {
+/* Positioneringsvak voor de kaartjes van één tegel: position:absolute (dus
+   geen invloed op de hoogte van het tegel-rooster). De kaartjes van de
+   bovenste rij (schrijven/kinderen) hangen aan de ONDERkant van hun tegel
+   en groeien omhoog; die van de onderste rij (organisaties/vakgenoten)
+   hangen aan de BOVENkant en groeien omlaag. Zo groeit elke stapel altijd
+   weg van de andere rij, en kunnen twee stapels — hoe hoog de tekst ook
+   is — elkaar per definitie nooit overlappen. */
+.tile-satellites {
+  position: absolute;
+  width: 250px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 16px;
 }
 
-.tile-cards:empty {
-  display: none;
+.tile-satellites--right {
+  left: 100%;
 }
 
-.tile-cards--schrijven {
-  grid-area: cards-schrijven;
+.tile-satellites--left {
+  right: 100%;
 }
 
-.tile-cards--kinderen {
-  grid-area: cards-kinderen;
+.tile-satellites--row1 {
+  bottom: 0;
 }
 
-.tile-cards--organisaties {
-  grid-area: cards-organisaties;
+.tile-satellites--row2 {
+  top: 0;
 }
 
-.tile-cards--vakgenoten {
-  grid-area: cards-vakgenoten;
-}
-
-.tile-card-row {
+.tile-satellite {
   display: flex;
   align-items: center;
-  gap: 10px;
 }
 
-/* Kaartjes links van hun tegel (Schrijven, Organisaties): kaartje en
-   lijntje omdraaien, zodat het lijntje weer richting de tegel wijst. */
-.tile-cards--left .tile-card-row {
+.tile-satellites--left .tile-satellite {
   flex-direction: row-reverse;
 }
 
+/* De lijn overbrugt vrijwel de hele tussenruimte: hij begint en eindigt
+   zelf ca. 12px van de rand van de tegel / het kaartje (viewBox-eenheden
+   komen 1-op-1 overeen met px, dankzij de vaste breedte/hoogte hieronder).
+   Eén rustige, organische welving, geen pijlpunt. */
 .tile-connector {
   flex: 0 0 auto;
-  width: 40px;
-  height: 28px;
+  width: 60px;
+  height: 26px;
   overflow: visible;
 }
 
 .tile-connector path {
   fill: none;
   stroke: var(--ink);
-  stroke-width: 1.3;
+  stroke-width: 1.4;
   stroke-linecap: round;
-  opacity: 0.55;
-}
-
-/* Elke lijn is los getekend (geen gedeeld/splitsend pad) en wisselt licht
-   van welving af, voor een speels, handgetekend ritme bij twee kaartjes
-   naast dezelfde tegel. */
-.tile-card-row:nth-of-type(even) .tile-connector {
-  transform: scaleY(-1);
 }
 
 .binnenkort-card {
-  flex: 1 1 auto;
-  min-width: 0;
+  flex: 0 0 190px;
+  width: 190px;
   border-radius: var(--tile-radius);
   padding: 14px 16px;
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.16);
@@ -255,22 +244,21 @@ main.home-main {
   transition: transform 0.2s ease;
 }
 
-.tile-card-row:nth-of-type(even) .binnenkort-card {
+.tile-satellite:nth-child(2) .binnenkort-card {
   transform: rotate(0.8deg);
 }
 
-.binnenkort-card:hover {
+.tile-satellite .binnenkort-card:hover {
   transform: rotate(0deg);
 }
 
 .binnenkort-card .binnenkort-label {
-  margin: 0 0 4px;
+  margin: 0 0 8px;
   font-family: 'Public Sans', sans-serif;
-  font-size: 0.66rem;
-  font-weight: 600;
-  letter-spacing: 0.07em;
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
-  opacity: 0.6;
 }
 
 .binnenkort-card h3 {
@@ -290,14 +278,16 @@ main.home-main {
   margin-bottom: 0;
 }
 
-@media (max-width: 900px) {
-  .home-tiles-wrap {
-    grid-template-columns: minmax(0, 180px) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 180px);
-    column-gap: 18px;
-  }
+/* Begrenst de hoogte van een kaartje, zodat twee kaartjes bij dezelfde
+   tegel altijd compact en voorspelbaar blijven. */
+.binnenkort-card .binnenkort-summary {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
 }
 
-@media (max-width: 720px) {
+@media (max-width: 900px) {
   body.home-body {
     display: block;
     min-height: 0;
@@ -309,26 +299,39 @@ main.home-main {
   }
 
   .home-tiles-wrap {
-    display: block;
+    max-width: 480px;
   }
 
-  .tile {
-    margin-bottom: 20px;
+  .tile-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
   }
 
-  .tile-cards {
-    margin-bottom: 28px;
+  .tile-cell {
+    margin-bottom: 8px;
   }
 
-  .tile-card-row,
-  .tile-cards--left .tile-card-row {
+  .tile-satellites {
+    position: static;
+    top: auto;
+    bottom: auto;
+    width: auto;
+    gap: 12px;
+    margin-top: 16px;
+  }
+
+  .tile-satellite {
     flex-direction: column;
     align-items: stretch;
-    gap: 6px;
   }
 
   .tile-connector {
     display: none;
+  }
+
+  .binnenkort-card {
+    width: auto;
+    flex: 1 1 auto;
   }
 
   .site-name {

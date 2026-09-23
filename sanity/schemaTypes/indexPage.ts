@@ -40,6 +40,13 @@ export default defineType({
           fields: [
             defineField({name: 'title', title: 'Titel', type: 'string', validation: (rule) => rule.required()}),
             defineField({
+              name: 'datum',
+              title: 'Datum (optioneel)',
+              description:
+                'Bijvoorbeeld "10 oktober". Verschijnt naast "Binnenkort" op het kaartje, in dezelfde stijl. Leeg laten als er nog geen datum bekend is.',
+              type: 'string',
+            }),
+            defineField({
               name: 'doelgroep',
               title: 'Doelgroep',
               type: 'string',

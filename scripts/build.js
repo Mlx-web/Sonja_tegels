@@ -85,6 +85,7 @@ function homepageBinnenkortItem(item) {
   const pageUrl = PAGE_URL[pageName];
   return {
     title: item.title,
+    datum: item.datum || '',
     summary: firstSentence(item.body),
     linkText: 'Meer info',
     linkUrl: pageUrl,

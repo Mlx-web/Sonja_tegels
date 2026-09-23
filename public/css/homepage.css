@@ -89,6 +89,7 @@ header.site-top {
   font-size: 0.95rem;
   font-weight: 600;
   border-radius: 999px;
+  white-space: nowrap;
   transition: transform 0.2s ease, background 0.2s ease;
 }
 
@@ -120,49 +121,35 @@ body.page-vakgenoten .nav-cta:hover {
   background: var(--tile-vakgenoten);
 }
 
-/* Op mobiel: "Terug naar homepage" bij de naam, "Over mij" bij
-   "Aanmelden & Contact" — niet allebei bovenaan samen met de naam. Op de
-   homepage (geen "Terug"-knop) staat de naam dan alleen op de eerste
-   regel. */
+/* Op mobiel: de naam altijd bovenaan, alle knoppen (Terug naar homepage,
+   Over mij, Aanmelden & Contact) daaronder op hun eigen regel(s). */
 @media (max-width: 720px) {
   .header-row {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    grid-template-areas:
-      'back name'
-      'overmij cta';
-    row-gap: 12px;
-    column-gap: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
   }
 
   .header-left {
     display: contents;
   }
 
-  .header-back {
-    grid-area: back;
-    justify-self: start;
+  .site-name {
+    order: 1;
+    flex-basis: 100%;
   }
 
-  .site-name {
-    grid-area: name;
-    justify-self: start;
+  .header-back {
+    order: 2;
   }
 
   .header-overmij {
-    grid-area: overmij;
-    justify-self: start;
+    order: 3;
   }
 
   .nav-cta {
-    grid-area: cta;
-    justify-self: start;
-  }
-
-  body.home-body .header-row {
-    grid-template-areas:
-      'name name'
-      'overmij cta';
+    order: 4;
   }
 }
 
@@ -369,7 +356,8 @@ main.home-main {
   }
 
   .site-name {
-    font-size: 1.3rem;
+    font-size: clamp(1.3rem, 8vw, 1.9rem);
+    white-space: nowrap;
   }
 }
 

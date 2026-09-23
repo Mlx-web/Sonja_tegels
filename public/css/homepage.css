@@ -239,9 +239,10 @@ main.home-main {
   flex-direction: row-reverse;
 }
 
-/* De lijn loopt vrijwel helemaal van de rand van de tegel tot de rand van
-   het kaartje (viewBox-eenheden komen 1-op-1 overeen met px, dankzij de
-   vaste breedte/hoogte hieronder). Eén rustige, organische welving, geen
+/* De lijn begint en eindigt exact op de rand van de tegel en het kaartje
+   (viewBox-eenheden komen 1-op-1 overeen met px, dankzij de vaste breedte/
+   hoogte hieronder, en het vak zelf sluit al direct aan). Eén organische,
+   licht onregelmatige welving (geen symmetrische sinusgolf), geen
    pijlpunt. */
 .tile-connector {
   flex: 0 0 auto;

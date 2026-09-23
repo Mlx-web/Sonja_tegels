@@ -10,7 +10,7 @@
   --tile-schrijven: #e39cb6;
   --tile-kinderen: #f5c518;
   --tile-organisaties: #3f47b0;
-  --tile-vakgenoten: #1e7a46;
+  --tile-vakgenoten: #28844f;
   --tile-overmij: #8c82d6;
   --hover-donkergrijs: #46433d;
 }
@@ -624,6 +624,14 @@ main.home-main {
 .tile-hero--compact .tile-hero-inner {
   align-items: flex-start;
   padding: 32px 32px 40px;
+}
+
+/* Vakgenoten heeft van de doelgroep-pagina's de minste kaartjes, waardoor
+   de groene band anders veel korter zou zijn dan bij de andere pagina's —
+   hij krijgt daarom zelf extra minimumhoogte, zodat het groen net zo ver
+   doorloopt. */
+.tile-hero--vakgenoten.tile-hero--compact {
+  min-height: calc(100vh - 125px);
 }
 
 .tile-hero-media {

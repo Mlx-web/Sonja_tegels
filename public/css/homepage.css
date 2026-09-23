@@ -169,11 +169,7 @@ main.home-main {
 .tile-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  column-gap: 26px;
-  /* Iets meer ruimte tussen de rijen dan tussen de tegels onderling: de
-     "Binnenkort"-kaartjes naast de bovenste rij kunnen net iets hoger
-     zijn dan de tegel, dus dit voorkomt dat ze in de onderste rij lopen. */
-  row-gap: 80px;
+  gap: 26px;
 }
 
 .tile-cell {

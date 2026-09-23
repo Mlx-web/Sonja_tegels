@@ -12,6 +12,7 @@
   --tile-organisaties: #3f47b0;
   --tile-vakgenoten: #1e7a46;
   --tile-overmij: #8c82d6;
+  --hover-donkergrijs: #46433d;
 }
 
 /* Duidelijk zichtbare duur voor de View Transition (homepage-tegel die
@@ -69,8 +70,22 @@ header.site-top {
   text-decoration: none;
 }
 
+/* Standaard (over-mij, contact, schrijven, organisaties): lila. Homepage,
+   kinderen-pagina en vakgenoten-pagina krijgen hieronder hun eigen kleur. */
 .site-name a:hover {
   color: var(--tile-overmij);
+}
+
+body.home-body .site-name a:hover {
+  color: var(--hover-donkergrijs);
+}
+
+body.page-kinderen .site-name a:hover {
+  color: var(--tile-kinderen);
+}
+
+body.page-vakgenoten .site-name a:hover {
+  color: var(--tile-vakgenoten);
 }
 
 .header-left {
@@ -97,6 +112,14 @@ header.site-top {
 .header-back:hover {
   background: var(--tile-overmij);
   transform: translateY(-2px);
+}
+
+body.page-kinderen .header-back:hover {
+  background: var(--tile-kinderen);
+}
+
+body.page-vakgenoten .header-back:hover {
+  background: var(--tile-vakgenoten);
 }
 
 .nav-cta {
@@ -216,10 +239,10 @@ main.home-main {
   flex-direction: row-reverse;
 }
 
-/* De lijn overbrugt vrijwel de hele tussenruimte: hij begint en eindigt
-   zelf ca. 12px van de rand van de tegel / het kaartje (viewBox-eenheden
-   komen 1-op-1 overeen met px, dankzij de vaste breedte/hoogte hieronder).
-   Eén rustige, organische welving, geen pijlpunt. */
+/* De lijn loopt vrijwel helemaal van de rand van de tegel tot de rand van
+   het kaartje (viewBox-eenheden komen 1-op-1 overeen met px, dankzij de
+   vaste breedte/hoogte hieronder). Eén rustige, organische welving, geen
+   pijlpunt. */
 .tile-connector {
   flex: 0 0 auto;
   width: 60px;

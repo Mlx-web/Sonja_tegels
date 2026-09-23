@@ -49,6 +49,18 @@ export default defineType({
               description: 'Alleen voor de "Binnenkort"-tegel op de homepage. Leeg laten om gewoon de titel hierboven te gebruiken.',
               type: 'string',
             }),
+            defineField({
+              name: 'binnenkortLinkText',
+              title: 'Linktekst op de homepage (optioneel)',
+              description: 'Alleen voor de "Binnenkort"-tegel op de homepage. Leeg laten om gewoon de linktekst hierboven te gebruiken.',
+              type: 'string',
+            }),
+            defineField({
+              name: 'binnenkortLinkUrl',
+              title: 'Link-URL op de homepage (optioneel)',
+              description: 'Alleen voor de "Binnenkort"-tegel op de homepage. Leeg laten om naar deze pagina zelf te linken in plaats van naar de link-URL hierboven.',
+              type: 'url',
+            }),
           ],
           preview: {
             select: {title: 'title'},

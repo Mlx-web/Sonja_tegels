@@ -49,8 +49,8 @@ function binnenkortItem(card, pageName, pageUrl, {summaryField = 'body', linkTex
   return {
     title: card.binnenkortTitle || card.title,
     summary: summarize(card[summaryField]),
-    linkText: card[linkTextField] || 'Meer info',
-    linkUrl: card.linkUrl || pageUrl,
+    linkText: card.binnenkortLinkText || card[linkTextField] || 'Meer info',
+    linkUrl: card.binnenkortLinkUrl || card.linkUrl || pageUrl,
     color: TILE_COLOR[pageName],
     textColor: TILE_TEXT_COLOR[pageName],
   };

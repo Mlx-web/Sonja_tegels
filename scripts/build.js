@@ -47,7 +47,7 @@ function summarize(value) {
 
 function binnenkortItem(card, pageName, pageUrl, {summaryField = 'body', linkTextField = 'linkText'} = {}) {
   return {
-    title: card.title,
+    title: card.binnenkortTitle || card.title,
     summary: summarize(card[summaryField]),
     linkText: card[linkTextField] || 'Meer info',
     linkUrl: card.linkUrl || pageUrl,

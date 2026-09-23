@@ -1,6 +1,6 @@
 {
   "pijler": "Schrijven voor Iedereen",
-  "subIntro": "Schrijfactiviteiten voor volwassenen in Wageningen, met begeleiding door Sonja.",
+  "subIntro": "Schrijfactiviteiten voor volwassenen in Wageningen, begeleiding door Sonja.",
   "subLocation": "In The Write Place (lokaal 9) van de Cultuurwerkplaats.",
   "quote": "Ik leer mensen niet hoe ze moeten schrijven, ik laat ze ontdekken dat ze het al kunnen.",
   "schrijfclub": {
@@ -14,9 +14,8 @@
   "waga": {
     "title": "Waga Write Club",
     "lines": [
-      "A community of for-fun writers. Not a course: playful exercises, writing on the spot, sharing if you wish. Every other week, 2 hours.",
-      "English-speaking, but write in any language you like.",
-      "The first try-out was on Wednesday, September 9. Waga Write Club starts soon."
+      "A community of for-fun writers. Not a course: playful exercises, writing on the spot, sharing if you wish. Every other week on Wednesday evenings, 2 hours.",
+      "English-speaking, but write in any language you like."
     ],
     "ctaText": "Get in touch",
     "binnenkort": true
@@ -25,11 +24,12 @@
     "title": "Write here! Write now!",
     "intro": "Wil je schrijven, maar niet alleen? Of je nu werkt aan je derde bestseller of je eerste thesis, je laatste dichtbundel of je derde sinterklaasgedicht: het kan hier en nu. Geen aanmelding nodig, je loopt gewoon binnen.",
     "englishNote": "Prefer to write in English? Write here! Write now! is an English-friendly drop-in session: no registration, just show up.",
-    "times": "Elke dinsdag 19:45–21:30 en vrijdag 9:00–10:45, in The Write Place (lokaal 9) van de Cultuurwerkplaats."
+    "times": "Elke dinsdag 19:45–21:30 en vrijdag 9:00–10:45.",
+    "location": "In The Write Place (lokaal 9) van de Cultuurwerkplaats."
   },
   "individueel": {
     "title": "Individuele schrijfcoaching",
-    "intro": "Liever een op een begeleiding dan in een groep? Bij individuele schrijfcoaching werk je in je eigen tempo aan je eigen tekst, verhaal of schrijfproject.",
+    "intro": "Liever een-op-eenbegeleiding dan in een groep? Bij individuele schrijfcoaching werk je in je eigen tempo aan je eigen tekst, verhaal of schrijfproject.",
     "closing": "Neem contact op om de mogelijkheden te bespreken."
   },
   "extraCards": []

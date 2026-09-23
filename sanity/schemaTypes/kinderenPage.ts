@@ -43,6 +43,12 @@ export default defineType({
               type: 'boolean',
               initialValue: false,
             }),
+            defineField({
+              name: 'binnenkortTitle',
+              title: 'Titel op de homepage (optioneel)',
+              description: 'Alleen voor de "Binnenkort"-tegel op de homepage. Leeg laten om gewoon de titel hierboven te gebruiken.',
+              type: 'string',
+            }),
           ],
           preview: {
             select: {title: 'title'},

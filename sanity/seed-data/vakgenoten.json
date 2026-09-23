@@ -14,5 +14,16 @@
       {"label": "Humor in de schrijfcursus", "description": "hoe humor het schrijfplezier en de schrijflust vergroot."}
     ]
   },
-  "extraCards": []
+  "extraCards": [
+    {
+      "title": "Ontwerpatelier voor docenten creatief schrijven",
+      "body": [
+        "Een creatieve werkplaats voor iedereen die les of workshops geeft in het schrijven van verhalen en gedichten: samen nieuwe, speelse schrijfoefeningen bedenken, testen en verfijnen.",
+        "Sonja geeft dit ontwerpatelier samen met een collega."
+      ],
+      "linkText": null,
+      "linkUrl": null,
+      "binnenkort": true
+    }
+  ]
 }

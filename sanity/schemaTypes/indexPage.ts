@@ -20,7 +20,6 @@ export default defineType({
     tileField('tileKinderen', 'Tegel: Voor kinderen & scholen'),
     tileField('tileOrganisaties', 'Tegel: Organisaties & Professionals'),
     tileField('tileVakgenoten', 'Tegel: Vakgenoten'),
-    defineField({name: 'placeholderNote', title: 'Notitie onder de tegels', type: 'text', rows: 2}),
   ],
   preview: {
     prepare() {

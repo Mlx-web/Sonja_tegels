@@ -1,15 +1,17 @@
 {
   "pijler": "Voor kinderen & scholen",
-  "sub": "Kris-kras-klup (8–12 jaar) & schoolprojecten (groep 5–8, voortgezet en speciaal onderwijs, ook voor thuiszitters en drop-outs)",
+  "sub": "Kris-kras-klup (8–12 jaar) & schoolprojecten (basis, voortgezet en speciaal onderwijs, thuiszitters en drop-outs)",
   "cards": [
     {
       "title": "Kris-kras-klup (8–12 jaar)",
+      "binnenkortTitle": "Kris-kras-klup — proefles 10 oktober",
       "body": [
-        "Kris-kras-klup is een schrijfclub voor kinderen, in de Cultuurwerkplaats (The Write Place, lokaal 9). In samenwerking met een illustrator bedenken en illustreren de kinderen samen verhalen.",
-        "Gepland te starten in 2026–2027. Interesse? Laat het weten."
+        "Kris-kras-klup is een nieuwe club in Wageningen waar kinderen (ongeveer 9–12 jaar) hun eigen verhalen leren schrijven en tekenen, samen met Sonja (schrijven) en Carlijn van WentinkArt (tekenen).",
+        "Proefles: kom gratis meedoen op zaterdag 10 oktober, 15:00–16:00 uur, in de bblthk, in het kader van de Kinderboekenweek."
       ],
       "linkText": "Bekijk het Kris Kras Clubhuis",
-      "linkUrl": "https://verhalenwinkel.netlify.app/"
+      "linkUrl": "https://verhalenwinkel.netlify.app/",
+      "binnenkort": true
     },
     {
       "title": "Workshop Fan Fiction (12–16 jaar)",
@@ -17,8 +19,8 @@
         "Geef je favoriete boek, film, serie of game een nieuwe plot: jij bepaalt wat er gebeurt tijdens de workshop.",
         "Op 16 oktober om 16:30 uur in de bibliotheek (bblthk)."
       ],
-      "linkText": "Aanmelden via bblthk.nl/agenda",
-      "linkUrl": "https://bblthk.nl/agenda",
+      "linkText": "Aanmelden via de bblthk",
+      "linkUrl": "https://bblthk.op-shop.nl/5976/workshop-fan-fiction-samen-eten-jouw-favo-verhaal-maar-dan-beter/16-10-2026",
       "binnenkort": true
     },
     {

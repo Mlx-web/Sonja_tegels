@@ -150,17 +150,13 @@ main.home-main {
   padding: 20px 32px 16px;
 }
 
-/* .grid krijgt via flex precies de ruimte die overblijft na header,
-   footer en de placeholder-note (dus altijd correct, ook als die van
-   hoogte veranderen) — en leidt daar zelf, via aspect-ratio, een eigen
-   breedte uit af. Zo blijft het rooster passen zonder scrollen, én
-   blijven de tegels zichzelf (niet te plat), met max-width als
-   bovengrens op grote schermen. */
+/* De tegels bepalen zelf hun (vierkante) vorm via aspect-ratio op .tile;
+   .grid volgt daaruit vanzelf in hoogte, in plaats van te rekken naar de
+   resterende ruimte — dat laatste zou bij een langer "Binnenkort"-paneel
+   de tegels uitrekken. */
 .grid {
-  flex: 1 1 auto;
-  min-height: 0;
+  flex: 0 0 auto;
   max-width: 700px;
-  aspect-ratio: 1.15 / 1;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
@@ -200,6 +196,7 @@ main.home-main.home-main--split {
 
 .home-split-right {
   flex: 0 0 320px;
+  min-height: 0;
   background: var(--paper-alt);
   border-radius: var(--tile-radius);
   padding: 28px;
@@ -290,20 +287,11 @@ main.home-main.home-main--split {
   color: white;
   border-radius: var(--tile-radius);
   overflow: hidden;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 1 / 1;
   isolation: isolate;
   transform: rotate(0deg);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   box-shadow: 0 2px 0 rgba(0, 0, 0, 0.15);
-}
-
-/* Op desktop bepaalt de grid-rij de hoogte van de tegel (zie hierboven,
-   .grid), niet een vaste verhouding — anders wint de aspect-ratio het
-   van de opgelegde grid-hoogte en past het rooster niet op het scherm. */
-@media (min-width: 721px) {
-  .tile {
-    aspect-ratio: auto;
-  }
 }
 
 .tile:hover {

@@ -20,7 +20,8 @@ export default defineType({
     defineField({
       name: 'cards',
       title: 'Kaartjes',
-      description: 'Voeg toe, verwijder of versleep om de volgorde te wijzigen.',
+      description:
+        'Voeg toe, verwijder of versleep om de volgorde te wijzigen. Kaartjes die je op de Homepage onder "Binnenkort" aanmaakt met doelgroep "Voor kinderen & scholen" verschijnen automatisch óók hier, onderaan — die hoef je hier niet apart toe te voegen.',
       type: 'array',
       of: [
         {
@@ -37,30 +38,6 @@ export default defineType({
             }),
             defineField({name: 'linkText', title: 'Linktekst (optioneel)', type: 'string'}),
             defineField({name: 'linkUrl', title: 'Link-URL (optioneel)', type: 'url'}),
-            defineField({
-              name: 'binnenkort',
-              title: 'Toon ook op de homepage onder "Binnenkort"',
-              type: 'boolean',
-              initialValue: false,
-            }),
-            defineField({
-              name: 'binnenkortTitle',
-              title: 'Titel op de homepage (optioneel)',
-              description: 'Alleen voor de "Binnenkort"-tegel op de homepage. Leeg laten om gewoon de titel hierboven te gebruiken.',
-              type: 'string',
-            }),
-            defineField({
-              name: 'binnenkortLinkText',
-              title: 'Linktekst op de homepage (optioneel)',
-              description: 'Alleen voor de "Binnenkort"-tegel op de homepage. Leeg laten om gewoon de linktekst hierboven te gebruiken.',
-              type: 'string',
-            }),
-            defineField({
-              name: 'binnenkortLinkUrl',
-              title: 'Link-URL op de homepage (optioneel)',
-              description: 'Alleen voor de "Binnenkort"-tegel op de homepage. Leeg laten om naar deze pagina zelf te linken in plaats van naar de link-URL hierboven.',
-              type: 'url',
-            }),
           ],
           preview: {
             select: {title: 'title'},

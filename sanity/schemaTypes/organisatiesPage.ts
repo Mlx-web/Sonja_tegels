@@ -10,7 +10,8 @@ const binnenkortField = defineField({
 const cardField = defineField({
   name: 'extraCards',
   title: 'Extra kaartjes',
-  description: 'Voeg toe, verwijder of versleep om de volgorde te wijzigen.',
+  description:
+    'Voeg toe, verwijder of versleep om de volgorde te wijzigen. Kaartjes die je op de Homepage onder "Binnenkort" aanmaakt met doelgroep "Organisaties & Professionals" verschijnen automatisch óók hier — die hoef je hier niet apart toe te voegen.',
   type: 'array',
   of: [
     {
@@ -21,7 +22,6 @@ const cardField = defineField({
         defineField({name: 'body', title: 'Tekst', type: 'array', of: [{type: 'text', rows: 3}]}),
         defineField({name: 'linkText', title: 'Linktekst (optioneel)', type: 'string'}),
         defineField({name: 'linkUrl', title: 'Link-URL (optioneel)', type: 'url'}),
-        binnenkortField,
       ],
       preview: {select: {title: 'title'}},
     },

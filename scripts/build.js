@@ -24,9 +24,9 @@ async function fetchContent(pageName) {
   return client.fetch(`*[_type == $type][0]`, {type: `${pageName}Page`});
 }
 
-// Kleuren horen bij de tegel van de pagina waar het kaartje vandaan komt
-// (zie --tile-* in homepage.css), zodat een "Binnenkort"-kaartje er op de
-// homepage hetzelfde uitziet als op zijn eigen pagina.
+// Kleuren horen bij de tegel van de doelgroep (zie --tile-* in
+// homepage.css), zodat een "Binnenkort"-kaartje er hetzelfde uitziet als
+// de pagina waar het bij hoort.
 const TILE_COLOR = {
   'kinderen-en-scholen': 'var(--tile-kinderen)',
   'schrijven-voor-iedereen': 'var(--tile-schrijven)',
@@ -39,85 +39,114 @@ const TILE_TEXT_COLOR = {
   'organisaties-en-professionals': '#fff',
   vakgenoten: '#fff',
 };
+const PAGE_URL = {
+  'kinderen-en-scholen': 'kinderen-en-scholen.html',
+  'schrijven-voor-iedereen': 'schrijven-voor-iedereen.html',
+  'organisaties-en-professionals': 'organisaties-en-professionals.html',
+  vakgenoten: 'vakgenoten.html',
+};
 
 function summarize(value) {
   if (Array.isArray(value)) return value.join(' ');
   return value || '';
 }
 
-function binnenkortItem(card, pageName, pageUrl, {summaryField = 'body', linkTextField = 'linkText'} = {}) {
+// Voor de vaste, aan een pagina gebonden kaartjes (bv. Waga Write Club) die
+// zelf zijn aangevinkt met "Toon ook op de homepage onder Binnenkort".
+function binnenkortItem(card, pageName, {summaryField = 'body', linkTextField = 'linkText'} = {}) {
+  const pageUrl = PAGE_URL[pageName];
   return {
-    title: card.binnenkortTitle || card.title,
+    title: card.title,
     summary: summarize(card[summaryField]),
-    linkText: card.binnenkortLinkText || card[linkTextField] || 'Meer info',
-    linkUrl: card.binnenkortLinkUrl || card.linkUrl || pageUrl,
+    linkText: card[linkTextField] || 'Meer info',
+    linkUrl: card.linkUrl || pageUrl,
     color: TILE_COLOR[pageName],
     textColor: TILE_TEXT_COLOR[pageName],
   };
 }
 
-function collectFlaggedCards(cards, pageName, pageUrl) {
-  return (cards || [])
-    .filter((card) => card && card.binnenkort)
-    .map((card) => binnenkortItem(card, pageName, pageUrl));
+// Voor kaartjes die rechtstreeks op de homepage zijn aangemaakt (met een
+// gekozen doelgroep) — dit is de belangrijkste bron van "Binnenkort".
+function homepageBinnenkortItem(item) {
+  const pageName = item.doelgroep;
+  const pageUrl = PAGE_URL[pageName];
+  return {
+    title: item.title,
+    summary: summarize(item.body),
+    linkText: item.linkText || 'Meer info',
+    linkUrl: item.linkUrl || pageUrl,
+    color: TILE_COLOR[pageName],
+    textColor: TILE_TEXT_COLOR[pageName],
+  };
 }
 
-// Verzamelt alle kaartjes die op hun eigen pagina zijn aangevinkt met
-// "Toon op homepage onder Binnenkort", over alle vier doelgroep-pagina's
-// heen. Elke pagina heeft zijn eigen kaartjes-vorm (vaste kaartjes met
-// eigen velden, plus een generieke extraCards-lijst), vandaar de
-// per-pagina uitzonderingen hieronder.
-async function getBinnenkortItems() {
+// Verzamelt alle "Binnenkort"-kaartjes: zowel de vaste pagina-kaartjes die
+// zichzelf hebben aangevinkt, als de kaartjes die rechtstreeks op de
+// homepage zijn aangemaakt. Kaartjes met dezelfde doelgroep (kleur) staan
+// zoveel mogelijk bij elkaar.
+async function getBinnenkortItems(indexContent) {
   const items = [];
-
-  const kinderen = await fetchContent('kinderen-en-scholen');
-  if (kinderen) {
-    items.push(...collectFlaggedCards(kinderen.cards, 'kinderen-en-scholen', 'kinderen-en-scholen.html'));
-  }
 
   const schrijven = await fetchContent('schrijven-voor-iedereen');
   if (schrijven) {
-    const pageUrl = 'schrijven-voor-iedereen.html';
     if (schrijven.schrijfclub && schrijven.schrijfclub.binnenkort) {
-      items.push(binnenkortItem(schrijven.schrijfclub, 'schrijven-voor-iedereen', pageUrl, {summaryField: 'intro'}));
+      items.push(binnenkortItem(schrijven.schrijfclub, 'schrijven-voor-iedereen', {summaryField: 'intro'}));
     }
     if (schrijven.waga && schrijven.waga.binnenkort) {
-      items.push(binnenkortItem(schrijven.waga, 'schrijven-voor-iedereen', pageUrl, {summaryField: 'lines', linkTextField: 'ctaText'}));
+      items.push(binnenkortItem(schrijven.waga, 'schrijven-voor-iedereen', {summaryField: 'lines', linkTextField: 'ctaText'}));
     }
     if (schrijven.writeHere && schrijven.writeHere.binnenkort) {
-      items.push(binnenkortItem(schrijven.writeHere, 'schrijven-voor-iedereen', pageUrl, {summaryField: 'intro'}));
+      items.push(binnenkortItem(schrijven.writeHere, 'schrijven-voor-iedereen', {summaryField: 'intro'}));
     }
     if (schrijven.individueel && schrijven.individueel.binnenkort) {
-      items.push(binnenkortItem(schrijven.individueel, 'schrijven-voor-iedereen', pageUrl, {summaryField: 'intro'}));
+      items.push(binnenkortItem(schrijven.individueel, 'schrijven-voor-iedereen', {summaryField: 'intro'}));
     }
-    items.push(...collectFlaggedCards(schrijven.extraCards, 'schrijven-voor-iedereen', pageUrl));
   }
 
   const organisaties = await fetchContent('organisaties-en-professionals');
   if (organisaties) {
-    const pageUrl = 'organisaties-en-professionals.html';
     for (const key of ['wur', 'huisarts', 'beleidsfeuilleton', 'andereIdeeen']) {
       const card = organisaties[key];
       if (card && card.binnenkort) {
-        items.push(binnenkortItem(card, 'organisaties-en-professionals', pageUrl));
+        items.push(binnenkortItem(card, 'organisaties-en-professionals'));
       }
     }
     if (organisaties.beleidsromans && organisaties.beleidsromans.binnenkort) {
-      items.push(binnenkortItem(organisaties.beleidsromans, 'organisaties-en-professionals', pageUrl, {summaryField: 'intro'}));
+      items.push(binnenkortItem(organisaties.beleidsromans, 'organisaties-en-professionals', {summaryField: 'intro'}));
     }
-    items.push(...collectFlaggedCards(organisaties.extraCards, 'organisaties-en-professionals', pageUrl));
   }
 
   const vakgenoten = await fetchContent('vakgenoten');
-  if (vakgenoten) {
-    const pageUrl = 'vakgenoten.html';
-    if (vakgenoten.workshops && vakgenoten.workshops.binnenkort) {
-      items.push(binnenkortItem(vakgenoten.workshops, 'vakgenoten', pageUrl));
-    }
-    items.push(...collectFlaggedCards(vakgenoten.extraCards, 'vakgenoten', pageUrl));
+  if (vakgenoten && vakgenoten.workshops && vakgenoten.workshops.binnenkort) {
+    items.push(binnenkortItem(vakgenoten.workshops, 'vakgenoten'));
   }
 
+  for (const item of (indexContent && indexContent.binnenkort) || []) {
+    items.push(homepageBinnenkortItem(item));
+  }
+
+  // Zelfde doelgroep (kleur) liever naast elkaar in het rooster.
+  items.sort((a, b) => (a.color || '').localeCompare(b.color || ''));
+
   return items;
+}
+
+// Kaartjes die op de homepage zijn aangemaakt met doelgroep `pageName`
+// verschijnen ook automatisch als kaartje op die doelgroep-pagina zelf.
+async function withHomepageBinnenkort(content, pageName) {
+  const index = await fetchContent('index');
+  const extra = ((index && index.binnenkort) || [])
+    .filter((item) => item.doelgroep === pageName)
+    .map((item) => ({title: item.title, body: item.body, linkText: item.linkText, linkUrl: item.linkUrl}));
+
+  if (!extra.length) return content;
+
+  if (pageName === 'kinderen-en-scholen') {
+    content.cards = [...(content.cards || []), ...extra];
+  } else {
+    content.extraCards = [...(content.extraCards || []), ...extra];
+  }
+  return content;
 }
 
 async function buildPage(pageName) {
@@ -131,7 +160,9 @@ async function buildPage(pageName) {
   }
 
   if (pageName === 'index') {
-    content.binnenkort = await getBinnenkortItems();
+    content.binnenkort = await getBinnenkortItems(content);
+  } else if (PAGE_URL[pageName]) {
+    await withHomepageBinnenkort(content, pageName);
   }
 
   const templateSource = fs.readFileSync(templatePath, 'utf8');

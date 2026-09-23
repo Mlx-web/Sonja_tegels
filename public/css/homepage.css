@@ -195,24 +195,26 @@ main.home-main.home-main--split {
 }
 
 .home-split-right {
-  flex: 0 0 320px;
+  flex: 0 0 420px;
   min-height: 0;
   background: var(--paper-alt);
   border-radius: var(--tile-radius);
-  padding: 28px;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
+  padding: 24px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-content: start;
+  gap: 14px;
   overflow-y: auto;
 }
 
 .home-split-right .section-heading {
+  grid-column: 1 / -1;
   margin-top: 0;
 }
 
 .binnenkort-card {
   border-radius: var(--tile-radius);
-  padding: 18px 20px;
+  padding: 16px 18px;
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.16);
   transform: rotate(-0.8deg);
   transition: transform 0.2s ease;
@@ -227,14 +229,14 @@ main.home-main.home-main--split {
 }
 
 .binnenkort-card h3 {
-  margin: 0 0 8px;
+  margin: 0 0 6px;
   font-family: 'Fraunces', Georgia, serif;
-  font-size: 1.1rem;
+  font-size: 0.98rem;
 }
 
 .binnenkort-card p {
-  margin: 0 0 8px;
-  font-size: 0.92rem;
+  margin: 0 0 6px;
+  font-size: 0.82rem;
   line-height: 1.5;
 }
 
@@ -271,7 +273,8 @@ main.home-main.home-main--split {
   }
 
   .home-split-right {
-    margin-top: 32px;
+    grid-template-columns: 1fr;
+    margin-bottom: 32px;
     overflow-y: visible;
   }
 

@@ -20,6 +20,18 @@
 </header>
 
 <main class="home-main{{#if binnenkort}} home-main--split{{/if}}">
+{{#if binnenkort}}
+  <div class="home-split-right">
+    <h3 class="section-heading">Binnenkort</h3>
+{{#each binnenkort}}
+    <div class="binnenkort-card" style="background: {{color}}; color: {{textColor}};">
+      <h3>{{title}}</h3>
+      <p>{{summary}}</p>
+      <p>&rarr; <a href="{{linkUrl}}">{{linkText}}</a></p>
+    </div>
+{{/each}}
+  </div>
+{{/if}}
   <div class="home-split-left">
   <div class="grid">
 
@@ -57,18 +69,6 @@
 
   </div>
   </div>
-{{#if binnenkort}}
-  <div class="home-split-right">
-    <h3 class="section-heading">Binnenkort</h3>
-{{#each binnenkort}}
-    <div class="binnenkort-card" style="background: {{color}}; color: {{textColor}};">
-      <h3>{{title}}</h3>
-      <p>{{summary}}</p>
-      <p>&rarr; <a href="{{linkUrl}}">{{linkText}}</a></p>
-    </div>
-{{/each}}
-  </div>
-{{/if}}
 </main>
 
 <footer class="site-bottom">

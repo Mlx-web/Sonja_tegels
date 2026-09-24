@@ -34,17 +34,6 @@
     </div>
 
     <div class="offer-grid offer-grid--vakgenoten">
-      <div class="offer-card offer-card--wide">
-        <h3>{{workshops.title}}</h3>
-        <p>{{workshops.body}}
-        &rarr; <a href="contact.html">{{workshops.linkText}}</a></p>
-      </div>
-      <div class="offer-card">
-        <h3>{{eerdereWorkshops.title}}</h3>
-{{#each eerdereWorkshops.items}}
-        <p><strong>{{label}}</strong>: {{description}}</p>
-{{/each}}
-      </div>
 {{#each extraCards}}
       <div class="offer-card">
         <h3>{{title}}</h3>
@@ -60,6 +49,17 @@
 {{/if}}
       </div>
 {{/each}}
+      <div class="offer-card offer-card--wide">
+        <h3>{{workshops.title}}</h3>
+        <p>{{workshops.body}}
+        &rarr; <a href="contact.html">{{workshops.linkText}}</a></p>
+      </div>
+      <div class="offer-card">
+        <h3>{{eerdereWorkshops.title}}</h3>
+{{#each eerdereWorkshops.items}}
+        <p><strong>{{label}}</strong>: {{description}}</p>
+{{/each}}
+      </div>
     </div>
   </div>
 </section>

@@ -166,9 +166,9 @@ async function withHomepageBinnenkort(content, pageName) {
   if (!extra.length) return content;
 
   if (pageName === 'kinderen-en-scholen') {
-    content.cards = [...(content.cards || []), ...extra];
+    content.cards = [...extra, ...(content.cards || [])];
   } else {
-    content.extraCards = [...(content.extraCards || []), ...extra];
+    content.extraCards = [...extra, ...(content.extraCards || [])];
   }
   return content;
 }

@@ -43,6 +43,21 @@
     </div>
 
     <div class="offer-grid offer-grid--schrijven">
+{{#each extraCards}}
+      <div class="offer-card">
+        <h3>{{title}}</h3>
+{{#each body}}
+        <p>
+          {{this}}
+        </p>
+{{/each}}
+{{#if linkUrl}}
+        <p>
+          &rarr; <a href="{{linkUrl}}">{{linkText}}</a>
+        </p>
+{{/if}}
+      </div>
+{{/each}}
       <div class="offer-card">
         <h3>{{schrijfclub.title}}</h3>
         <p>
@@ -87,21 +102,6 @@
           {{individueel.closing}}
         </p>
       </div>
-{{#each extraCards}}
-      <div class="offer-card">
-        <h3>{{title}}</h3>
-{{#each body}}
-        <p>
-          {{this}}
-        </p>
-{{/each}}
-{{#if linkUrl}}
-        <p>
-          &rarr; <a href="{{linkUrl}}">{{linkText}}</a>
-        </p>
-{{/if}}
-      </div>
-{{/each}}
     </div>
   </div>
 </section>

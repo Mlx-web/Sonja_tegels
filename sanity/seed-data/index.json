@@ -5,7 +5,7 @@
   },
   "tileKinderen": {
     "pijler": "Voor kinderen & scholen",
-    "sub": "Kris-kras-klup & schoolprojecten"
+    "sub": "KrisKrasKlup & schoolprojecten"
   },
   "tileOrganisaties": {
     "pijler": "Organisaties & Professionals",
@@ -17,13 +17,13 @@
   },
   "binnenkort": [
     {
-      "title": "Kris-kras-klup — proefles 10 oktober",
+      "title": "KrisKrasKlup — proefles 10 oktober",
       "doelgroep": "kinderen-en-scholen",
       "body": [
         "Proefles: kom gratis meedoen op zaterdag 10 oktober, 15:00–16:00 uur, in de bblthk, in het kader van de Kinderboekenweek."
       ],
-      "linkText": null,
-      "linkUrl": null
+      "linkText": "Aanmelden via de bblthk",
+      "linkUrl": "https://bblthk.op-shop.nl/6054/kriskrasklup-try-out/10-10-2026"
     },
     {
       "title": "Workshop Fan Fiction (12–16 jaar)",

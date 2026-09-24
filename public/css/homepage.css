@@ -263,11 +263,13 @@ main.home-main {
 }
 
 .binnenkort-card {
+  display: block;
   flex: 0 0 170px;
   width: 170px;
   border-radius: var(--tile-radius);
   padding: 12px 14px;
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.16);
+  text-decoration: none;
   transform: rotate(-0.8deg);
   transition: transform 0.2s ease;
 }
@@ -306,7 +308,11 @@ main.home-main {
   margin-bottom: 0;
 }
 
-.binnenkort-card .binnenkort-summary a {
+.binnenkort-card .binnenkort-cta {
+  display: inline-block;
+  margin-top: 2px;
+  font-weight: 600;
+  text-decoration: underline;
   white-space: nowrap;
 }
 

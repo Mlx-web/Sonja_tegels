@@ -61,17 +61,17 @@ function firstSentence(value) {
 }
 
 // Voor de vaste, aan een pagina gebonden kaartjes (bv. Waga Write Club) die
-// zelf zijn aangevinkt met "Toon ook op de homepage onder Binnenkort". Het
-// homepage-kaartje linkt altijd naar de eigen doelgroep-pagina (waar de
-// volledige tekst en de eigenlijke link, bv. naar het aanmeldformulier,
-// wél staan) — niet naar de linkUrl van het kaartje zelf.
+// zelf zijn aangevinkt met "Toon ook op de homepage onder Binnenkort". De
+// hele kaart is klikbaar: heeft het kaartje een eigen link (bv. een
+// aanmeldformulier), dan gaat de hele kaart daarnaartoe; anders naar de
+// eigen doelgroep-pagina.
 function binnenkortItem(card, pageName, {summaryField = 'body'} = {}) {
   const pageUrl = PAGE_URL[pageName];
   return {
     title: card.title,
     summary: firstSentence(card[summaryField]),
-    linkText: 'Meer info',
-    linkUrl: pageUrl,
+    linkText: card.linkText || 'Meer info',
+    linkUrl: card.linkUrl || pageUrl,
     color: TILE_COLOR[pageName],
     textColor: TILE_TEXT_COLOR[pageName],
     doelgroep: pageName,
@@ -79,7 +79,9 @@ function binnenkortItem(card, pageName, {summaryField = 'body'} = {}) {
 }
 
 // Voor kaartjes die rechtstreeks op de homepage zijn aangemaakt (met een
-// gekozen doelgroep) — dit is de belangrijkste bron van "Binnenkort".
+// gekozen doelgroep) — dit is de belangrijkste bron van "Binnenkort". De
+// hele kaart is klikbaar naar de eigen link als die is ingevuld (bv. een
+// extern aanmeldformulier), anders naar de doelgroep-pagina.
 function homepageBinnenkortItem(item) {
   const pageName = item.doelgroep;
   const pageUrl = PAGE_URL[pageName];
@@ -87,8 +89,8 @@ function homepageBinnenkortItem(item) {
     title: item.title,
     datum: item.datum || '',
     summary: firstSentence(item.body),
-    linkText: 'Meer info',
-    linkUrl: pageUrl,
+    linkText: item.linkText || 'Meer info',
+    linkUrl: item.linkUrl || pageUrl,
     color: TILE_COLOR[pageName],
     textColor: TILE_TEXT_COLOR[pageName],
     doelgroep: pageName,

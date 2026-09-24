@@ -703,6 +703,13 @@ main.home-main {
     max-width: 320px;
     align-items: center;
   }
+
+  /* De titel/plaatje/ondertitel bovenaan blijven gecentreerd, maar de
+     tekst in de kaartjes zelf leest prettiger links uitgelijnd. */
+  .offer-grid,
+  .offer-card {
+    text-align: left;
+  }
 }
 
 /* ---------- Aanbod-tegels: dezelfde grid-taal als de homepage, met

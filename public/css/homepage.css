@@ -669,7 +669,7 @@ main.home-main {
 .tile-hero-media .sub-quote {
   font-family: 'Public Sans', -apple-system, sans-serif;
   font-size: 0.95rem;
-  opacity: 1;
+  opacity: 0.85;
 }
 
 .tile-hero-media .lead {

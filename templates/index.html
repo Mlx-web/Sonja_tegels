@@ -41,7 +41,7 @@
         <div class="tile-satellite">
           <svg class="tile-connector" viewBox="0 0 60 26" aria-hidden="true"><path d="M0,14 C 16,5 32,21 60,13" /></svg>
           <a class="binnenkort-card" href="{{linkUrl}}" style="background: {{color}}; color: {{textColor}};">
-            <p class="binnenkort-label">Binnenkort{{#if datum}} · {{datum}}{{/if}}</p>
+            <p class="binnenkort-label">Binnenkort{{#if datum}} <span class="binnenkort-datum">· {{datum}}</span>{{/if}}</p>
             <h3>{{title}}</h3>
             <p class="binnenkort-summary">{{summary}} <span class="binnenkort-cta">&rarr; {{linkText}}</span></p>
           </a>
@@ -63,7 +63,7 @@
         <div class="tile-satellite">
           <svg class="tile-connector" viewBox="0 0 60 26" aria-hidden="true">{{#if @first}}<path d="M0,12 C 20,23 40,4 60,15" />{{else}}<path d="M0,15 C 22,4 46,22 60,12" />{{/if}}</svg>
           <a class="binnenkort-card" href="{{linkUrl}}" style="background: {{color}}; color: {{textColor}};">
-            <p class="binnenkort-label">Binnenkort{{#if datum}} · {{datum}}{{/if}}</p>
+            <p class="binnenkort-label">Binnenkort{{#if datum}} <span class="binnenkort-datum">· {{datum}}</span>{{/if}}</p>
             <h3>{{title}}</h3>
             <p class="binnenkort-summary">{{summary}} <span class="binnenkort-cta">&rarr; {{linkText}}</span></p>
           </a>
@@ -85,7 +85,7 @@
         <div class="tile-satellite">
           <svg class="tile-connector" viewBox="0 0 60 26" aria-hidden="true"><path d="M0,13 C 14,24 44,3 60,14" /></svg>
           <a class="binnenkort-card" href="{{linkUrl}}" style="background: {{color}}; color: {{textColor}};">
-            <p class="binnenkort-label">Binnenkort{{#if datum}} · {{datum}}{{/if}}</p>
+            <p class="binnenkort-label">Binnenkort{{#if datum}} <span class="binnenkort-datum">· {{datum}}</span>{{/if}}</p>
             <h3>{{title}}</h3>
             <p class="binnenkort-summary">{{summary}} <span class="binnenkort-cta">&rarr; {{linkText}}</span></p>
           </a>
@@ -107,7 +107,7 @@
         <div class="tile-satellite">
           <svg class="tile-connector" viewBox="0 0 60 26" aria-hidden="true"><path d="M0,14 C 18,22 38,6 60,12" /></svg>
           <a class="binnenkort-card" href="{{linkUrl}}" style="background: {{color}}; color: {{textColor}};">
-            <p class="binnenkort-label">Binnenkort{{#if datum}} · {{datum}}{{/if}}</p>
+            <p class="binnenkort-label">Binnenkort{{#if datum}} <span class="binnenkort-datum">· {{datum}}</span>{{/if}}</p>
             <h3>{{title}}</h3>
             <p class="binnenkort-summary">{{summary}} <span class="binnenkort-cta">&rarr; {{linkText}}</span></p>
           </a>

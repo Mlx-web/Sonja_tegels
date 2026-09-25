@@ -291,6 +291,10 @@ main.home-main {
   text-transform: uppercase;
 }
 
+.binnenkort-card .binnenkort-datum {
+  white-space: nowrap;
+}
+
 .binnenkort-card h3 {
   margin: 0 0 6px;
   font-family: 'Fraunces', Georgia, serif;

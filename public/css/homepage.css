@@ -218,7 +218,7 @@ main.home-main {
    de hoogte van de tegel te passen. */
 .tile-satellites {
   position: absolute;
-  top: 50%;
+  top: calc(50% + 26px);
   transform: translateY(-50%);
   width: 230px;
   display: flex;

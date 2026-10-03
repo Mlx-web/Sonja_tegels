@@ -3,6 +3,7 @@ require('dotenv').config();
 const express = require('express');
 const cookieSession = require('cookie-session');
 const bcrypt = require('bcryptjs');
+const rateLimit = require('express-rate-limit');
 
 const contact = require('./contact');
 
@@ -43,7 +44,17 @@ function asyncHandler(handler) {
 
 // ---- Auth routes ----
 
-app.post('/api/login', (req, res) => {
+// Beperkt het aantal inlogpogingen, zodat een wachtwoord niet simpelweg
+// geraden kan worden door het script na script te laten proberen.
+const loginLimiter = rateLimit({
+  windowMs: 60 * 1000,
+  max: 5,
+  standardHeaders: true,
+  legacyHeaders: false,
+  message: { error: 'Te veel inlogpogingen. Probeer het over een minuut opnieuw.' },
+});
+
+app.post('/api/login', loginLimiter, (req, res) => {
   const { password } = req.body || {};
   if (typeof password !== 'string' || !bcrypt.compareSync(password, ADMIN_PASSWORD_HASH)) {
     return res.status(401).json({ error: 'Onjuist wachtwoord.' });

@@ -70,7 +70,7 @@ header.site-top {
 }
 
 .site-name--schrijfclub {
-  margin-left: 24px;
+  margin-left: 56px;
   color: var(--ink);
 }
 
@@ -673,6 +673,13 @@ main.home-main {
   font-weight: 750;
   line-height: 1.1;
   letter-spacing: -0.01em;
+}
+
+/* "Schrijven voor" blijft op regel 1 links staan; "Iedereen" (regel 2,
+   door de regelafbreking) schuift wat op naar rechts. */
+.page-schrijfclub .tile-hero-media .pijler {
+  padding-left: 48px;
+  text-indent: -48px;
 }
 
 .tile-hero-media .sub {

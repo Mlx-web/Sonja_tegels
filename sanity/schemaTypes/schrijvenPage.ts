@@ -38,12 +38,35 @@ export default defineType({
     defineField({name: 'subLocation', title: 'Locatiezin (onder het plaatje)', type: 'text', rows: 2}),
     defineField({name: 'quote', title: 'Quote (onder het plaatje, zonder aanhalingstekens)', type: 'text', rows: 2}),
     defineField({
+      name: 'subStichting',
+      title: 'Zin over de stichting (onder het plaatje)',
+      description: 'Bijvoorbeeld: "Schrijfclub Wageningen is een activiteit van Stichting Schrijfplezier."',
+      type: 'string',
+    }),
+    defineField({
       name: 'schrijfclub',
       title: 'Kaartje: Schrijfclub Wageningen',
       type: 'object',
       fields: [
         defineField({name: 'title', title: 'Titel', type: 'string'}),
         defineField({name: 'intro', title: 'Introtekst', type: 'text', rows: 3}),
+        defineField({
+          name: 'groepen',
+          title: 'Schrijfgroepen',
+          description: 'Eén regel per groep (bv. Dichtgroep, Verhaalgroep, Biografisch schrijven) met wanneer ze samenkomen.',
+          type: 'array',
+          of: [
+            {
+              type: 'object',
+              name: 'groep',
+              fields: [
+                defineField({name: 'naam', title: 'Naam van de groep', type: 'string', validation: (rule) => rule.required()}),
+                defineField({name: 'tijd', title: 'Wanneer (dag/frequentie)', type: 'string'}),
+              ],
+              preview: {select: {title: 'naam', subtitle: 'tijd'}},
+            },
+          ],
+        }),
         defineField({name: 'agendaLead', title: 'Zin voor de agenda-link', type: 'string'}),
         defineField({name: 'agendaLinkText', title: 'Linktekst agenda', type: 'string'}),
         defineField({name: 'agendaUrl', title: 'Link-URL agenda', type: 'url'}),

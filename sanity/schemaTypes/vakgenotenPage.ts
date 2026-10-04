@@ -46,31 +46,6 @@ export default defineType({
         binnenkortField,
       ],
     }),
-    defineField({
-      name: 'eerdereWorkshops',
-      title: 'Kaartje: Eerdere workshops',
-      type: 'object',
-      fields: [
-        defineField({name: 'title', title: 'Titel', type: 'string'}),
-        defineField({
-          name: 'items',
-          title: 'Workshops',
-          description: 'Voeg toe, verwijder of versleep om de volgorde te wijzigen.',
-          type: 'array',
-          of: [
-            {
-              type: 'object',
-              name: 'item',
-              fields: [
-                defineField({name: 'label', title: 'Naam workshop', type: 'string', validation: (rule) => rule.required()}),
-                defineField({name: 'description', title: 'Omschrijving', type: 'text', rows: 2}),
-              ],
-              preview: {select: {title: 'label'}},
-            },
-          ],
-        }),
-      ],
-    }),
     cardField,
   ],
   preview: {

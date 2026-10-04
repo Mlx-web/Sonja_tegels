@@ -96,6 +96,16 @@ export default defineType({
       ],
     }),
     defineField({
+      name: 'fictiefVerslag',
+      title: 'Kaartje: Fictief verslag',
+      type: 'object',
+      fields: [
+        defineField({name: 'title', title: 'Titel', type: 'string'}),
+        defineField({name: 'body', title: 'Tekst', type: 'text', rows: 3}),
+        binnenkortField,
+      ],
+    }),
+    defineField({
       name: 'andereIdeeen',
       title: 'Kaartje: Andere ideeën?',
       type: 'object',

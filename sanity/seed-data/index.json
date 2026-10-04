@@ -1,6 +1,6 @@
 {
   "tileSchrijven": {
-    "pijler": "Schrijven voor Iedereen",
+    "pijler": "Schrijven voor iedereen",
     "sub": "Schrijfgroepen & inloopsessies"
   },
   "tileKinderen": {
@@ -8,12 +8,12 @@
     "sub": "KrisKrasKlup & schoolprojecten"
   },
   "tileOrganisaties": {
-    "pijler": "Organisaties & Professionals",
+    "pijler": "Organisaties & professionals",
     "sub": "Beleidsromans & workshops"
   },
   "tileVakgenoten": {
     "pijler": "Vakgenoten",
-    "sub": "Ontwerpatelier & intervisie"
+    "sub": "Ontwerpateliers & intervisie"
   },
   "binnenkort": [
     {
@@ -21,7 +21,7 @@
       "datum": "10 oktober",
       "doelgroep": "kinderen-en-scholen",
       "body": [
-        "Proefles: kom gratis meedoen op zaterdag 10 oktober, 15:00–16:00 uur, in de bblthk, in het kader van de Kinderboekenweek."
+        "Kom de KrisKrasKlup gratis uitproberen tijdens de Kinderboekenweek! De try-out is op zaterdag 10 oktober, 15:00–16:00 uur, in de bblthk."
       ],
       "linkText": "Aanmelden via de bblthk",
       "linkUrl": "https://bblthk.op-shop.nl/6054/kriskrasklup-try-out/10-10-2026"
@@ -31,7 +31,7 @@
       "datum": "16 oktober",
       "doelgroep": "kinderen-en-scholen",
       "body": [
-        "Geef je favoriete boek, film, serie of game een nieuwe plot: jij bepaalt wat er gebeurt tijdens de workshop.",
+        "Geef je favoriete boek, film, serie of game een nieuwe plot: tijdens deze workshop bepaal jij wat er gebeurt met je favoriete personages.",
         "Op 16 oktober om 16:30 uur in de bibliotheek (bblthk)."
       ],
       "linkText": "Aanmelden via de bblthk",
@@ -41,8 +41,8 @@
       "title": "Ontwerpatelier voor docenten creatief schrijven",
       "doelgroep": "vakgenoten",
       "body": [
-        "Een creatieve werkplaats voor iedereen die les of workshops geeft in het schrijven van verhalen en gedichten: samen nieuwe, speelse schrijfoefeningen bedenken, testen en verfijnen.",
-        "Sonja geeft dit ontwerpatelier samen met een collega."
+        "Een creatieve werkplaats voor iedereen die les of workshops geeft in het schrijven van verhalen en gedichten. Samen bedenken, testen en verfijnen we nieuwe, speelse schrijfoefeningen. Aan de hand van een thema, zoals spel, beweging of omdenken.",
+        "Sonja geeft elk ontwerpatelier samen met een expert op het thema."
       ],
       "linkText": null,
       "linkUrl": null

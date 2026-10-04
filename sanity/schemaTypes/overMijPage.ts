@@ -8,7 +8,13 @@ export default defineType({
     defineField({name: 'pijler', title: 'Titel (in de hero)', type: 'string'}),
     defineField({name: 'subLine1', title: 'Subregel 1', type: 'string'}),
     defineField({name: 'subLine2', title: 'Subregel 2', type: 'string'}),
-    defineField({name: 'intro', title: 'Introtekst', type: 'text', rows: 4}),
+    defineField({
+      name: 'intro',
+      title: 'Introtekst',
+      description: 'Elke regel wordt een eigen alinea. Voeg toe of verwijder om alinea’s te wijzigen.',
+      type: 'array',
+      of: [{type: 'text', rows: 4}],
+    }),
     defineField({name: 'publicatiesTitle', title: 'Kopje: Publicaties', type: 'string'}),
     defineField({
       name: 'publicaties',

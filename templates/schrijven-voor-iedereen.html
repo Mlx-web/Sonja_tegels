@@ -17,10 +17,9 @@
   <div class="header-row">
     <div class="header-left">
       <a class="header-back" href="index.html">&larr; Homepage</a>
-      <h1 class="site-name">Sonja van der Arend</h1>
+      <h1 class="site-name">Schrijfclub Wageningen</h1>
     </div>
     <div class="header-right">
-      <a class="header-overmij" href="over-mij.html">Over mij</a>
       <a class="nav-cta" href="contact.html">Aanmelden &amp; Contact</a>
     </div>
   </div>
@@ -39,6 +38,9 @@
       </p>
       <p class="sub sub-quote">
         &ldquo;{{quote}}&rdquo;
+      </p>
+      <p class="sub">
+        {{subStichting}}
       </p>
     </div>
 
@@ -63,9 +65,14 @@
         <p>
           {{schrijfclub.intro}}
         </p>
+        <ul class="groepen-lijst">
+{{#each schrijfclub.groepen}}
+          <li><strong>{{naam}}</strong>: {{tijd}}</li>
+{{/each}}
+        </ul>
         <p>
           {{schrijfclub.agendaLead}}
-          &rarr; <a class="link-plain" href="{{schrijfclub.agendaUrl}}">{{schrijfclub.agendaLinkText}}</a>.
+          <a class="link-plain" href="{{schrijfclub.agendaUrl}}">{{schrijfclub.agendaLinkText}}</a>.
         </p>
         <p>
           {{schrijfclub.closing}}
@@ -107,7 +114,6 @@
 </section>
 
 <footer class="site-bottom">
-  <p>Sonja van der Arend werkt onder Stichting Schrijfplezier (facturatie).</p>
   <div class="footer-links">
     <a href="privacy.html">Privacy</a>
     <a href="login.html">Berichten</a>

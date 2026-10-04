@@ -1,17 +1,21 @@
 {
   "pijler": "Over mij",
   "subLine1": "Schrijver, schrijfdocent en -coach",
-  "subLine2": "Voorheen bestuurskundig onderzoeker",
-  "intro": "Ik heb mijn werk gemaakt van samen schrijven en mensen laten schrijven. In 2023 rondde ik de opleiding Docent Creatief Schrijven af bij Dactylus, de academie voor schrijfdocenten. Ik help mensen om met plezier samen te schrijven. Door schrijven kunnen mensen zich verbinden met zichzelf, de wereld, hun werk en anderen.",
+  "subLine2": "Voorheen onderzoeker bestuurskunde",
+  "intro": [
+    "Ik heb mijn werk gemaakt van samen schrijven en mensen laten schrijven. Ik geloof in schrijven als hobby: voor je plezier en samen met anderen. Mensen die samen schrijven verbinden zich met zichzelf, met de wereld, met hun werk en met elkaar.",
+    "Het begon met Een otter in Brussel, mijn eerste beleidsroman. Een echt verhaal met spanning, humor en romantiek, over de Europese Kaderrichtlijn Water. Geschreven met professionals uit het waterbeheer. Na jarenlange pogingen om wetenschappelijke teksten te produceren was het een verademing om mijn creativiteit maximaal te kunnen inzetten bij het schrijven. Dat zouden meer mensen moeten doen! Sindsdien help ik kinderen in groep 8 met het bedenken en schrijven van hun eigen eindmusical, begon ik een schrijfclub voor kinderen en schreef ik nog een paar beleidsromans. In 2020 heb ik Schrijfclub Wageningen opgericht, waar inmiddels meer dan 50 leden en tientallen anderen regelmatig bij elkaar komen om verhalen en gedichten te maken. In 2023 deed ik de opleiding Docent Creatief Schrijven bij Dactylus, de academie voor schrijfdocenten.",
+    "Tegenwoordig ben ik onderdeel van de Cultuurwerkplaats in Wageningen, een paradijs voor kunstenaars en cultuurliefhebbers. Ik beheer de Write Place, een atelier dat speciaal is ingericht voor samen schrijven en luisteren naar elkaar. Verder werk ik nog steeds graag op het snijvlak van onderwijs, onderzoek, beleid en creatief schrijven. Met andere woorden: serious fiction."
+  ],
   "publicatiesTitle": "Publicaties",
   "publicaties": [
     {
-      "title": "Pleitbezorgers, procesmanagers en participanten. Interactief beleid en de rolverdeling tussen overheid en burgers in de Nederlandse democratie",
-      "rest": " (Eburon, 2007): proefschrift over de opkomst en ontwikkeling van interactief beleid in Nederland, en de wisselwerking tussen interactief beleid, democratie en macht."
+      "title": "Krachtige grachten",
+      "rest": " (beleidsfeuilleton, 2025): een verhaal in afleveringen, geschreven samen met medewerkers van Waternet, Amsterdam."
     },
     {
-      "title": "Een otter in Brussel",
-      "rest": " (Landwerk, 2013): een waterkwaliteitsroman over de Europese Kaderrichtlijn Water, geschreven in opdracht van STOWA."
+      "title": "Veerkracht",
+      "rest": " (2023): een boekje met 36 korte verhalen van 20 plezierschrijvers uit Randwijk en Wageningen, over het Lexkesveer, het pontje tussen beide plaatsen. Ik begeleidde de schrijvers van de Schrijfclub; aan de Randwijkse kant coördineerde Yoeke Nagel het proces en deed de eindredactie. Illustraties door Annet Konijn, vormgeving door Buro Blûn, foto's door Jan Prins."
     },
     {
       "title": "De nevengeul van Kampvoort",
@@ -22,12 +26,12 @@
       "rest": " (Landwerk, 2016): een roman over energieneutraal bouwen, uitgegeven via Platform31."
     },
     {
-      "title": "Veerkracht",
-      "rest": ": een boekje met 36 korte verhalen van 20 plezierschrijvers uit Randwijk en Wageningen, over het Lexkesveer, het pontje tussen beide dorpen. Sonja begeleidde als schrijfcoach het schrijfproces van de cursisten bij de Schrijfclub; aan de Randwijkse kant coördineerde Yoeke Nagel het proces en deed de eindredactie. Illustraties door Annet Konijn, vormgeving door Buro Blûn, foto's door Jan Prins."
+      "title": "Een otter in Brussel",
+      "rest": " (Landwerk, 2013): een waterkwaliteitsroman over de Europese Kaderrichtlijn Water, geschreven in opdracht van STOWA."
     },
     {
-      "title": "Beleidsfeuilleton",
-      "rest": ": een verhaal in afleveringen, geschreven samen met medewerkers van een organisatie in de watersector."
+      "title": "Pleitbezorgers, procesmanagers en participanten. Interactief beleid en de rolverdeling tussen overheid en burgers in de Nederlandse democratie",
+      "rest": " (Eburon, 2007): proefschrift over de opkomst en ontwikkeling van interactief beleid in Nederland, en de wisselwerking tussen interactief beleid, democratie en macht."
     }
   ]
 }

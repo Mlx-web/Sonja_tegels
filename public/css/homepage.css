@@ -790,6 +790,20 @@ main.home-main {
   margin-bottom: 0;
 }
 
+.offer-card .groepen-lijst {
+  margin: 0 0 12px;
+  padding: 0;
+  list-style: none;
+}
+
+.offer-card .groepen-lijst li {
+  margin: 0 0 6px;
+}
+
+.offer-card .groepen-lijst li:last-child {
+  margin-bottom: 0;
+}
+
 .offer-card a {
   font-weight: 600;
 }

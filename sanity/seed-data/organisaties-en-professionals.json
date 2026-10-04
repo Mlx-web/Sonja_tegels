@@ -1,32 +1,36 @@
 {
   "pijler": "Organisaties & Professionals",
-  "lead": "Als voormalig bestuurskundig onderzoeker combineert Sonja haar kennis van beleid en organisaties met haar schrijverschap. Ze helpt professionals en organisaties om via fictie en schrijven dichter bij hun eigen werk en samenwerking te komen.",
+  "lead": "Om beleid en samenwerking te begrijpen, is fictie een fantastisch en krachtig middel. Sonja combineert haar achtergrond als bestuurskundig onderzoeker met haar schrijverschap. Door samen met betrokkenen personages en verhaallijnen te creëren, helpt ze professionals en organisaties anders te kijken naar hun eigen rol en werkveld.",
   "wur": {
     "title": "Schrijfworkshops WUR",
-    "body": "Voor promovendi en medewerkers van Wageningen University & Research: fictietechnieken als hulpmiddel om losser en directer te leren schrijven."
+    "body": "Wil je losser en directer leren schrijven? In workshops voor promovendi en medewerkers van Wageningen University & Research maak je kennis met fictietechnieken en leer je de stem in je pen te gebruiken."
   },
   "huisarts": {
     "title": "Schrijfworkshops huisartsopleiders",
-    "body": "Module Creatief Schrijven tijdens de scholingsdagen voor huisartsopleiders Utrecht (2023 en 2024). Deelnemers gebruiken fictietechnieken zoals verhaallijn, spanningsboog, het creëren van personages en 'wat als...', om een verhaal te schrijven over hun vak als huisarts en opleider."
+    "body": "In de module Creatief Schrijven maken huisartsopleiders kennis met fictietechnieken als verhaallijn, spanningsboog, personages en 'wat als…' om een verhaal te schrijven over hun werk als huisarts en opleider. Sonja gaf deze module tijdens scholingsdagen in Utrecht in 2023 en 2024."
   },
   "beleidsromans": {
     "title": "Beleidsromans",
-    "intro": "Een beleidsroman is een roman rond een concreet beleidsvraagstuk, gemaakt met input van de mensen die erbij betrokken zijn: fictie die laat zien hoe beleid in de praktijk tot stand komt. Onderzoek naar samenwerking, ervaringen en besluitvorming dat niet in een la, maar op het nachtkastje belandt.",
+    "intro": "Hoe zorg je dat onderzoek naar beleid en samenwerking niet alleen wordt opgeleverd, maar ook wordt gelezen? Een beleidsroman is een roman rond een concreet beleidsvraagstuk, gemaakt in samenwerking met de mensen die erbij betrokken zijn. Het verhaal laat zien hoe beleid in de praktijk ontstaat en werkt. Een onderzoek naar samenwerking, ervaringen en besluitvorming dat niet in een la, maar op het nachtkastje belandt.",
     "booksIntro": "Drie beleidsromans: ",
     "books": [
       {"title": "Een otter in Brussel", "year": "2013", "description": "over de Europese Kaderrichtlijn Water, in opdracht van STOWA"},
       {"title": "De nevengeul van Kampvoort", "year": "2016", "description": "over burgerparticipatie bij het rivierproject Ruimte voor de Rivier"},
       {"title": "Beter dan nul", "year": "2016", "description": "over energieneutraal bouwen, uitgegeven via Platform31"}
     ],
-    "closing": "Denk je dat dit voor jouw organisatie iets is? Neem contact op om de mogelijkheden te bespreken."
+    "closing": "Een beleidsroman kan een vraagstuk in je organisatie op een andere manier zichtbaar maken. Neem contact op, dan verkennen we samen wat mogelijk is."
   },
   "beleidsfeuilleton": {
     "title": "Beleidsfeuilleton",
-    "body": "Een beleidsfeuilleton is een verhaal dat in afleveringen verschijnt, geschreven samen met medewerkers van een organisatie. Eerder geschreven voor een organisatie in de watersector."
+    "body": "Met een beleidsfeuilleton kun je een lopend proces binnen je organisatie in verhaalvorm volgen en delen. Een verhaal in afleveringen, geschreven samen met medewerkers van de organisatie. Sonja schreef eerder een beleidsfeuilleton voor Waternet in Amsterdam."
+  },
+  "fictiefVerslag": {
+    "title": "Fictief verslag",
+    "body": "Voor P2-managers schreef Sonja een fictief verslag van een grote bijeenkomst. De dag begon met het begin van een verhaal, dat Sonja de rest van de dag uitwerkte met alles wat ze die dag hoorde en zag. De notulen die je deelnemers helemaal uitlezen tot de ontknoping."
   },
   "andereIdeeen": {
     "title": "Andere ideeën?",
-    "body": "Heb je een ander idee voor je organisatie? Neem contact op met Sonja om de mogelijkheden te bespreken."
+    "body": "Heb je een ander vraagstuk of idee? De mogelijkheden op het snijvlak van beleid, onderzoek, onderwijs en fictie zijn eindeloos. Neem contact op om samen op zoek te gaan naar een creatieve vorm."
   },
   "extraCards": []
 }

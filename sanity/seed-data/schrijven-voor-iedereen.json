@@ -1,36 +1,41 @@
 {
   "pijler": "Schrijven voor Iedereen",
-  "subIntro": "Schrijfactiviteiten voor volwassenen in Wageningen, begeleiding door Sonja.",
+  "subIntro": "Schrijven voor volwassenen in Wageningen: vrijblijvend aanschuiven of een vaste schrijfgroep met begeleiding van Sonja.",
   "subLocation": "In The Write Place (lokaal 9) van de Cultuurwerkplaats.",
   "quote": "Ik leer mensen niet hoe ze moeten schrijven, ik laat ze ontdekken dat ze het al kunnen.",
+  "subStichting": "Schrijfclub Wageningen is een activiteit van Stichting Schrijfplezier.",
   "schrijfclub": {
     "title": "Schrijfclub Wageningen",
-    "intro": "Schrijven in een vaste schrijfgroep van 6 tot 10 leden, met schrijfoefeningen en begeleiding van Sonja. Er zijn groepen voor gedichten, verhalen of biografie.",
-    "agendaLead": "De schrijfgroepen komen om de week samen. Zie de",
+    "intro": "Bij de Schrijfclub Wageningen schrijf je in een vaste groep van 6 tot 10 mensen, met schrijfoefeningen en begeleiding van Sonja.",
+    "groepen": [
+      {"naam": "Dichtgroep", "tijd": "Maandagavond 20:00–22:00, eens in de twee weken."},
+      {"naam": "Verhaalgroep", "tijd": "Woensdagmiddag 13:30–15:30, eens in de twee weken."},
+      {"naam": "Biografisch schrijven", "tijd": "Maandagavond 19:30–21:30, eens in de twee weken."}
+    ],
+    "agendaLead": "Bekijk de actuele data in de",
     "agendaLinkText": "agenda van de Cultuurwerkplaats",
     "agendaUrl": "https://decultuurwerkplaats.nl/agenda/",
-    "closing": "Wil je aansluiten? Je bent welkom om een keer te komen kennismaken."
+    "closing": "Wil je een keer komen kennismaken? Neem contact op!"
   },
   "waga": {
     "title": "Waga Write Club",
     "lines": [
-      "A community of for-fun writers. Not a course: playful exercises, writing on the spot, sharing if you wish. Every other week on Wednesday evenings, 2 hours.",
-      "English-speaking, but write in any language you like."
+      "A community of creative writers. You get playful exercises, write on the spot, and share if you wish. Every other Wednesday and Thursday evenings, for two hours."
     ],
     "ctaText": "Get in touch",
     "binnenkort": true
   },
   "writeHere": {
-    "title": "Write here! Write now!",
-    "intro": "Wil je schrijven, maar niet alleen? Of je nu werkt aan je derde bestseller of je eerste thesis, je laatste dichtbundel of je derde sinterklaasgedicht: het kan hier en nu. Geen aanmelding nodig, je loopt gewoon binnen.",
-    "englishNote": "Prefer to write in English? Write here! Write now! is an English-friendly drop-in session: no registration, just show up.",
+    "title": "Write Here Write Now",
+    "intro": "Wil je schrijven, maar komt het er thuis in je eentje niet van? Bij Write Here Write Now vind je een plek aan de grote ronde tafel tussen andere schrijvers. Of je nu werkt aan je derde bestseller of je eerste thesis, je dagboek of een brief aan je oma. Geen aanmelding nodig, je loopt binnen en je schrijft.",
+    "englishNote": "Write Here Write Now is a multilingual drop-in session. No registration required. Just walk in and find your place among other writers. We just share our plans and start writing.",
     "times": "Elke dinsdag 19:45–21:30 en vrijdag 9:00–10:45.",
     "location": "In The Write Place (lokaal 9) van de Cultuurwerkplaats."
   },
   "individueel": {
     "title": "Individuele schrijfcoaching",
-    "intro": "Liever een-op-eenbegeleiding dan in een groep? Bij individuele schrijfcoaching werk je in je eigen tempo aan je eigen tekst, verhaal of schrijfproject.",
-    "closing": "Neem contact op om de mogelijkheden te bespreken."
+    "intro": "Bij individuele schrijfcoaching werk je, met begeleiding van Sonja, in je eigen tempo, aan een tekst, verhaal of schrijfproject waar je gericht mee verder wilt.",
+    "closing": "Neem contact op, dan kijken we samen wat jouw tekst of schrijfproject nodig heeft."
   },
   "extraCards": []
 }

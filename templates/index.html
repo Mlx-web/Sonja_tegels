@@ -29,50 +29,6 @@
   <div class="tile-grid">
 
     <div class="tile-cell">
-      <a class="tile tile--schrijven" href="schrijven-voor-iedereen.html" aria-label="Schrijven voor Iedereen">
-        <img src="images/tegels/schrijven-voor-iedereen.jpg" alt="">
-        <div class="tile-label">
-          <span class="pijler">{{tileSchrijven.pijler}}</span>
-          <span class="sub">{{tileSchrijven.sub}}</span>
-        </div>
-      </a>
-      <div class="tile-satellites tile-satellites--left">
-{{#each tileSchrijven.items}}
-        <div class="tile-satellite">
-          <svg class="tile-connector" viewBox="0 0 60 26" aria-hidden="true"><path d="M0,14 C 16,5 32,21 60,13" /></svg>
-          <a class="binnenkort-card" href="{{linkUrl}}" style="background: {{color}}; color: {{textColor}};">
-            <p class="binnenkort-label">Binnenkort{{#if datum}} <span class="binnenkort-datum">· {{datum}}</span>{{/if}}</p>
-            <h3>{{title}}</h3>
-            <p class="binnenkort-summary">{{summary}} <span class="binnenkort-cta">&rarr; {{linkText}}</span></p>
-          </a>
-        </div>
-{{/each}}
-      </div>
-    </div>
-
-    <div class="tile-cell">
-      <a class="tile tile--kinderen" href="kinderen-en-scholen.html" aria-label="Voor kinderen en scholen">
-        <img src="images/tegels/kinderen-en-scholen.jpg" alt="">
-        <div class="tile-label">
-          <span class="pijler">{{tileKinderen.pijler}}</span>
-          <span class="sub">{{tileKinderen.sub}}</span>
-        </div>
-      </a>
-      <div class="tile-satellites tile-satellites--right">
-{{#each tileKinderen.items}}
-        <div class="tile-satellite">
-          <svg class="tile-connector" viewBox="0 0 60 26" aria-hidden="true">{{#if @first}}<path d="M0,12 C 20,23 40,4 60,15" />{{else}}<path d="M0,15 C 22,4 46,22 60,12" />{{/if}}</svg>
-          <a class="binnenkort-card" href="{{linkUrl}}" style="background: {{color}}; color: {{textColor}};">
-            <p class="binnenkort-label">Binnenkort{{#if datum}} <span class="binnenkort-datum">· {{datum}}</span>{{/if}}</p>
-            <h3>{{title}}</h3>
-            <p class="binnenkort-summary">{{summary}} <span class="binnenkort-cta">&rarr; {{linkText}}</span></p>
-          </a>
-        </div>
-{{/each}}
-      </div>
-    </div>
-
-    <div class="tile-cell">
       <a class="tile tile--organisaties" href="organisaties-en-professionals.html" aria-label="Organisaties en professionals">
         <img src="images/tegels/organisaties-en-professionals.jpg" alt="">
         <div class="tile-label">
@@ -106,6 +62,50 @@
 {{#each tileVakgenoten.items}}
         <div class="tile-satellite">
           <svg class="tile-connector" viewBox="0 0 60 26" aria-hidden="true"><path d="M0,14 C 18,22 38,6 60,12" /></svg>
+          <a class="binnenkort-card" href="{{linkUrl}}" style="background: {{color}}; color: {{textColor}};">
+            <p class="binnenkort-label">Binnenkort{{#if datum}} <span class="binnenkort-datum">· {{datum}}</span>{{/if}}</p>
+            <h3>{{title}}</h3>
+            <p class="binnenkort-summary">{{summary}} <span class="binnenkort-cta">&rarr; {{linkText}}</span></p>
+          </a>
+        </div>
+{{/each}}
+      </div>
+    </div>
+
+    <div class="tile-cell">
+      <a class="tile tile--kinderen" href="kinderen-en-scholen.html" aria-label="Voor kinderen en scholen">
+        <img src="images/tegels/kinderen-en-scholen.jpg" alt="">
+        <div class="tile-label">
+          <span class="pijler">{{tileKinderen.pijler}}</span>
+          <span class="sub">{{tileKinderen.sub}}</span>
+        </div>
+      </a>
+      <div class="tile-satellites tile-satellites--left">
+{{#each tileKinderen.items}}
+        <div class="tile-satellite">
+          <svg class="tile-connector" viewBox="0 0 60 26" aria-hidden="true"><path d="M0,14 C 16,5 32,21 60,13" /></svg>
+          <a class="binnenkort-card" href="{{linkUrl}}" style="background: {{color}}; color: {{textColor}};">
+            <p class="binnenkort-label">Binnenkort{{#if datum}} <span class="binnenkort-datum">· {{datum}}</span>{{/if}}</p>
+            <h3>{{title}}</h3>
+            <p class="binnenkort-summary">{{summary}} <span class="binnenkort-cta">&rarr; {{linkText}}</span></p>
+          </a>
+        </div>
+{{/each}}
+      </div>
+    </div>
+
+    <div class="tile-cell">
+      <a class="tile tile--schrijven" href="schrijven-voor-iedereen.html" aria-label="Schrijven voor Iedereen">
+        <img src="images/tegels/schrijven-voor-iedereen.jpg" alt="">
+        <div class="tile-label">
+          <span class="pijler">{{tileSchrijven.pijler}}</span>
+          <span class="sub">{{tileSchrijven.sub}}</span>
+        </div>
+      </a>
+      <div class="tile-satellites tile-satellites--right">
+{{#each tileSchrijven.items}}
+        <div class="tile-satellite">
+          <svg class="tile-connector" viewBox="0 0 60 26" aria-hidden="true">{{#if @first}}<path d="M0,12 C 20,23 40,4 60,15" />{{else}}<path d="M0,15 C 22,4 46,22 60,12" />{{/if}}</svg>
           <a class="binnenkort-card" href="{{linkUrl}}" style="background: {{color}}; color: {{textColor}};">
             <p class="binnenkort-label">Binnenkort{{#if datum}} <span class="binnenkort-datum">· {{datum}}</span>{{/if}}</p>
             <h3>{{title}}</h3>

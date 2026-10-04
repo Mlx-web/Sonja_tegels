@@ -8,8 +8,9 @@
   /* Overheersende kleur van elke tegel-illustratie, gebruikt voor de hero-
      band en de aanbod-tegels op de bijbehorende content-pagina. */
   --tile-schrijven: #fbcf1e;
-  --tile-kinderen: #f5c518;
-  --tile-organisaties: #3f47b0;
+  --tile-schrijfclub: #fbcf1e;
+  --tile-kinderen: #e39cb6;
+  --tile-organisaties: #1883ff;
   --tile-vakgenoten: #1e7a46;
   --tile-overmij: #8c82d6;
   --hover-donkergrijs: #46433d;
@@ -66,6 +67,10 @@ header.site-top {
   font-size: 1.75rem;
   font-weight: 750;
   letter-spacing: -0.01em;
+}
+
+.site-name--schrijfclub {
+  margin-left: 24px;
   color: var(--ink);
 }
 
@@ -575,7 +580,7 @@ main.home-main {
 }
 
 .tile-hero--schrijven {
-  background: var(--tile-schrijven);
+  background: var(--tile-schrijfclub);
   color: var(--ink);
   view-transition-name: hero-schrijven;
 }
@@ -811,10 +816,12 @@ main.home-main {
 .card-cta-right {
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 
 .card-cta-right .btn-dark {
   align-self: flex-end;
+  margin-top: auto;
 }
 
 .btn-dark {
@@ -851,7 +858,7 @@ main.home-main {
 }
 
 .offer-grid--schrijven .offer-card {
-  background: var(--tile-schrijven);
+  background: var(--tile-schrijfclub);
   color: var(--ink);
 }
 

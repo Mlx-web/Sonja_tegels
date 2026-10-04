@@ -38,6 +38,8 @@ export default defineType({
             }),
             defineField({name: 'linkText', title: 'Linktekst (optioneel)', type: 'string'}),
             defineField({name: 'linkUrl', title: 'Link-URL (optioneel)', type: 'url'}),
+            defineField({name: 'linkText2', title: 'Tweede linktekst (optioneel)', type: 'string'}),
+            defineField({name: 'linkUrl2', title: 'Tweede link-URL (optioneel)', type: 'url'}),
           ],
           preview: {
             select: {title: 'title'},

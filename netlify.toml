@@ -7,3 +7,11 @@
   from = "/api/*"
   to = "/.netlify/functions/api"
   status = 200
+
+# schrijfclubwageningen.nl is een los domein op dezelfde site, dat altijd
+# rechtstreeks naar de Schrijfclub-pagina (Schrijven voor Iedereen) wijst.
+[[redirects]]
+  from = "https://schrijfclubwageningen.nl/*"
+  to = "https://sonjavanderarend.nl/schrijven-voor-iedereen.html"
+  status = 301
+  force = true

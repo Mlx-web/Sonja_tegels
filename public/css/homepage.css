@@ -197,6 +197,7 @@ body.page-schrijfclub .nav-cta:active {
   h1.site-name.site-name--schrijfclub {
     margin-left: 0;
     text-align: center;
+    padding-right: 14%;
     white-space: normal;
     font-size: clamp(1.4rem, 8.6vw, 2.3rem);
     line-height: 1.2;
@@ -204,6 +205,7 @@ body.page-schrijfclub .nav-cta:active {
 
   .page-schrijfclub .nav-cta {
     order: 2;
+    margin-left: auto;
   }
 
   /* Op mobiel verhuist "Naar Sonja's website" uit de header naar onderaan

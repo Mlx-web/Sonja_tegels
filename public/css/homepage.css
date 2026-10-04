@@ -158,6 +158,22 @@ body.page-vakgenoten .nav-cta:hover {
   .nav-cta {
     order: 4;
   }
+
+  /* Schrijfclub-pagina: titel gecentreerd en niet naar rechts geschoven
+     (dat was alleen bedoeld voor desktop), en Aanmelden & Contact vóór
+     Naar Sonja's website. */
+  .site-name--schrijfclub {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .page-schrijfclub .nav-cta {
+    order: 2;
+  }
+
+  .page-schrijfclub .header-back {
+    order: 3;
+  }
 }
 
 main {
@@ -347,6 +363,12 @@ main.home-main {
 
   .tile-cell {
     margin-bottom: 8px;
+  }
+
+  /* Op mobiel staat Vakgenoten helemaal onderaan, los van de volgorde
+     op desktop. */
+  .tile-cell--vakgenoten {
+    order: 999;
   }
 
   .tile-satellites {

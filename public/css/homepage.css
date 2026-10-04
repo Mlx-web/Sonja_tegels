@@ -191,10 +191,15 @@ body.page-schrijfclub .nav-cta:active {
 
   /* Schrijfclub-pagina: titel gecentreerd en niet naar rechts geschoven
      (dat was alleen bedoeld voor desktop), en Aanmelden & Contact vóór
-     Naar Sonja's website. */
-  .site-name--schrijfclub {
+     Naar Sonja's website. "Schrijfclub Wageningen" is langer dan "Sonja
+     van der Arend" — zonder eigen, kleinere lettergrootte en zonder de
+     nowrap van .site-name liep de titel op smalle schermen buiten beeld. */
+  h1.site-name.site-name--schrijfclub {
     margin-left: 0;
     text-align: center;
+    white-space: normal;
+    font-size: clamp(1.1rem, 6.3vw, 1.6rem);
+    line-height: 1.2;
   }
 
   .page-schrijfclub .nav-cta {

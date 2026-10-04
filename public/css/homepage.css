@@ -206,8 +206,11 @@ body.page-schrijfclub .nav-cta:active {
     order: 2;
   }
 
-  .page-schrijfclub .header-back {
-    order: 3;
+  /* Op mobiel verhuist "Naar Sonja's website" uit de header naar onderaan
+     de pagina (zie .hero-footer-nav) — op desktop blijft hij gewoon
+     bovenin staan. */
+  .page-schrijfclub .header-right .header-back {
+    display: none;
   }
 }
 
@@ -1135,6 +1138,23 @@ main.home-main {
 
 .page-body li:last-child {
   margin-bottom: 0;
+}
+
+/* ---------- Schrijfclub Wageningen: op mobiel verhuist "Naar Sonja's
+   website" uit de header naar onderaan de pagina, onder alle kaartjes —
+   maar wel binnen de gele band, niet op de beige paginakleur eronder.
+   Op desktop blijft hij gewoon in de header staan. ---------- */
+
+.hero-footer-nav {
+  display: none;
+}
+
+@media (max-width: 720px) {
+  .hero-footer-nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 32px;
+  }
 }
 
 /* ---------- Footer, doorlopend op elke pagina ---------- */

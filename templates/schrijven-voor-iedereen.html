@@ -16,11 +16,11 @@
 <header class="site-top">
   <div class="header-row">
     <div class="header-left">
-      <a class="header-back" href="index.html">&larr; Homepage</a>
       <h1 class="site-name">Schrijfclub Wageningen</h1>
     </div>
     <div class="header-right">
       <a class="nav-cta" href="contact.html">Aanmelden &amp; Contact</a>
+      <a class="header-back" href="index.html">Naar Sonja&rsquo;s website &rarr;</a>
     </div>
   </div>
 </header>
@@ -83,6 +83,11 @@
 {{#each waga.lines}}
         <p>
           <em>{{this}}</em>
+        </p>
+{{/each}}
+{{#each waga.linesNl}}
+        <p>
+          {{this}}
         </p>
 {{/each}}
         <a class="btn-dark" href="contact.html">&rarr; {{waga.ctaText}}</a>

@@ -86,6 +86,12 @@ export default defineType({
           type: 'array',
           of: [{type: 'text', rows: 2}],
         }),
+        defineField({
+          name: 'linesNl',
+          title: 'Tekstregels (Nederlandse vertaling)',
+          type: 'array',
+          of: [{type: 'text', rows: 2}],
+        }),
         defineField({name: 'ctaText', title: 'Knoptekst', type: 'string'}),
         binnenkortField,
       ],

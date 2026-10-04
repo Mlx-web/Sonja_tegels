@@ -418,6 +418,11 @@ main.home-main {
   z-index: 1;
 }
 
+.tile--schrijven::after,
+.tile--kinderen::after {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.38) 0%, rgba(0, 0, 0, 0) 40%);
+}
+
 .tile-label {
   position: absolute;
   left: 0;
@@ -804,8 +809,8 @@ main.home-main {
 
 .offer-card .groepen-lijst {
   margin: 0 0 12px;
-  padding: 0;
-  list-style: none;
+  padding-left: 1.2em;
+  list-style: disc;
 }
 
 .offer-card .groepen-lijst li {

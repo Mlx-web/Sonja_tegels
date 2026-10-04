@@ -35,8 +35,10 @@ body {
   font-family: 'Public Sans', -apple-system, sans-serif;
 }
 
-a {
+a,
+button {
   color: inherit;
+  -webkit-tap-highlight-color: transparent;
 }
 
 /* ---------- Header, doorlopend op elke pagina ---------- */
@@ -105,26 +107,54 @@ header.site-top {
    vakgenoten-pagina krijgen hieronder hun eigen kleur. */
 .header-back:hover,
 .header-overmij:hover,
-.nav-cta:hover {
+.nav-cta:hover,
+.header-back:active,
+.header-overmij:active,
+.nav-cta:active {
   background: var(--tile-overmij);
   transform: translateY(-2px);
 }
 
 body.home-body .header-overmij:hover,
-body.home-body .nav-cta:hover {
+body.home-body .nav-cta:hover,
+body.home-body .header-overmij:active,
+body.home-body .nav-cta:active {
   background: var(--hover-donkergrijs);
 }
 
 body.page-kinderen .header-back:hover,
 body.page-kinderen .header-overmij:hover,
-body.page-kinderen .nav-cta:hover {
+body.page-kinderen .nav-cta:hover,
+body.page-kinderen .header-back:active,
+body.page-kinderen .header-overmij:active,
+body.page-kinderen .nav-cta:active {
   background: var(--tile-kinderen);
 }
 
 body.page-vakgenoten .header-back:hover,
 body.page-vakgenoten .header-overmij:hover,
-body.page-vakgenoten .nav-cta:hover {
+body.page-vakgenoten .nav-cta:hover,
+body.page-vakgenoten .header-back:active,
+body.page-vakgenoten .header-overmij:active,
+body.page-vakgenoten .nav-cta:active {
   background: var(--tile-vakgenoten);
+}
+
+body.page-organisaties .header-back:hover,
+body.page-organisaties .header-overmij:hover,
+body.page-organisaties .nav-cta:hover,
+body.page-organisaties .header-back:active,
+body.page-organisaties .header-overmij:active,
+body.page-organisaties .nav-cta:active {
+  background: var(--tile-organisaties);
+}
+
+body.page-schrijfclub .header-back:hover,
+body.page-schrijfclub .nav-cta:hover,
+body.page-schrijfclub .header-back:active,
+body.page-schrijfclub .nav-cta:active {
+  background: var(--tile-schrijfclub);
+  color: var(--ink);
 }
 
 /* Op mobiel: de naam altijd bovenaan, alle knoppen (Terug naar homepage,
@@ -398,6 +428,14 @@ main.home-main {
     font-size: clamp(1.3rem, 8vw, 1.9rem);
     white-space: nowrap;
   }
+
+  /* De titels op de tegels (Organisaties, Vakgenoten, Kinderen, Schrijven)
+     zijn op mobiel schaal t.o.v. de viewport-breedte i.p.v. -hoogte, en
+     groter dan de basiswaarde — op een telefoon vallen ze anders te klein
+     op binnen zo'n groot, vierkant tegel-plaatje. */
+  .tile-label .pijler {
+    font-size: clamp(1.5rem, 6vw, 2.1rem);
+  }
 }
 
 .tile {
@@ -459,7 +497,7 @@ main.home-main {
   font-family: 'Fraunces', Georgia, serif;
   font-optical-sizing: auto;
   font-variation-settings: 'WONK' 1, 'SOFT' 0;
-  font-size: clamp(0.95rem, 2.6vh, 1.45rem);
+  font-size: clamp(1.05rem, 2.9vh, 1.6rem);
   font-weight: 750;
   line-height: 1.15;
 }
@@ -603,6 +641,12 @@ main.home-main {
 
   .tile-hero-text .lead {
     max-width: none;
+  }
+
+  /* Het portret op de Over mij-pagina mag op mobiel groter dan de
+     standaardmaat — het stond er nogal klein bij. */
+  .page-overmij .tile-hero-image {
+    width: min(88%, 380px);
   }
 }
 
@@ -759,6 +803,16 @@ main.home-main {
      tekst in de kaartjes zelf leest prettiger links uitgelijnd. */
   .offer-grid,
   .offer-card {
+    text-align: left;
+  }
+
+  /* Schrijfclub- en Organisaties-pagina: de tekst onder het plaatje
+     (titel + ondertitels) links uitgelijnd in plaats van gecentreerd.
+     Het plaatje zelf is al full-width binnen deze kolom en verschuift
+     dus niet mee. */
+  .page-schrijfclub .tile-hero-media,
+  .page-organisaties .tile-hero-media {
+    align-items: flex-start;
     text-align: left;
   }
 }

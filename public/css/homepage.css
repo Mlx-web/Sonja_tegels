@@ -1159,6 +1159,35 @@ main.home-main {
   }
 }
 
+/* Stichting-vermelding: twee varianten, elk zichtbaar op één breakpoint.
+   Op desktop staat de tekst in de footer, op dezelfde hoogte als Privacy/
+   Berichten/Beheer, rechts uitgelijnd. Op mobiel staat ze in de gele band
+   zelf, los onder de "Naar Sonja's website"-knop. */
+.hero-footer-note--desktop {
+  margin: 0;
+  text-align: right;
+}
+
+.hero-footer-note--mobile {
+  display: none;
+}
+
+@media (max-width: 720px) {
+  .hero-footer-note--desktop {
+    display: none;
+  }
+
+  .hero-footer-note--mobile {
+    display: block;
+    margin: 32px 0 0;
+    text-align: center;
+    color: var(--ink);
+    font-family: 'Public Sans', -apple-system, sans-serif;
+    font-size: 0.95rem;
+    opacity: 0.85;
+  }
+}
+
 /* ---------- Footer, doorlopend op elke pagina ---------- */
 
 footer.site-bottom {

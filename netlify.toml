@@ -12,6 +12,13 @@
 # rechtstreeks naar de Schrijfclub-pagina (Schrijven voor Iedereen) wijst.
 [[redirects]]
   from = "https://schrijfclubwageningen.nl/*"
-  to = "https://sonjavanderarend.nl/schrijven-voor-iedereen.html"
+  to = "https://sonjavanderarend.nl/schrijfclubwageningen.html"
   status = 301
   force = true
+
+# De pagina heette eerst schrijven-voor-iedereen.html; oude links/bladwijzers
+# daarnaartoe blijven werken en komen nu op de nieuwe URL uit.
+[[redirects]]
+  from = "/schrijven-voor-iedereen.html"
+  to = "/schrijfclubwageningen.html"
+  status = 301

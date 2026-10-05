@@ -39,9 +39,15 @@ const TILE_TEXT_COLOR = {
   'organisaties-en-professionals': '#fff',
   vakgenoten: '#fff',
 };
+// De publieke URL van een pagina staat hier los van de pageName (= de
+// templatenaam en de Sanity-contenttype-sleutel, die ongewijzigd blijven).
+// Zo kan de Schrijven-voor-iedereen-pagina publiek als
+// schrijfclubwageningen.html verschijnen (dezelfde naam als het domein
+// schrijfclubwageningen.nl) zonder de Sanity-koppeling of de
+// seed-data-bestandsnaam aan te hoeven passen.
 const PAGE_URL = {
   'kinderen-en-scholen': 'kinderen-en-scholen.html',
-  'schrijven-voor-iedereen': 'schrijven-voor-iedereen.html',
+  'schrijven-voor-iedereen': 'schrijfclubwageningen.html',
   'organisaties-en-professionals': 'organisaties-en-professionals.html',
   vakgenoten: 'vakgenoten.html',
 };
@@ -199,8 +205,9 @@ async function buildPage(pageName) {
   const template = Handlebars.compile(templateSource, {noEscape: false});
   const html = template(content);
 
-  fs.writeFileSync(path.join(OUTPUT_DIR, `${pageName}.html`), html);
-  console.log(`Gebouwd: ${pageName}.html`);
+  const outputFile = PAGE_URL[pageName] || `${pageName}.html`;
+  fs.writeFileSync(path.join(OUTPUT_DIR, outputFile), html);
+  console.log(`Gebouwd: ${outputFile}`);
 }
 
 async function main() {

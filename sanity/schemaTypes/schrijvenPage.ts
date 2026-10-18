@@ -36,7 +36,6 @@ export default defineType({
     defineField({name: 'pijler', title: 'Titel (boven het plaatje)', type: 'string'}),
     defineField({name: 'subIntro', title: 'Introzin (onder het plaatje)', type: 'text', rows: 2}),
     defineField({name: 'subLocation', title: 'Locatiezin (onder het plaatje)', type: 'text', rows: 2}),
-    defineField({name: 'quote', title: 'Quote (onder het plaatje, zonder aanhalingstekens)', type: 'text', rows: 2}),
     defineField({
       name: 'subStichting',
       title: 'Zin over de stichting (onder het plaatje)',

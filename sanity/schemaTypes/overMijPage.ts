@@ -8,6 +8,7 @@ export default defineType({
     defineField({name: 'pijler', title: 'Titel (in de hero)', type: 'string'}),
     defineField({name: 'subLine1', title: 'Subregel 1', type: 'string'}),
     defineField({name: 'subLine2', title: 'Subregel 2', type: 'string'}),
+    defineField({name: 'subLine3', title: 'Subregel 3', type: 'string'}),
     defineField({
       name: 'intro',
       title: 'Introtekst',

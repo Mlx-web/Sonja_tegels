@@ -41,15 +41,26 @@ const TILE_TEXT_COLOR = {
 };
 // De publieke URL van een pagina staat hier los van de pageName (= de
 // templatenaam en de Sanity-contenttype-sleutel, die ongewijzigd blijven).
-// Zo kan de Schrijven-voor-iedereen-pagina publiek als
-// schrijfclubwageningen.html verschijnen (dezelfde naam als het domein
-// schrijfclubwageningen.nl) zonder de Sanity-koppeling of de
-// seed-data-bestandsnaam aan te hoeven passen.
+// "schrijven-voor-iedereen" (de volledige inhoud: schrijfgroepen, Waga,
+// Write Here Write Now, …) verschijnt publiek als schrijfclubwageningen.html
+// en is alleen bereikbaar via het eigen domein schrijfclubwageningen.nl —
+// niet via een sonjavanderarend.nl-URL met Sonja's naam erin.
 const PAGE_URL = {
   'kinderen-en-scholen': 'kinderen-en-scholen.html',
   'schrijven-voor-iedereen': 'schrijfclubwageningen.html',
   'organisaties-en-professionals': 'organisaties-en-professionals.html',
   vakgenoten: 'vakgenoten.html',
+};
+
+// Waar de "Binnenkort"-kaartjes en de homepage-tegel per doelgroep naartoe
+// linken — meestal gelijk aan PAGE_URL, behalve voor "schrijven-voor-
+// iedereen": de tegel en Binnenkort-koppelingen op sonjavanderarend.nl
+// wijzen naar de losse, korte overzichtspagina schrijvenvooriedereen.html
+// (pageName "schrijvenvooriedereen"), die op zijn beurt doorlinkt naar
+// schrijfclubwageningen.nl.
+const DOELGROEP_LINK = {
+  ...PAGE_URL,
+  'schrijven-voor-iedereen': 'schrijvenvooriedereen.html',
 };
 
 function summarize(value) {
@@ -72,7 +83,7 @@ function firstSentence(value) {
 // aanmeldformulier), dan gaat de hele kaart daarnaartoe; anders naar de
 // eigen doelgroep-pagina.
 function binnenkortItem(card, pageName, {summaryField = 'body'} = {}) {
-  const pageUrl = PAGE_URL[pageName];
+  const pageUrl = DOELGROEP_LINK[pageName];
   return {
     title: card.title,
     summary: firstSentence(card[summaryField]),
@@ -90,7 +101,7 @@ function binnenkortItem(card, pageName, {summaryField = 'body'} = {}) {
 // extern aanmeldformulier), anders naar de doelgroep-pagina.
 function homepageBinnenkortItem(item) {
   const pageName = item.doelgroep;
-  const pageUrl = PAGE_URL[pageName];
+  const pageUrl = DOELGROEP_LINK[pageName];
   return {
     title: item.title,
     datum: item.datum || '',

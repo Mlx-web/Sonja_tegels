@@ -20,7 +20,7 @@
     </div>
     <div class="header-right">
       <a class="nav-cta" href="contact.html">Aanmelden &amp; Contact</a>
-      <a class="header-back" href="index.html">Naar Sonja&rsquo;s website &rarr;</a>
+      <a class="header-back" href="https://sonjavanderarend.nl/">Naar Sonja&rsquo;s website &rarr;</a>
     </div>
   </div>
 </header>
@@ -38,6 +38,10 @@
       </p>
       <p class="sub">
         {{subLocation}}
+      </p>
+      <p class="sub">
+        {{schrijfclub.agendaLead}}
+        <a class="link-plain" href="{{schrijfclub.agendaUrl}}">{{schrijfclub.agendaLinkText}}</a>.
       </p>
     </div>
 
@@ -99,22 +103,32 @@
         </p>
         <p>
           {{writeHere.times}}<br>
+          <em>{{writeHere.timesEn}}</em><br>
           {{writeHere.location}}
         </p>
       </div>
       <div class="offer-card offer-card--wide">
-        <h3>{{individueel.title}}</h3>
+        <h3>{{workshops.title}}</h3>
         <p>
-          {{individueel.intro}}
+          {{workshops.intro}}
         </p>
         <p>
-          {{individueel.closing}}
+          {{workshops.closing}}
+        </p>
+      </div>
+      <div class="offer-card">
+        <h3>{{kriskrasklup.title}}</h3>
+        <p>
+          {{kriskrasklup.intro}}
+        </p>
+        <p>
+          &rarr; <a href="{{kriskrasklup.linkUrl}}">{{kriskrasklup.linkText}}</a>
         </p>
       </div>
     </div>
 
     <div class="hero-footer-nav">
-      <a class="header-back" href="index.html">Naar Sonja&rsquo;s website &rarr;</a>
+      <a class="header-back" href="https://sonjavanderarend.nl/">Naar Sonja&rsquo;s website &rarr;</a>
     </div>
 
     <p class="hero-footer-note--mobile">{{subStichting}}</p>

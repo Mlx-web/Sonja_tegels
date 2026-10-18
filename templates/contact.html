@@ -66,6 +66,18 @@
       <button type="submit" class="contact-submit">{{submitText}}</button>
       <p id="contact-note" class="contact-note" hidden></p>
     </form>
+
+    <div class="contact-werkplek">
+      <h3 class="section-heading">{{werkplek.title}}</h3>
+      <p>
+{{#each werkplek.lines}}
+        {{this}}<br>
+{{/each}}
+      </p>
+      <p>
+        &rarr; <a href="{{werkplek.linkUrl}}" target="_blank" rel="noopener">{{werkplek.linkText}}</a>
+      </p>
+    </div>
   </div>
 </main>
 

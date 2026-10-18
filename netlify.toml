@@ -8,17 +8,30 @@
   to = "/.netlify/functions/api"
   status = 200
 
-# schrijfclubwageningen.nl is een los domein op dezelfde site, dat altijd
-# rechtstreeks naar de Schrijfclub-pagina (Schrijven voor Iedereen) wijst.
+# schrijfclubwageningen.nl is een los domein op dezelfde site. Dit is een
+# "rewrite" (status 200, geen browser-redirect) van alleen de hoofd-URL:
+# de bezoeker blijft schrijfclubwageningen.nl in de adresbalk zien, de
+# inhoud komt achter de schermen van schrijfclubwageningen.html. Expres
+# geen wildcard (/*) — anders zouden ook de CSS/afbeeldingen-paden op dit
+# domein worden omgeleid en de pagina onopgemaakt tonen.
 [[redirects]]
-  from = "https://schrijfclubwageningen.nl/*"
-  to = "https://sonjavanderarend.nl/schrijfclubwageningen.html"
+  from = "https://schrijfclubwageningen.nl/"
+  to = "/schrijfclubwageningen.html"
+  status = 200
+  force = true
+
+# Sonja wil niet dat haar eigen naam in de URL van de Schrijfclub-pagina
+# voorkomt — wie per ongeluk op sonjavanderarend.nl/schrijfclubwageningen.html
+# uitkomt, gaat naar het eigen domein.
+[[redirects]]
+  from = "https://sonjavanderarend.nl/schrijfclubwageningen.html"
+  to = "https://schrijfclubwageningen.nl/"
   status = 301
   force = true
 
-# De pagina heette eerst schrijven-voor-iedereen.html; oude links/bladwijzers
-# daarnaartoe blijven werken en komen nu op de nieuwe URL uit.
+# De oude URL schrijven-voor-iedereen.html bestaat niet meer; bezoekers
+# komen nu op de nieuwe, korte overzichtspagina op sonjavanderarend.nl.
 [[redirects]]
   from = "/schrijven-voor-iedereen.html"
-  to = "/schrijfclubwageningen.html"
+  to = "/schrijvenvooriedereen.html"
   status = 301

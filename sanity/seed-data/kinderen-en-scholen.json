@@ -3,60 +3,26 @@
   "sub": "KrisKrasKlup (9–12 jaar) & schoolprojecten (basis-, voortgezet en speciaal onderwijs, en thuiszitters).",
   "cards": [
     {
-      "title": "KrisKrasKlup (8–12 jaar)",
+      "title": "Lesvoorbeelden via Kunstmenu",
       "body": [
-        "Bij de KrisKrasKlup in Wageningen schrijven en tekenen kinderen hun eigen verhalen, samen met Sonja (schrijven) en Carlijn van WentinkArt (tekenen).",
-        "Start na de herfstvakantie."
+        "Via Kunstmenu Wageningen geeft Sonja verschillende lessenseries creatief schrijven, op maat van de klas. Een kleine greep:",
+        "Vrijland (groep 5–8) — creatief met democratie: de klas geeft samen vorm aan een gedroomd land.",
+        "Krant in de klas & Klas in de krant (groep 6–8): leerlingen maken hun eigen Kinderpagina in de Stad Wageningen.",
+        "De kunst van de natuur (groep 5–8): van haiku's bij natuurfoto's tot klimaatfictie.",
+        "Er was eens … een sprookje (groep 6–8): een bekend sprookje herschrijven vanuit een nieuw perspectief.",
+        "Upcycling! Wat doe jij met een waardeloos boek? (groep 5–8): van weggegooide boeken nieuwe literaire kunst maken."
       ],
-      "linkText": "Meer info & aanmelden",
-      "linkUrl": "https://wentinkart.nl/kriskrasklup/",
-      "linkText2": "Bekijk het Kris Kras Kluphuis",
-      "linkUrl2": "https://kriskraskluphuis.netlify.app/"
-    },
-    {
-      "title": "Vrijland - creatief met democratie (groep 5–8)",
-      "body": [
-        "Bij Vrijland geeft de klas samen vorm aan een gedroomd land, met een kaart, een vlag, een volkslied en verhalen. Al makend praten de leerlingen over waarden, vrijheid en de grenzen daarvan.",
-        "3 lessen van anderhalf uur."
-      ],
-      "linkText": "Meer info & aanmelden via Kunstmenu",
+      "linkText": "Alle lesvoorbeelden & aanmelden via Kunstmenu",
       "linkUrl": "https://www.kunstmenuwageningen.nl/aanbod/"
     },
     {
-      "title": "Krant in de klas & Klas in de krant (groep 6–8)",
+      "title": "Nieuws: schrijven moet belangrijker worden in het onderwijs",
       "body": [
-        "Leerlingen vormen samen de redactie van hun eigen Kinderpagina in de Stad Wageningen, met rubrieken als nieuws, interview, strip en portret. Van bedenken wat je aan de hele stad wil vertellen, tot persklaar maken van de artikelen.",
-        "3 lessen van 90 minuten."
+        "De onderwijsinspectie concludeert dat schrijven belangrijker moet worden in alle vakken — de helft van de leraren Nederlands vindt dat ze genoeg kennis en vaardigheden hebben om schrijfonderwijs te geven.",
+        "Ook voor leerkrachten in het basis- en voortgezet onderwijs interessant: sluit eens aan bij een sessie voor vakgenoten."
       ],
-      "linkText": "Meer info & aanmelden via Kunstmenu",
-      "linkUrl": "https://www.kunstmenuwageningen.nl/aanbod/"
-    },
-    {
-      "title": "De kunst van de natuur (groep 5–8)",
-      "body": [
-        "Een flexibele lessenserie op maat rond natuur en milieu, in overleg ontworpen voor de klas: van haiku's bij eigen natuurfoto's tot klimaatfictie of een nieuwe songtekst.",
-        "3 tot 8 lessen van 60–90 minuten."
-      ],
-      "linkText": "Meer info & aanmelden via Kunstmenu",
-      "linkUrl": "https://www.kunstmenuwageningen.nl/aanbod/"
-    },
-    {
-      "title": "Er was eens … een sprookje (groep 6–8)",
-      "body": [
-        "Leerlingen analyseren een bekend sprookje en schrijven daarna hun eigen versie, vanuit een nieuw perspectief of met een eigentijdse draai.",
-        "3 lessen van 60 minuten, eventueel een vierde les om er een boekje van te maken."
-      ],
-      "linkText": "Meer info & aanmelden via Kunstmenu",
-      "linkUrl": "https://www.kunstmenuwageningen.nl/aanbod/"
-    },
-    {
-      "title": "Upcycling! Wat doe jij met een waardeloos boek? (groep 5–8)",
-      "body": [
-        "Van weggegooide boeken maken leerlingen nieuwe literaire kunst, zoals een stapelgedicht of stripverhaal. Zo ontdekken ze al makend wat upcycling is.",
-        "3 lessen van 75 minuten."
-      ],
-      "linkText": "Meer info & aanmelden via Kunstmenu",
-      "linkUrl": "https://www.kunstmenuwageningen.nl/aanbod/"
+      "linkText": "Lees het artikel van de onderwijsinspectie",
+      "linkUrl": "https://www.onderwijsinspectie.nl/actueel/nieuws/2025/11/20/schrijven-moet-belangrijker-worden-in-alle-vakken"
     },
     {
       "title": "Activiteiten voor thuiszitters",

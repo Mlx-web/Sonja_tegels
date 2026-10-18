@@ -741,6 +741,23 @@ main.home-main {
   gap: 14px;
 }
 
+/* Deze pagina heeft meer tekstregels onder het plaatje (introzin, quote,
+   locatie, agenda-link) dan de andere doelgroep-pagina's — op een
+   laptopscherm (incl. browserbalken) viel die tekst daardoor net buiten
+   beeld. Alleen het plaatje kleiner maken (niet de hele kolom, anders
+   gaat de tekst juist breder uitvallen en meer regels innemen). */
+.page-schrijfclub .tile-hero-media {
+  gap: 10px;
+}
+
+.page-schrijfclub .tile-hero-media .tile-hero-image {
+  width: 180px;
+}
+
+.page-schrijfclub .tile-hero--compact .tile-hero-inner {
+  padding-top: 24px;
+}
+
 .tile-hero-media .tile-hero-image {
   width: 100%;
 }
@@ -1001,6 +1018,15 @@ main.home-main {
   display: flex;
   flex-direction: column;
   gap: 18px;
+}
+
+.contact-werkplek {
+  margin-top: 48px;
+  max-width: 480px;
+}
+
+.contact-werkplek p {
+  margin: 0 0 8px;
 }
 
 .contact-form label {

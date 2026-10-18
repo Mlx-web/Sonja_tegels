@@ -1,6 +1,7 @@
 import indexPage from './indexPage'
 import kinderenPage from './kinderenPage'
 import schrijvenPage from './schrijvenPage'
+import schrijvenvooriedereenPage from './schrijvenvooriedereenPage'
 import organisatiesPage from './organisatiesPage'
 import vakgenotenPage from './vakgenotenPage'
 import overMijPage from './overMijPage'
@@ -10,6 +11,7 @@ export const schemaTypes = [
   indexPage,
   kinderenPage,
   schrijvenPage,
+  schrijvenvooriedereenPage,
   organisatiesPage,
   vakgenotenPage,
   overMijPage,

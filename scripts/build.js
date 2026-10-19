@@ -2,6 +2,8 @@ const fs = require('fs');
 const path = require('path');
 const Handlebars = require('handlebars');
 
+Handlebars.registerHelper('eq', (a, b) => a === b);
+
 const TEMPLATES_DIR = path.join(__dirname, '..', 'templates');
 const SEED_DIR = path.join(__dirname, '..', 'sanity', 'seed-data');
 const OUTPUT_DIR = path.join(__dirname, '..', 'public');

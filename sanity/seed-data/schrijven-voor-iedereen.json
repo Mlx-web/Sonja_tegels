@@ -4,7 +4,7 @@
   "subStichting": "Schrijfclub Wageningen is een activiteit van Stichting Schrijfplezier.",
   "schrijfclub": {
     "title": "Schrijfclub Wageningen",
-    "intro": "Bij Schrijfclub Wageningen schrijf je in een vaste groep van 6 tot 10 mensen, met schrijfoefeningen en begeleiding van Sonja.",
+    "intro": "Bij Schrijfclub Wageningen schrijf je in een vaste groep van 6 tot 10 mensen, met schrijfoefeningen en begeleiding van Sonja of een andere schrijfdocent.",
     "groepen": [
       {"naam": "Dichtgroep", "tijd": "Maandagavond 20:00–22:00, om de 4 weken."},
       {"naam": "Biografiegroep", "tijd": "Maandagavond 19:30–21:30, om de 2 weken."},
@@ -16,7 +16,7 @@
     "agendaLead": "Bekijk de actuele data in de",
     "agendaLinkText": "agenda van de Cultuurwerkplaats",
     "agendaUrl": "https://decultuurwerkplaats.nl/agenda/",
-    "closing": "Wil je een keer komen kennismaken? Je bent welkom"
+    "closing": "Wil je een keer komen kennismaken? Neem contact op"
   },
   "waga": {
     "title": "Waga Write Club",

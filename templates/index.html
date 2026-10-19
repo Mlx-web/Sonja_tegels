@@ -64,7 +64,7 @@
           <svg class="tile-connector" viewBox="0 0 60 26" aria-hidden="true"><path d="M0,14 C 18,22 38,6 60,12" /></svg>
           <a class="binnenkort-card" href="{{linkUrl}}" style="background: {{color}}; color: {{textColor}};">
             <p class="binnenkort-label">Binnenkort{{#if datum}} <span class="binnenkort-datum">· {{datum}}</span>{{/if}}</p>
-            <h3>{{title}}</h3>
+            <h3{{#if (eq title "Ontwerpatelier: Oeps/Omdenken")}} class="offer-card-title--center"{{/if}}>{{title}}</h3>
             <p class="binnenkort-summary">{{summary}} <span class="binnenkort-cta">&rarr; {{linkText}}</span></p>
           </a>
         </div>

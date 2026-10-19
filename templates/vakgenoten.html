@@ -36,7 +36,7 @@
     <div class="offer-grid offer-grid--vakgenoten">
 {{#each extraCards}}
       <div class="offer-card">
-        <h3>{{title}}</h3>
+        <h3{{#if (eq title "Ontwerpatelier: Oeps/Omdenken")}} class="offer-card-title--center"{{/if}}>{{title}}</h3>
 {{#each body}}
         <p>
           {{this}}

@@ -8,7 +8,7 @@
 <meta name="description" content="Schrijfgroepen, een Engelstalige groep en vrije inloopsessies in Wageningen. Looking for a writing group in English? Write here! Write now! welcomes English speakers too.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Narrow:wght@600;700&family=Barlow:wght@400&family=Fraunces:opsz,SOFT,WONK,wght@9..144,0,1,600..900&family=Public+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo+Narrow:wght@600&family=Barlow:wght@400&family=Fraunces:opsz,SOFT,WONK,wght@9..144,0,1,600..900&family=Public+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/homepage.css">
 </head>
 <body class="page-schrijfclub">
@@ -37,7 +37,7 @@
           <span class="icon-pin" aria-hidden="true"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C7.58 2 4 5.58 4 10c0 5.25 6.5 11.5 7.3 12.2a1 1 0 0 0 1.4 0C13.5 21.5 20 15.25 20 10c0-4.42-3.58-8-8-8zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg></span>{{subLocation}}
         </p>
         <p class="sub schrijfclub-agenda">
-          <strong><span class="pink-accent">&rarr;</span> {{schrijfclub.agendaLead}} <a class="link-plain" href="{{schrijfclub.agendaUrl}}">{{schrijfclub.agendaLinkText}}</a>.</strong>
+          <strong><span class="pink-accent arrow-speels">&#10132;</span> {{schrijfclub.agendaLead}} <a class="link-plain" href="{{schrijfclub.agendaUrl}}">{{schrijfclub.agendaLinkText}}</a>.</strong>
         </p>
       </div>
     </div>
@@ -67,9 +67,7 @@
           <em>{{writeHere.englishNote}}</em>
         </p>
         <p>
-          {{writeHere.times}}<br>
-          <em>{{writeHere.timesEn}}</em><br>
-          {{writeHere.location}}
+          {{writeHere.times}}
         </p>
         <p>
           {{writeHere.invite}} <span class="pink-accent">&rarr;</span>
@@ -103,11 +101,6 @@
 {{#each waga.lines}}
         <p>
           <em>{{this}}</em>
-        </p>
-{{/each}}
-{{#each waga.linesNl}}
-        <p>
-          {{this}}
         </p>
 {{/each}}
         <a class="btn-dark" href="contact.html">{{waga.ctaText}} <span class="pink-accent">&rarr;</span></a>

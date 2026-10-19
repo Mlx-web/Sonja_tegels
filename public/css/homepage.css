@@ -17,7 +17,7 @@
 
   /* Kleurstelling van de Schrijfclub-pagina: roze/donkerblauw, los van
      de rest van de site. */
-  --schrijfclub-roze: #f94971;
+  --schrijfclub-roze: #db3550;
   --schrijfclub-roze-zacht: #f28ba0;
   --schrijfclub-navy: #16284d;
   --schrijfclub-lichtroze: #fce1e4;
@@ -295,6 +295,26 @@ body.page-schrijfclub .offer-grid--schrijven .offer-card:nth-child(4):hover {
   transform: rotate(0deg);
 }
 
+/* Op mobiel (één kolom) een andere volgorde dan op desktop: Schrijfclub
+   Wageningen, Write Here Write Now, Waga Write Club, KrisKrasKlup. */
+@media (max-width: 720px) {
+  body.page-schrijfclub .offer-grid--schrijven .offer-card:nth-child(1) {
+    order: 2;
+  }
+
+  body.page-schrijfclub .offer-grid--schrijven .offer-card:nth-child(2) {
+    order: 1;
+  }
+
+  body.page-schrijfclub .offer-grid--schrijven .offer-card:nth-child(3) {
+    order: 4;
+  }
+
+  body.page-schrijfclub .offer-grid--schrijven .offer-card:nth-child(4) {
+    order: 3;
+  }
+}
+
 body.page-schrijfclub .offer-card h3 {
   margin: -22px -20px 16px;
   padding: 14px 20px;
@@ -309,7 +329,7 @@ body.page-schrijfclub .offer-card h3 {
 }
 
 body.page-schrijfclub .offer-card.kopbalk-roze h3 {
-  background: var(--schrijfclub-roze-zacht);
+  background: var(--schrijfclub-roze);
   color: var(--schrijfclub-navy);
 }
 

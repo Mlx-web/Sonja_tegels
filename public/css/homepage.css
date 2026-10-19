@@ -330,7 +330,7 @@ body.page-schrijfclub .offer-card h3 {
 
 body.page-schrijfclub .offer-card.kopbalk-roze h3 {
   background: var(--schrijfclub-roze);
-  color: var(--schrijfclub-navy);
+  color: #fff;
 }
 
 body.page-schrijfclub .offer-card.kopbalk-navy h3 {

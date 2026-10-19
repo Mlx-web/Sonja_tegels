@@ -8,7 +8,7 @@
 <meta name="description" content="Schrijfgroepen, een Engelstalige groep en vrije inloopsessies in Wageningen. Looking for a writing group in English? Write here! Write now! welcomes English speakers too.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,SOFT,WONK,wght@9..144,0,1,600..900&family=Public+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400&family=Barlow+Condensed:wght@600;700&family=Fraunces:opsz,SOFT,WONK,wght@9..144,0,1,600..900&family=Public+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/homepage.css">
 </head>
 <body class="page-schrijfclub">
@@ -16,30 +16,30 @@
 <header class="site-top">
   <div class="header-row">
     <div class="header-left">
-      <h1 class="site-name site-name--schrijfclub">Schrijfclub Wageningen</h1>
+      <h1 class="site-name site-name--schrijfclub visually-hidden">Schrijfclub Wageningen</h1>
     </div>
     <div class="header-right">
       <a class="nav-cta" href="contact.html">Aanmelden &amp; Contact</a>
-      <a class="header-back" href="https://sonjavanderarend.nl/">Naar Sonja&rsquo;s website &rarr;</a>
+      <a class="header-back" href="https://sonjavanderarend.nl/">Naar Sonja&rsquo;s website <span class="pink-accent">&rarr;</span></a>
     </div>
   </div>
 </header>
 
 <section class="tile-hero tile-hero--schrijven tile-hero--compact">
   <div class="tile-hero-inner">
-    <div class="tile-hero-media">
-      <img class="tile-hero-image" src="images/tegels/schrijfclub-wageningen.jpg" alt="">
-      <span class="pijler">{{pijler}}</span>
-      <p class="sub">
-        {{subIntro}}
-      </p>
-      <p class="sub">
-        {{subLocation}}
-      </p>
-      <p class="sub">
-        {{schrijfclub.agendaLead}}
-        <a class="link-plain" href="{{schrijfclub.agendaUrl}}">{{schrijfclub.agendaLinkText}}</a>.
-      </p>
+    <div class="schrijfclub-top">
+      <img class="schrijfclub-logo-image" src="images/tegels/schrijfclub-wageningen-banner.jpg" alt="Schrijfclub Wageningen">
+      <div class="schrijfclub-intro">
+        <p class="sub">
+          {{subIntro}}
+        </p>
+        <p class="sub schrijfclub-location">
+          <span class="icon-pin" aria-hidden="true"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C7.58 2 4 5.58 4 10c0 5.25 6.5 11.5 7.3 12.2a1 1 0 0 0 1.4 0C13.5 21.5 20 15.25 20 10c0-4.42-3.58-8-8-8zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg></span>{{subLocation}}
+        </p>
+        <p class="sub schrijfclub-agenda">
+          <strong><span class="pink-accent">&rarr;</span> {{schrijfclub.agendaLead}} <a class="link-plain" href="{{schrijfclub.agendaUrl}}">{{schrijfclub.agendaLinkText}}</a>.</strong>
+        </p>
+      </div>
     </div>
 
     <div class="offer-grid offer-grid--schrijven">
@@ -58,39 +58,7 @@
 {{/if}}
       </div>
 {{/each}}
-      <div class="offer-card">
-        <h3>{{schrijfclub.title}}</h3>
-        <p>
-          {{schrijfclub.intro}}
-        </p>
-        <ul class="groepen-lijst">
-{{#each schrijfclub.groepen}}
-          <li><strong>{{naam}}</strong>: {{tijd}}</li>
-{{/each}}
-        </ul>
-        <p>
-          {{schrijfclub.agendaLead}}
-          <a class="link-plain" href="{{schrijfclub.agendaUrl}}">{{schrijfclub.agendaLinkText}}</a>.
-        </p>
-        <p>
-          {{schrijfclub.closing}}
-        </p>
-      </div>
-      <div class="offer-card card-cta-right">
-        <h3>{{waga.title}}</h3>
-{{#each waga.lines}}
-        <p>
-          <em>{{this}}</em>
-        </p>
-{{/each}}
-{{#each waga.linesNl}}
-        <p>
-          {{this}}
-        </p>
-{{/each}}
-        <a class="btn-dark" href="contact.html">&rarr; {{waga.ctaText}}</a>
-      </div>
-      <div class="offer-card offer-card--wide">
+      <div class="offer-card kopbalk-navy">
         <h3>{{writeHere.title}}</h3>
         <p>
           {{writeHere.intro}}
@@ -103,29 +71,51 @@
           <em>{{writeHere.timesEn}}</em><br>
           {{writeHere.location}}
         </p>
-      </div>
-      <div class="offer-card offer-card--wide">
-        <h3>{{workshops.title}}</h3>
         <p>
-          {{workshops.intro}}
-        </p>
-        <p>
-          {{workshops.closing}}
+          {{writeHere.invite}} <span class="pink-accent">&rarr;</span>
         </p>
       </div>
-      <div class="offer-card">
+      <div class="offer-card kopbalk-roze">
+        <h3>{{schrijfclub.title}}</h3>
+        <p>
+          {{schrijfclub.intro}}
+        </p>
+        <ul class="groepen-lijst">
+{{#each schrijfclub.groepen}}
+          <li><strong>{{naam}}</strong>: {{tijd}}</li>
+{{/each}}
+        </ul>
+        <p>
+          {{schrijfclub.closing}} <span class="pink-accent">&rarr;</span>
+        </p>
+      </div>
+      <div class="offer-card kopbalk-lichtroze">
         <h3>{{kriskrasklup.title}}</h3>
         <p>
           {{kriskrasklup.intro}}
         </p>
         <p>
-          &rarr; <a href="{{kriskrasklup.linkUrl}}">{{kriskrasklup.linkText}}</a>
+          <a href="{{kriskrasklup.linkUrl}}">{{kriskrasklup.linkText}}</a> <span class="pink-accent">&rarr;</span>
         </p>
+      </div>
+      <div class="offer-card card-cta-right kopbalk-navy">
+        <h3>{{waga.title}}</h3>
+{{#each waga.lines}}
+        <p>
+          <em>{{this}}</em>
+        </p>
+{{/each}}
+{{#each waga.linesNl}}
+        <p>
+          {{this}}
+        </p>
+{{/each}}
+        <a class="btn-dark" href="contact.html">{{waga.ctaText}} <span class="pink-accent">&rarr;</span></a>
       </div>
     </div>
 
     <div class="hero-footer-nav">
-      <a class="header-back" href="https://sonjavanderarend.nl/">Naar Sonja&rsquo;s website &rarr;</a>
+      <a class="header-back" href="https://sonjavanderarend.nl/">Naar Sonja&rsquo;s website <span class="pink-accent">&rarr;</span></a>
     </div>
 
     <p class="hero-footer-note--mobile">{{subStichting}}</p>

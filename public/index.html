@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="view-transition" content="same-origin">
-<title>Sonja van der Arend | Schrijfcoach en creatief onderzoeker</title>
+<title>Sonja van der Arend | Docent creatief schrijven</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,SOFT,WONK,wght@9..144,0,1,600..900&family=Public+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -14,58 +14,109 @@
 
 <header class="site-top">
   <div class="header-row">
-    <h1 class="site-name"><a href="over-mij.html">Sonja van der Arend</a></h1>
-    <a class="nav-cta" href="contact.html">Aanmelden &amp; Contact</a>
+    <div class="header-left">
+      <h1 class="site-name">Sonja van der Arend</h1>
+    </div>
+    <div class="header-right">
+      <a class="header-overmij" href="over-mij.html">Over mij</a>
+      <a class="nav-cta" href="contact.html">Aanmelden &amp; Contact</a>
+    </div>
   </div>
 </header>
 
 <main class="home-main">
-  <div class="grid">
+  <div class="home-tiles-wrap">
+  <div class="tile-grid">
 
-    <a class="tile tile--schrijven" href="schrijven-voor-iedereen.html" aria-label="Schrijven voor Iedereen">
-      <img src="images/tegels/schrijven-voor-iedereen.jpg" alt="">
-      <div class="tile-label">
-        <span class="pijler">Schrijven voor Iedereen</span>
-        <span class="sub">Schrijfgroepen &amp; inloopsessies</span>
+    <div class="tile-cell">
+      <a class="tile tile--schrijven" href="schrijvenvooriedereen.html" aria-label="Schrijven voor iedereen">
+        <img src="images/tegels/schrijven-voor-iedereen.jpg" alt="">
+        <div class="tile-label">
+          <span class="pijler">Schrijven voor iedereen</span>
+          <span class="sub">Schrijfgroepen &amp; inloopsessies</span>
+        </div>
+      </a>
+      <div class="tile-satellites tile-satellites--left">
       </div>
-    </a>
+    </div>
 
-    <a class="tile tile--kinderen" href="kinderen-en-scholen.html" aria-label="Voor kinderen en scholen">
-      <img src="images/tegels/kinderen-en-scholen.jpg" alt="">
-      <div class="tile-label">
-        <span class="pijler">Voor kinderen &amp; scholen</span>
-        <span class="sub">Kris-kras-klup &amp; schoolprojecten</span>
+    <div class="tile-cell tile-cell--vakgenoten">
+      <a class="tile tile--vakgenoten" href="vakgenoten.html" aria-label="Vakgenoten">
+        <img src="images/tegels/vakgenoten.jpg" alt="">
+        <div class="tile-label">
+          <span class="pijler">Vakgenoten</span>
+          <span class="sub">Workshops &amp; intervisie voor docenten creatief schrijven</span>
+        </div>
+      </a>
+      <div class="tile-satellites tile-satellites--right">
+        <div class="tile-satellite">
+          <svg class="tile-connector" viewBox="0 0 60 26" aria-hidden="true"><path d="M0,14 C 18,22 38,6 60,12" /></svg>
+          <a class="binnenkort-card" href="vakgenoten.html" style="background: var(--tile-vakgenoten); color: #fff;">
+            <p class="binnenkort-label">Binnenkort</p>
+            <h3>Tweede Wageningse Schrijversborrel</h3>
+            <p class="binnenkort-summary">Een informele borrel voor iedereen in Wageningen die schrijft of met schrijven bezig is: ontmoet andere (vak)schrijvers. <span class="binnenkort-cta">&rarr; Meer info</span></p>
+          </a>
+        </div>
+        <div class="tile-satellite">
+          <svg class="tile-connector" viewBox="0 0 60 26" aria-hidden="true"><path d="M0,14 C 18,22 38,6 60,12" /></svg>
+          <a class="binnenkort-card" href="vakgenoten.html" style="background: var(--tile-vakgenoten); color: #fff;">
+            <p class="binnenkort-label">Binnenkort</p>
+            <h3>Ontwerpatelier: Oeps/Omdenken</h3>
+            <p class="binnenkort-summary">Een creatieve werkplaats voor iedereen die andere mensen aan het schrijven wil zetten, dit keer rond het thema omdenken: van oeps naar nieuwe schrijfoefening. <span class="binnenkort-cta">&rarr; Meer info</span></p>
+          </a>
+        </div>
       </div>
-    </a>
+    </div>
 
-    <a class="tile tile--organisaties" href="organisaties-en-professionals.html" aria-label="Organisaties en professionals">
-      <img src="images/tegels/organisaties-en-professionals.jpg" alt="">
-      <div class="tile-label">
-        <span class="pijler">Organisaties &amp; Professionals</span>
-        <span class="sub">Beleidsromans &amp; workshops</span>
+    <div class="tile-cell">
+      <a class="tile tile--kinderen" href="kinderen-en-scholen.html" aria-label="Voor kinderen en scholen">
+        <img src="images/tegels/kinderen-en-scholen.jpg" alt="">
+        <div class="tile-label">
+          <span class="pijler">Voor kinderen &amp; scholen</span>
+          <span class="sub">KrisKrasKlup &amp; schoolprojecten</span>
+        </div>
+      </a>
+      <div class="tile-satellites tile-satellites--left">
+        <div class="tile-satellite">
+          <svg class="tile-connector" viewBox="0 0 60 26" aria-hidden="true"><path d="M0,14 C 16,5 32,21 60,13" /></svg>
+          <a class="binnenkort-card" href="https://wentinkart.nl/kriskrasklup/" style="background: var(--tile-kinderen); color: var(--ink);">
+            <p class="binnenkort-label">Binnenkort</p>
+            <h3>KrisKrasKlup (9–12 jaar)</h3>
+            <p class="binnenkort-summary">Nieuwe club in Wageningen waar kinderen hun eigen verhalen leren schrijven en tekenen, samen met Sonja (schrijven) en Carlijn van WentinkArt (tekenen). <span class="binnenkort-cta">&rarr; Meer info &amp; aanmelden</span></p>
+          </a>
+        </div>
+        <div class="tile-satellite">
+          <svg class="tile-connector" viewBox="0 0 60 26" aria-hidden="true"><path d="M0,14 C 16,5 32,21 60,13" /></svg>
+          <a class="binnenkort-card" href="kinderen-en-scholen.html" style="background: var(--tile-kinderen); color: var(--ink);">
+            <p class="binnenkort-label">Binnenkort</p>
+            <h3>Kinderpagina’s in de krant</h3>
+            <p class="binnenkort-summary">Leerlingen maakten hun eigen Kinderpagina in de Stad Wageningen: binnenkort te lezen. <span class="binnenkort-cta">&rarr; Meer info</span></p>
+          </a>
+        </div>
       </div>
-    </a>
+    </div>
 
-    <a class="tile tile--vakgenoten" href="vakgenoten.html" aria-label="Vakgenoten">
-      <img src="images/tegels/vakgenoten.jpg" alt="">
-      <div class="tile-label">
-        <span class="pijler">Vakgenoten</span>
-        <span class="sub">Ontwerpatelier &amp; intervisie</span>
+    <div class="tile-cell">
+      <a class="tile tile--organisaties" href="organisaties-en-professionals.html" aria-label="Organisaties en professionals">
+        <img src="images/tegels/organisaties-en-professionals.jpg" alt="">
+        <div class="tile-label">
+          <span class="pijler">Organisaties &amp; professionals</span>
+          <span class="sub">Beleidsromans &amp; workshops</span>
+        </div>
+      </a>
+      <div class="tile-satellites tile-satellites--right">
       </div>
-    </a>
+    </div>
 
   </div>
-
-  <p class="placeholder-note">
-    De vier tegel-illustraties zijn een eerste verkenning (mbt AI) en worden door een designer uitgewerkt.
-  </p>
+  </div>
 </main>
 
 <footer class="site-bottom">
-  <p>Sonja van der Arend werkt onder Stichting Schrijfplezier (facturatie).</p>
   <div class="footer-links">
     <a href="privacy.html">Privacy</a>
-    <a href="login.html">Beheer</a>
+    <a href="login.html">Berichten</a>
+    <a href="https://sonjavanderarend.sanity.studio/" target="_blank" rel="noopener">Beheer</a>
   </div>
 </footer>
 

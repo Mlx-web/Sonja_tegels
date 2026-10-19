@@ -106,17 +106,7 @@ export default defineType({
         defineField({name: 'times', title: 'Tijden (NL)', type: 'text', rows: 2}),
         defineField({name: 'timesEn', title: 'Tijden (EN, cursief)', type: 'text', rows: 2}),
         defineField({name: 'location', title: 'Locatie', type: 'text', rows: 2}),
-        binnenkortField,
-      ],
-    }),
-    defineField({
-      name: 'workshops',
-      title: 'Kaartje: Workshop voor groepen',
-      type: 'object',
-      fields: [
-        defineField({name: 'title', title: 'Titel', type: 'string'}),
-        defineField({name: 'intro', title: 'Introtekst', type: 'text', rows: 3}),
-        defineField({name: 'closing', title: 'Slotzin', type: 'text', rows: 2}),
+        defineField({name: 'invite', title: 'Uitnodigingszin (zonder pijltje, dat voegt de pagina zelf toe)', type: 'string'}),
         binnenkortField,
       ],
     }),

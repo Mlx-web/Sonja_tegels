@@ -29,15 +29,15 @@
   <div class="tile-grid">
 
     <div class="tile-cell">
-      <a class="tile tile--organisaties" href="organisaties-en-professionals.html" aria-label="Organisaties en professionals">
-        <img src="images/tegels/organisaties-en-professionals.jpg" alt="">
+      <a class="tile tile--schrijven" href="schrijvenvooriedereen.html" aria-label="Schrijven voor iedereen">
+        <img src="images/tegels/schrijven-voor-iedereen.jpg" alt="">
         <div class="tile-label">
-          <span class="pijler">{{tileOrganisaties.pijler}}</span>
-          <span class="sub">{{tileOrganisaties.sub}}</span>
+          <span class="pijler">{{tileSchrijven.pijler}}</span>
+          <span class="sub">{{tileSchrijven.sub}}</span>
         </div>
       </a>
       <div class="tile-satellites tile-satellites--left">
-{{#each tileOrganisaties.items}}
+{{#each tileSchrijven.items}}
         <div class="tile-satellite">
           <svg class="tile-connector" viewBox="0 0 60 26" aria-hidden="true"><path d="M0,13 C 14,24 44,3 60,14" /></svg>
           <a class="binnenkort-card" href="{{linkUrl}}" style="background: {{color}}; color: {{textColor}};">
@@ -95,15 +95,15 @@
     </div>
 
     <div class="tile-cell">
-      <a class="tile tile--schrijven" href="schrijvenvooriedereen.html" aria-label="Schrijven voor iedereen">
-        <img src="images/tegels/schrijven-voor-iedereen.jpg" alt="">
+      <a class="tile tile--organisaties" href="organisaties-en-professionals.html" aria-label="Organisaties en professionals">
+        <img src="images/tegels/organisaties-en-professionals.jpg" alt="">
         <div class="tile-label">
-          <span class="pijler">{{tileSchrijven.pijler}}</span>
-          <span class="sub">{{tileSchrijven.sub}}</span>
+          <span class="pijler">{{tileOrganisaties.pijler}}</span>
+          <span class="sub">{{tileOrganisaties.sub}}</span>
         </div>
       </a>
       <div class="tile-satellites tile-satellites--right">
-{{#each tileSchrijven.items}}
+{{#each tileOrganisaties.items}}
         <div class="tile-satellite">
           <svg class="tile-connector" viewBox="0 0 60 26" aria-hidden="true">{{#if @first}}<path d="M0,12 C 20,23 40,4 60,15" />{{else}}<path d="M0,15 C 22,4 46,22 60,12" />{{/if}}</svg>
           <a class="binnenkort-card" href="{{linkUrl}}" style="background: {{color}}; color: {{textColor}};">

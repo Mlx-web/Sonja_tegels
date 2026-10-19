@@ -18,11 +18,13 @@
     {
       "title": "Nieuws: schrijven moet belangrijker worden in het onderwijs",
       "body": [
-        "De onderwijsinspectie concludeert dat schrijven belangrijker moet worden in alle vakken — de helft van de leraren Nederlands vindt dat ze genoeg kennis en vaardigheden hebben om schrijfonderwijs te geven.",
+        "De onderwijsinspectie concludeert dat schrijven belangrijker moet worden in alle vakken.",
         "Ook voor leerkrachten in het basis- en voortgezet onderwijs interessant: sluit eens aan bij een sessie voor vakgenoten."
       ],
       "linkText": "Lees het artikel van de onderwijsinspectie",
-      "linkUrl": "https://www.onderwijsinspectie.nl/actueel/nieuws/2025/11/20/schrijven-moet-belangrijker-worden-in-alle-vakken"
+      "linkUrl": "https://www.onderwijsinspectie.nl/actueel/nieuws/2025/11/20/schrijven-moet-belangrijker-worden-in-alle-vakken",
+      "linkText2": "Bekijk de pagina voor vakgenoten",
+      "linkUrl2": "vakgenoten.html"
     },
     {
       "title": "Activiteiten voor thuiszitters",

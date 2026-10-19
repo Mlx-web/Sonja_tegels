@@ -14,6 +14,14 @@
   --tile-vakgenoten: #1e7a46;
   --tile-overmij: #8c82d6;
   --hover-donkergrijs: #46433d;
+
+  /* Kleurstelling van de Schrijfclub-pagina: roze/donkerblauw, los van
+     de rest van de site. */
+  --schrijfclub-roze: #f94971;
+  --schrijfclub-navy: #1b1567;
+  --schrijfclub-lichtroze: #fce1e4;
+  --schrijfclub-paper: #fbf7ee;
+  --schrijfclub-card-bg: #fffcf5;
 }
 
 /* Duidelijk zichtbare duur voor de View Transition (homepage-tegel die
@@ -41,12 +49,29 @@ button {
   -webkit-tap-highlight-color: transparent;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 /* ---------- Header, doorlopend op elke pagina ---------- */
 
 header.site-top {
   padding: 22px 32px;
   border-bottom: 2px solid var(--ink);
   view-transition-name: site-header;
+}
+
+body.page-schrijfclub header.site-top {
+  background: var(--schrijfclub-roze);
+  border-bottom: none;
 }
 
 .header-row {
@@ -157,6 +182,123 @@ body.page-schrijfclub .nav-cta:active {
   color: var(--ink);
 }
 
+body.page-schrijven-voor-iedereen .header-back:hover,
+body.page-schrijven-voor-iedereen .header-overmij:hover,
+body.page-schrijven-voor-iedereen .nav-cta:hover,
+body.page-schrijven-voor-iedereen .header-back:active,
+body.page-schrijven-voor-iedereen .header-overmij:active,
+body.page-schrijven-voor-iedereen .nav-cta:active {
+  background: var(--tile-schrijfclub);
+  color: var(--ink);
+}
+
+/* Schrijfclub-pagina: eigen typografie (Barlow / Barlow Condensed) en
+   donkerblauwe knoppen, in lijn met het nieuwe logo. */
+body.page-schrijfclub {
+  font-family: 'Barlow', -apple-system, sans-serif;
+}
+
+body.page-schrijfclub .site-name--schrijfclub {
+  font-family: 'Barlow Condensed', 'Fraunces', Georgia, serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+body.page-schrijfclub .nav-cta {
+  background: var(--schrijfclub-navy);
+  color: #fff;
+  border-radius: 8px;
+}
+
+body.page-schrijfclub .header-back {
+  background: transparent;
+  border: 2px solid var(--schrijfclub-navy);
+  border-radius: 8px;
+  color: var(--schrijfclub-navy);
+  padding: 10px 20px;
+}
+
+body.page-schrijfclub .btn-dark {
+  background: var(--schrijfclub-navy);
+  color: #fff;
+  border-radius: 8px;
+}
+
+body.page-schrijfclub .btn-dark:hover {
+  background: var(--schrijfclub-navy);
+  text-decoration: underline;
+  text-decoration-color: #f72e5c;
+  text-decoration-thickness: 2px;
+}
+
+/* Roze is op deze pagina bewust alleen nog een klein accent: de
+   pijltjes bij de uitnodigingszinnen, niet een grote vlakkleur. */
+body.page-schrijfclub .pink-accent {
+  color: #f72e5c;
+}
+
+/* Kopbalk: elk kaartje krijgt een ingekleurd titelvlak over de volle
+   kaartbreedte (negatieve margin = kaartpadding, zodat het vlak precies
+   tot de rand van het kaartje loopt). Drie stevige kleuren, afgewisseld
+   per kaartje: donkerblauw, warme oker en heel licht crème. */
+body.page-schrijfclub .offer-card {
+  border-radius: 0;
+}
+
+/* Elk kaartje krijgt zijn eigen, iets sterkere kanteling in plaats van
+   de standaard afwisseling — oogt losser, minder uniform. */
+body.page-schrijfclub .offer-grid--schrijven .offer-card:nth-child(1) {
+  transform: rotate(-1deg);
+}
+
+body.page-schrijfclub .offer-grid--schrijven .offer-card:nth-child(2) {
+  transform: rotate(0.7deg);
+}
+
+body.page-schrijfclub .offer-grid--schrijven .offer-card:nth-child(3) {
+  transform: rotate(-0.6deg);
+}
+
+body.page-schrijfclub .offer-grid--schrijven .offer-card:nth-child(4) {
+  transform: rotate(0.4deg);
+}
+
+body.page-schrijfclub .offer-grid--schrijven .offer-card:nth-child(1):hover,
+body.page-schrijfclub .offer-grid--schrijven .offer-card:nth-child(2):hover,
+body.page-schrijfclub .offer-grid--schrijven .offer-card:nth-child(3):hover,
+body.page-schrijfclub .offer-grid--schrijven .offer-card:nth-child(4):hover {
+  transform: rotate(0deg);
+}
+
+body.page-schrijfclub .offer-card h3 {
+  margin: -22px -20px 16px;
+  padding: 14px 20px;
+  border-radius: 0;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  font-size: 1.2rem;
+  background: var(--schrijfclub-navy);
+  color: #fff;
+}
+
+body.page-schrijfclub .offer-card.kopbalk-roze h3 {
+  background: var(--schrijfclub-roze);
+  color: var(--schrijfclub-navy);
+}
+
+body.page-schrijfclub .offer-card.kopbalk-navy h3 {
+  background: var(--schrijfclub-navy);
+  color: #fff;
+}
+
+body.page-schrijfclub .offer-card.kopbalk-lichtroze h3 {
+  background: var(--schrijfclub-lichtroze);
+  color: var(--schrijfclub-navy);
+}
+
 /* Op mobiel: de naam altijd bovenaan, alle knoppen (Terug naar homepage,
    Over mij, Aanmelden & Contact) daaronder op hun eigen regel(s). */
 @media (max-width: 720px) {
@@ -235,7 +377,7 @@ main.home-main {
   flex: 1 1 auto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   max-width: 1300px;
   width: 100%;
@@ -718,6 +860,33 @@ main.home-main {
   min-height: 0;
 }
 
+/* Schrijven-voor-iedereen is een korte teaserpagina met maar twee
+   kaartjes. De gele band vult (met flex: 1) de volledige resterende
+   schermhoogte onder de header, en de footer blijft daardoor altijd
+   direct daaronder — een smalle crème strook, in plaats van een los,
+   groot crème vlak onderaan. */
+body.page-schrijven-voor-iedereen {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+body.page-schrijven-voor-iedereen .tile-hero {
+  flex: 1 0 auto;
+  min-height: 0;
+}
+
+body.page-schrijven-voor-iedereen footer.site-bottom {
+  flex-shrink: 0;
+}
+
+/* Schrijfclub-pagina: het logo-plaatje is een brede banner (tekstlogo),
+   geen illustratie — past niet mooi in het vierkante tegelformaat van de
+   andere pagina's. Komt daarom los bovenaan de band, op volle breedte
+   getoond zonder bijsnijden. .tile-hero is normaal een flex-rij (voor
+   verticale centrering); dat zou deze banner als tweede kolom naast de
+   twee-koloms inhoud duwen, dus voor deze pagina wordt het een gewoon
+   blok, met de twee-koloms layout daaronder. */
 .tile-hero--compact .tile-hero-inner {
   align-items: flex-start;
   padding: 32px 32px 40px;
@@ -741,21 +910,111 @@ main.home-main {
   gap: 14px;
 }
 
-/* Deze pagina heeft meer tekstregels onder het plaatje (introzin, quote,
-   locatie, agenda-link) dan de andere doelgroep-pagina's — op een
-   laptopscherm (incl. browserbalken) viel die tekst daardoor net buiten
-   beeld. Alleen het plaatje kleiner maken (niet de hele kolom, anders
-   gaat de tekst juist breder uitvallen en meer regels innemen). */
-.page-schrijfclub .tile-hero-media {
-  gap: 10px;
+/* Schrijfclub-pagina: alleen het beeld + de intro bovenaan staan in de
+   gele band; de kaartjes daaronder staan op de gewone crème
+   paginaondergrond. De band is daarom geen aparte sectiekleur meer,
+   maar een eigen geel vlak (.schrijfclub-top) binnen de band, en de
+   twee-kolomsindeling (media-kolom + kaartjes-rooster naast elkaar)
+   wordt een gestapelde indeling. */
+body.page-schrijfclub .tile-hero--schrijven {
+  background: var(--schrijfclub-paper);
 }
 
-.page-schrijfclub .tile-hero-media .tile-hero-image {
-  width: 180px;
+body.page-schrijfclub {
+  background: var(--schrijfclub-paper);
 }
 
-.page-schrijfclub .tile-hero--compact .tile-hero-inner {
+body.page-schrijfclub .offer-grid--schrijven .offer-card {
+  background: var(--schrijfclub-card-bg);
+}
+
+body.page-schrijfclub .tile-hero--compact .tile-hero-inner {
+  flex-direction: column;
+  align-items: stretch;
   padding-top: 24px;
+}
+
+.schrijfclub-top {
+  display: flex;
+  align-items: flex-start;
+  gap: 32px;
+}
+
+.schrijfclub-top .schrijfclub-logo-image {
+  flex: 0 0 auto;
+  width: min(42%, 420px);
+  aspect-ratio: 1281 / 711;
+  object-fit: contain;
+  border-radius: var(--tile-radius);
+  box-shadow: none;
+}
+
+/* Het logo-plaatje steekt op desktop groter en licht schuin boven de
+   gele header uit, zodat het niet meer "Schrijfclub Wageningen" in de
+   header én meteen daaronder herhaalt, maar als los, speels element
+   over de scheidslijn heen valt. */
+@media (min-width: 721px) {
+  body.page-schrijfclub .schrijfclub-top .schrijfclub-logo-image {
+    position: relative;
+    z-index: 2;
+    width: min(52%, 480px);
+    margin-top: -72px;
+    margin-left: -28px;
+    transform: rotate(-2.5deg);
+    box-shadow: 0 18px 34px rgba(0, 0, 0, 0.3);
+  }
+
+  body.page-schrijfclub .schrijfclub-intro {
+    margin-left: 48px;
+  }
+}
+
+.schrijfclub-intro {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 4px;
+}
+
+.schrijfclub-intro .sub {
+  font-family: 'Barlow', -apple-system, sans-serif;
+  opacity: 1;
+  color: var(--ink);
+}
+
+.schrijfclub-location {
+  display: flex;
+  align-items: flex-start;
+  white-space: pre-line;
+}
+
+.icon-pin {
+  display: inline-flex;
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  margin-right: 6px;
+  color: #15004d;
+}
+
+.icon-pin svg {
+  width: 100%;
+  height: 100%;
+  fill: currentColor;
+}
+
+@media (max-width: 720px) {
+  .schrijfclub-top {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .schrijfclub-top .schrijfclub-logo-image {
+    width: 100%;
+    max-width: 320px;
+  }
 }
 
 .tile-hero-media .tile-hero-image {
@@ -771,13 +1030,6 @@ main.home-main {
   font-weight: 750;
   line-height: 1.1;
   letter-spacing: -0.01em;
-}
-
-/* "Schrijven voor" blijft op regel 1 links staan; "Iedereen" (regel 2,
-   door de regelafbreking) schuift wat op naar rechts. */
-.page-schrijfclub .tile-hero-media .pijler {
-  padding-left: 48px;
-  text-indent: -48px;
 }
 
 .tile-hero-media .sub {
@@ -833,11 +1085,9 @@ main.home-main {
     text-align: left;
   }
 
-  /* Schrijfclub- en Organisaties-pagina: de tekst onder het plaatje
-     (titel + ondertitels) links uitgelijnd in plaats van gecentreerd.
-     Het plaatje zelf is al full-width binnen deze kolom en verschuift
-     dus niet mee. */
-  .page-schrijfclub .tile-hero-media,
+  /* Organisaties-pagina: de tekst onder het plaatje (titel + ondertitels)
+     links uitgelijnd in plaats van gecentreerd. Het plaatje zelf is al
+     full-width binnen deze kolom en verschuift dus niet mee. */
   .page-organisaties .tile-hero-media {
     align-items: flex-start;
     text-align: left;
@@ -972,9 +1222,16 @@ main.home-main {
   opacity: 0.8;
 }
 
-.offer-grid--schrijven .offer-card {
-  background: var(--tile-schrijfclub);
-  color: var(--ink);
+/* De kaartjes op de Schrijfclub-pagina staan op de gewone crème
+   paginaondergrond (zie .tile-hero .offer-grid .offer-card hierboven) en
+   krijgen hun kleur via de kopbalk, niet via de kaartachtergrond. */
+
+/* De kaartjes Schrijfclub Wageningen en Waga Write Club staan naast
+   elkaar, maar Schrijfclub Wageningen is door de schrijfgroepen-lijst
+   veel langer — met de standaard grid-uitrekking kreeg Waga daardoor
+   een lelijk wit stuk onderaan. */
+.page-schrijfclub .offer-grid {
+  align-items: start;
 }
 
 .offer-grid--kinderen .offer-card {

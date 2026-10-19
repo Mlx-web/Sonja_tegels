@@ -1,7 +1,6 @@
 {
-  "pijler": "Schrijven voor iedereen",
-  "subIntro": "Schrijven voor volwassenen in Wageningen: vrijblijvend aanschuiven of een vaste schrijfgroep met begeleiding van een schrijfdocent.",
-  "subLocation": "In The Write Place (lokaal 9) van de Cultuurwerkplaats, Arboretumlaan 1, Wageningen.",
+  "subIntro": "Schrijfclub Wageningen is een actieve schrijfgemeenschap: vaste schrijfgroepen met begeleiding, vrije inloopsessies, en een eigen club voor kinderen. Voor wie schrijven wil ontdekken of gewoon lekker doen.",
+  "subLocation": "The Write Place (lokaal 9) van de Cultuurwerkplaats,\nArboretumlaan 1, Wageningen.",
   "subStichting": "Schrijfclub Wageningen is een activiteit van Stichting Schrijfplezier.",
   "schrijfclub": {
     "title": "Schrijfclub Wageningen",
@@ -17,7 +16,7 @@
     "agendaLead": "Bekijk de actuele data in de",
     "agendaLinkText": "agenda van de Cultuurwerkplaats",
     "agendaUrl": "https://decultuurwerkplaats.nl/agenda/",
-    "closing": "Wil je een keer komen kennismaken? Neem contact op!"
+    "closing": "Wil je een keer komen kennismaken? Je bent welkom"
   },
   "waga": {
     "title": "Waga Write Club",
@@ -27,7 +26,7 @@
     "linesNl": [
       "Schrijfclub Wageningen heeft ook een Engelstalige groep: Waga Write Club. Je krijgt speelse oefeningen, schrijft ter plekke en leest voor als je wilt. Er zijn twee groepen: op woensdagavond en op donderdagavond, om de week. Zie de agenda van de Cultuurwerkplaats."
     ],
-    "ctaText": "Get in touch",
+    "ctaText": "Curious?",
     "binnenkort": false
   },
   "writeHere": {
@@ -36,17 +35,13 @@
     "englishNote": "Write Here Write Now is a multilingual drop-in session. No registration required. Just walk in and find your place among other writers. We just share our plans and start writing.",
     "times": "Elke dinsdag 19:45–21:30 en vrijdag 9:00–10:45.",
     "timesEn": "Tuesdays 7.45pm-9.30pm and Fridays 9am-10.45am.",
-    "location": "In The Write Place (lokaal 9) van de Cultuurwerkplaats."
-  },
-  "workshops": {
-    "title": "Workshop voor groepen",
-    "intro": "Op je feest, festival, familieweekend of met vrienden, team of collega's: laagdrempelige, creatieve schrijfactiviteiten voor een groep. Dichten, boekselen, samen schrijven — ook leuk als cadeau.",
-    "closing": "Neem contact op, dan denkt Sonja mee over wat bij jullie past."
+    "location": "In The Write Place (lokaal 9) van de Cultuurwerkplaats.",
+    "invite": "Loop gerust binnen en schuif aan"
   },
   "kriskrasklup": {
     "title": "KrisKrasKlup (9–12 jaar)",
     "intro": "De KrisKrasKlup is de club van Schrijfclub Wageningen voor kinderen: ze schrijven en tekenen er hun eigen verhalen, samen met Sonja (schrijven) en Carlijn van WentinkArt (tekenen).",
-    "linkText": "Bekijk het Kris Kras Kluphuis",
+    "linkText": "Nieuwsgierig? Kijk mee in het Kris Kras Kluphuis",
     "linkUrl": "https://kriskraskluphuis.netlify.app/"
   },
   "extraCards": []

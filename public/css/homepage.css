@@ -1202,6 +1202,18 @@ body.page-schrijfclub .tile-hero--compact .tile-hero-inner {
   text-align: center;
 }
 
+/* "Write Here / Write Now" breekt alleen op mobiel naar een nieuwe
+   regel; op desktop staat de titel gewoon op één regel. */
+.hero-break-mobile {
+  display: none;
+}
+
+@media (max-width: 720px) {
+  .hero-break-mobile {
+    display: block;
+  }
+}
+
 .offer-card p {
   margin: 0 0 12px;
 }

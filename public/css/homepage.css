@@ -18,7 +18,8 @@
   /* Kleurstelling van de Schrijfclub-pagina: roze/donkerblauw, los van
      de rest van de site. */
   --schrijfclub-roze: #f94971;
-  --schrijfclub-navy: #1b1567;
+  --schrijfclub-roze-zacht: #f28ba0;
+  --schrijfclub-navy: #16284d;
   --schrijfclub-lichtroze: #fce1e4;
   --schrijfclub-paper: #fbf7ee;
   --schrijfclub-card-bg: #fffcf5;
@@ -192,14 +193,15 @@ body.page-schrijven-voor-iedereen .nav-cta:active {
   color: var(--ink);
 }
 
-/* Schrijfclub-pagina: eigen typografie (Barlow / Barlow Condensed) en
-   donkerblauwe knoppen, in lijn met het nieuwe logo. */
+/* Schrijfclub-pagina: eigen typografie (Barlow voor lopende tekst,
+   Archivo Narrow voor koppen) en donkerblauwe knoppen, in lijn met het
+   nieuwe logo. */
 body.page-schrijfclub {
   font-family: 'Barlow', -apple-system, sans-serif;
 }
 
 body.page-schrijfclub .site-name--schrijfclub {
-  font-family: 'Barlow Condensed', 'Fraunces', Georgia, serif;
+  font-family: 'Archivo Narrow', 'Fraunces', Georgia, serif;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.02em;
@@ -217,6 +219,20 @@ body.page-schrijfclub .header-back {
   border-radius: 8px;
   color: var(--schrijfclub-navy);
   padding: 10px 20px;
+}
+
+/* In de roze header zelf oogt de donkerblauwe knop te zwaar naast het
+   felle roze — daar krijgen de knoppen een rustiger, lichte uitvoering.
+   Onderaan de pagina (op de crème ondergrond) blijft "Naar Sonja's
+   website" wel gewoon donkerblauw. */
+body.page-schrijfclub header.site-top .nav-cta {
+  background: var(--schrijfclub-paper);
+  color: var(--schrijfclub-navy);
+}
+
+body.page-schrijfclub header.site-top .header-back {
+  border-color: var(--schrijfclub-paper);
+  color: var(--schrijfclub-paper);
 }
 
 body.page-schrijfclub .btn-dark {
@@ -275,8 +291,8 @@ body.page-schrijfclub .offer-card h3 {
   margin: -22px -20px 16px;
   padding: 14px 20px;
   border-radius: 0;
-  font-family: 'Barlow Condensed', sans-serif;
-  font-weight: 700;
+  font-family: 'Anton', sans-serif;
+  font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.02em;
   font-size: 1.2rem;
@@ -285,7 +301,7 @@ body.page-schrijfclub .offer-card h3 {
 }
 
 body.page-schrijfclub .offer-card.kopbalk-roze h3 {
-  background: var(--schrijfclub-roze);
+  background: var(--schrijfclub-roze-zacht);
   color: var(--schrijfclub-navy);
 }
 
@@ -987,6 +1003,8 @@ body.page-schrijfclub .tile-hero--compact .tile-hero-inner {
   display: flex;
   align-items: flex-start;
   white-space: pre-line;
+  margin-top: -6px;
+  margin-bottom: -6px;
 }
 
 .icon-pin {

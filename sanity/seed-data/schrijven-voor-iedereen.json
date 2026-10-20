@@ -6,12 +6,12 @@
     "title": "Schrijfclub Wageningen",
     "intro": "Bij Schrijfclub Wageningen schrijf je in een vaste groep van 6 tot 10 mensen, met schrijfoefeningen en begeleiding van Sonja of een andere schrijfdocent.",
     "groepen": [
-      {"naam": "Dichtgroep", "tijd": "Maandagavond 20:00–22:00, om de 4 weken."},
-      {"naam": "Biografiegroep", "tijd": "Maandagavond 19:30–21:30, om de 2 weken."},
-      {"naam": "Verhaalgroepen", "tijd": "Woensdagmiddag 13:30–15:30, om de 2 weken."},
-      {"naam": "Verhaalgroepen", "tijd": "Woensdagavond 19:30–21:30, om de 2 weken."},
-      {"naam": "Waga write club", "tijd": "Woensdagavond 19:30–21:30, om de 2 weken."},
-      {"naam": "Waga write club", "tijd": "Donderdagavond 19:30–21:30, om de 2 weken."}
+      {"naam": "Dichtgroep", "tijd": "Maandagavond 20:00–22:00, elke 4 weken."},
+      {"naam": "Biografiegroep", "tijd": "Maandagavond 19:30–21:30, elke 2 weken."},
+      {"naam": "Verhaalgroepen", "tijd": "Woensdagmiddag 13:30–15:30, elke 2 weken."},
+      {"naam": "Verhaalgroepen", "tijd": "Woensdagavond 19:30–21:30, elke 2 weken."},
+      {"naam": "Waga write club", "tijd": "Woensdagavond 19:30–21:30, elke 2 weken."},
+      {"naam": "Waga write club", "tijd": "Donderdagavond 19:30–21:30, elke 2 weken."}
     ],
     "agendaLead": "Bekijk de actuele data in de",
     "agendaLinkText": "agenda van de Cultuurwerkplaats",
@@ -21,12 +21,12 @@
   "waga": {
     "title": "Waga Write Club",
     "lines": [
-      "Wageningen's new English groups for creative writers. You get playful exercises, write on the spot, and share if you wish. There are two groups: one meets every other Wednesday evening, the other on Thursday evenings, twice a month. Check the CWP agenda."
+      "Wageningen's new English groups for creative writers. You get playful exercises, write on the spot, and share if you wish. There are two groups: one meets every other Wednesday evening, the other on Thursday evenings, twice a month."
     ],
     "linesNl": [
       "Schrijfclub Wageningen heeft ook een Engelstalige groep: Waga Write Club. Je krijgt speelse oefeningen, schrijft ter plekke en leest voor als je wilt. Er zijn twee groepen: op woensdagavond en op donderdagavond, om de week. Zie de agenda van de Cultuurwerkplaats."
     ],
-    "ctaText": "Curious?",
+    "ctaText": "Curious? Sign up",
     "binnenkort": false
   },
   "writeHere": {
@@ -42,7 +42,9 @@
     "title": "KrisKrasKlup (9–12 jaar)",
     "intro": "De KrisKrasKlup is de club van Schrijfclub Wageningen voor kinderen: ze schrijven en tekenen er hun eigen verhalen, samen met Sonja (schrijven) en Carlijn van WentinkArt (tekenen).",
     "linkText": "Nieuwsgierig? Kijk mee in het Kris Kras Kluphuis",
-    "linkUrl": "https://kriskraskluphuis.netlify.app/"
+    "linkUrl": "https://kriskraskluphuis.netlify.app/",
+    "signupText": "Meld je aan",
+    "signupUrl": "schrijfclub-contact.html"
   },
   "extraCards": []
 }

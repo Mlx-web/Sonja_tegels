@@ -6,6 +6,7 @@ import organisatiesPage from './organisatiesPage'
 import vakgenotenPage from './vakgenotenPage'
 import overMijPage from './overMijPage'
 import contactPage from './contactPage'
+import schrijfclubContactPage from './schrijfclubContactPage'
 
 export const schemaTypes = [
   indexPage,
@@ -16,4 +17,5 @@ export const schemaTypes = [
   vakgenotenPage,
   overMijPage,
   contactPage,
+  schrijfclubContactPage,
 ]

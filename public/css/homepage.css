@@ -235,6 +235,75 @@ body.page-schrijfclub header.site-top .header-back {
   color: var(--schrijfclub-paper);
 }
 
+/* Aanmeldpagina: de terugknop staat links, is gevuld crème (geen
+   transparante rand), en er staat rechtsboven een klein stukje van het
+   logo-plaatje over de roze band heen, zodat meteen duidelijk is dat
+   deze pagina bij Schrijfclub Wageningen hoort. */
+body.page-schrijfclub-contact header.site-top .header-back {
+  background: var(--schrijfclub-paper);
+  border-color: var(--schrijfclub-paper);
+  color: var(--schrijfclub-navy);
+}
+
+body.page-schrijfclub-contact header.site-top {
+  position: relative;
+  overflow: visible;
+}
+
+body.page-schrijfclub-contact .contact-logo-image {
+  width: 220px;
+  aspect-ratio: 1281 / 711;
+  object-fit: contain;
+  border-radius: var(--tile-radius);
+  box-shadow: none;
+}
+
+@media (min-width: 721px) {
+  body.page-schrijfclub-contact .header-right {
+    /* Het plaatje wordt absoluut gepositioneerd, dus deze flex-child
+       hoeft zelf geen ruimte meer te reserveren. */
+    width: 0;
+  }
+
+  body.page-schrijfclub-contact .contact-logo-image {
+    position: absolute;
+    z-index: 2;
+    top: calc(100% - 50px);
+    left: 52%;
+    width: min(40%, 420px);
+    transform: rotate(2.5deg);
+    box-shadow: 0 18px 34px rgba(0, 0, 0, 0.3);
+  }
+}
+
+/* Introtekst even smal als de formuliervelden, en in twee talen
+   (NL + EN) onder elkaar. */
+.contact-intro {
+  max-width: 480px;
+}
+
+/* Typografie op deze pagina sluit aan bij de rest van de
+   Schrijfclub-site: Archivo Black voor de koppen, Barlow voor
+   formuliervelden en labels. */
+body.page-schrijfclub-contact .page-title,
+body.page-schrijfclub-contact .section-heading {
+  font-family: 'Archivo Black', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+body.page-schrijfclub-contact .contact-form label,
+body.page-schrijfclub-contact .contact-form input,
+body.page-schrijfclub-contact .contact-form select,
+body.page-schrijfclub-contact .contact-form textarea,
+body.page-schrijfclub-contact .contact-submit {
+  font-family: 'Barlow', -apple-system, sans-serif;
+}
+
+.contact-intro--en {
+  color: var(--ink-soft);
+}
+
 body.page-schrijfclub .btn-dark {
   background: var(--schrijfclub-navy);
   color: #fff;
@@ -242,6 +311,20 @@ body.page-schrijfclub .btn-dark {
 }
 
 body.page-schrijfclub .btn-dark:hover {
+  background: var(--schrijfclub-navy);
+  text-decoration: underline;
+  text-decoration-color: #f72e5c;
+  text-decoration-thickness: 2px;
+}
+
+/* Aanmeldpagina van de schrijfclub: verstuurknop in dezelfde stijl als
+   de rest van de pagina (vierkant, donkerblauw). */
+body.page-schrijfclub .contact-submit {
+  background: var(--schrijfclub-navy);
+  border-radius: 8px;
+}
+
+body.page-schrijfclub .contact-submit:hover {
   background: var(--schrijfclub-navy);
   text-decoration: underline;
   text-decoration-color: #f72e5c;

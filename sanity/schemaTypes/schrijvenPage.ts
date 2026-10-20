@@ -120,6 +120,8 @@ export default defineType({
         defineField({name: 'intro', title: 'Introtekst', type: 'text', rows: 3}),
         defineField({name: 'linkText', title: 'Linktekst', type: 'string'}),
         defineField({name: 'linkUrl', title: 'Link-URL', type: 'url'}),
+        defineField({name: 'signupText', title: 'Aanmeldtekst', type: 'string'}),
+        defineField({name: 'signupUrl', title: 'Aanmeld-URL', type: 'url'}),
       ],
     }),
     cardField,

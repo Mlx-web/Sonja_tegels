@@ -19,7 +19,7 @@
       <h1 class="site-name site-name--schrijfclub visually-hidden">Schrijfclub Wageningen</h1>
     </div>
     <div class="header-right">
-      <a class="nav-cta" href="contact.html">Aanmelden &amp; Contact</a>
+      <a class="nav-cta" href="schrijfclub-contact.html">Aanmelden &amp; Contact</a>
       <a class="header-back" href="https://sonjavanderarend.nl/">Naar Sonja&rsquo;s website <span class="pink-accent">&rarr;</span></a>
     </div>
   </div>
@@ -84,7 +84,7 @@
 {{/each}}
         </ul>
         <p>
-          {{schrijfclub.closing}} <span class="pink-accent">&rarr;</span>
+          <a href="schrijfclub-contact.html"><strong>{{schrijfclub.closing}}</strong> <span class="pink-accent">&rarr;</span></a>
         </p>
       </div>
       <div class="offer-card kopbalk-lichtroze">
@@ -95,6 +95,9 @@
         <p>
           <a href="{{kriskrasklup.linkUrl}}">{{kriskrasklup.linkText}}</a> <span class="pink-accent">&rarr;</span>
         </p>
+        <p>
+          <strong><a href="{{kriskrasklup.signupUrl}}">{{kriskrasklup.signupText}}</a></strong> <span class="pink-accent">&rarr;</span>
+        </p>
       </div>
       <div class="offer-card card-cta-right kopbalk-navy">
         <h3>{{waga.title}}</h3>
@@ -103,7 +106,7 @@
           <em>{{this}}</em>
         </p>
 {{/each}}
-        <a class="btn-dark" href="contact.html">{{waga.ctaText}} <span class="pink-accent">&rarr;</span></a>
+        <a class="btn-dark" href="schrijfclub-contact.html">{{waga.ctaText}} <span class="pink-accent">&rarr;</span></a>
       </div>
     </div>
 

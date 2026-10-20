@@ -1,0 +1,12 @@
+{
+  "pageTitle": "Aanmelden & Contact",
+  "intro": "Wil je een keer komen kennismaken, heb je een vraag over een van de groepen, of wil je je aanmelden? Stuur hieronder een bericht.",
+  "introEn": "Curious, have a question about one of the groups, or want to sign up? Send a message below.",
+  "submitText": "Versturen",
+  "werkplek": {
+    "title": "Locatie",
+    "lines": ["The Write Place (lokaal 9)", "de Cultuurwerkplaats", "Arboretumlaan 1", "Wageningen"],
+    "linkText": "Routebeschrijving & meer info",
+    "linkUrl": "https://decultuurwerkplaats.nl/ruimtes/the-write-place/"
+  }
+}

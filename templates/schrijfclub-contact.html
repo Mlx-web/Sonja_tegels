@@ -26,6 +26,7 @@
 
 <main>
   <div class="page-body">
+   <div class="contact-main">
     <div class="contact-card contact-card--navy">
       <h3>{{pageTitle}}</h3>
       <p>
@@ -67,7 +68,9 @@
       <button type="submit" class="contact-submit">{{submitText}}</button>
       <p id="contact-note" class="contact-note" hidden></p>
     </form>
+   </div>
 
+   <div class="contact-side">
     <div class="contact-card contact-card--roze">
       <h3>{{werkplek.title}}</h3>
       <p>
@@ -82,6 +85,7 @@
         <span class="icon-pin" aria-hidden="true"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C7.58 2 4 5.58 4 10c0 5.25 6.5 11.5 7.3 12.2a1 1 0 0 0 1.4 0C13.5 21.5 20 15.25 20 10c0-4.42-3.58-8-8-8zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg></span><a href="{{werkplek.routeUrl}}" target="_blank" rel="noopener">{{werkplek.routeText}}</a>
       </p>
     </div>
+   </div>
   </div>
 </main>
 

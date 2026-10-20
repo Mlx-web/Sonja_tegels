@@ -289,8 +289,9 @@ body.page-schrijfclub-contact .contact-submit {
 
 /* "Aanmelden & Contact" (titel + tweetalige introtekst) en "Locatie"
    staan allebei in een kaartje, net als op de homepage van de
-   schrijfclub: gekleurde kopbalk, los kaartje, licht gekanteld en iets
-   naar links verschoven t.o.v. de formuliervelden. */
+   schrijfclub: gekleurde kopbalk, los kaartje, licht gekanteld. Het
+   locatiekaartje staat los in een rechterkolom, onder het logo-plaatje
+   in de header, met ruimte ertussen. */
 body.page-schrijfclub-contact .contact-card {
   max-width: 480px;
   margin: 0 0 32px -24px;
@@ -301,9 +302,36 @@ body.page-schrijfclub-contact .contact-card {
   transform: rotate(-0.8deg);
 }
 
-body.page-schrijfclub-contact .contact-card--roze {
-  margin-top: 32px;
+body.page-schrijfclub-contact .contact-side .contact-card {
+  margin: 32px 0 0;
   transform: rotate(0.8deg);
+}
+
+@media (min-width: 721px) {
+  body.page-schrijfclub-contact .contact-side .contact-card {
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 721px) {
+  body.page-schrijfclub-contact .page-body {
+    display: flex;
+    align-items: flex-start;
+    gap: 48px;
+  }
+
+  body.page-schrijfclub-contact .contact-main {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
+  body.page-schrijfclub-contact .contact-side {
+    flex: 0 0 auto;
+    width: min(40%, 420px);
+    /* Zakt onder het logo-plaatje dat rechtsboven over de header hangt,
+       met wat ruimte ertussen. */
+    margin-top: 210px;
+  }
 }
 
 body.page-schrijfclub-contact .contact-card h3 {

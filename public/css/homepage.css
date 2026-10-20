@@ -276,22 +276,9 @@ body.page-schrijfclub-contact .contact-logo-image {
   }
 }
 
-/* Introtekst even smal als de formuliervelden, en in twee talen
-   (NL + EN) onder elkaar. */
-.contact-intro {
-  max-width: 480px;
-}
-
 /* Typografie op deze pagina sluit aan bij de rest van de
    Schrijfclub-site: Archivo Black voor de koppen, Barlow voor
    formuliervelden en labels. */
-body.page-schrijfclub-contact .page-title,
-body.page-schrijfclub-contact .section-heading {
-  font-family: 'Archivo Black', sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 0.02em;
-}
-
 body.page-schrijfclub-contact .contact-form label,
 body.page-schrijfclub-contact .contact-form input,
 body.page-schrijfclub-contact .contact-form select,
@@ -300,8 +287,59 @@ body.page-schrijfclub-contact .contact-submit {
   font-family: 'Barlow', -apple-system, sans-serif;
 }
 
-.contact-intro--en {
-  color: var(--ink-soft);
+/* "Aanmelden & Contact" (titel + tweetalige introtekst) en "Locatie"
+   staan allebei in een kaartje, net als op de homepage van de
+   schrijfclub: gekleurde kopbalk, los kaartje, licht gekanteld en iets
+   naar links verschoven t.o.v. de formuliervelden. */
+body.page-schrijfclub-contact .contact-card {
+  max-width: 480px;
+  margin: 0 0 32px -24px;
+  padding: 22px 20px;
+  background: var(--schrijfclub-card-bg);
+  border-radius: 0;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.16);
+  transform: rotate(-0.8deg);
+}
+
+body.page-schrijfclub-contact .contact-card--roze {
+  margin-top: 32px;
+  transform: rotate(0.8deg);
+}
+
+body.page-schrijfclub-contact .contact-card h3 {
+  margin: -22px -20px 16px;
+  padding: 14px 20px;
+  border-radius: 0;
+  font-family: 'Archivo Black', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  font-size: 1.2rem;
+}
+
+body.page-schrijfclub-contact .contact-card p {
+  margin: 0 0 12px;
+  font-family: 'Barlow', -apple-system, sans-serif;
+  line-height: 1.6;
+}
+
+body.page-schrijfclub-contact .contact-card p:last-child {
+  margin-bottom: 0;
+}
+
+body.page-schrijfclub-contact .contact-card--navy h3 {
+  background: var(--schrijfclub-navy);
+  color: #fff;
+}
+
+body.page-schrijfclub-contact .contact-card--roze h3 {
+  background: var(--schrijfclub-roze);
+  color: var(--schrijfclub-navy);
+}
+
+@media (max-width: 720px) {
+  body.page-schrijfclub-contact .contact-card {
+    margin-left: 0;
+  }
 }
 
 body.page-schrijfclub .btn-dark {
@@ -343,6 +381,10 @@ body.page-schrijfclub .arrow-speels {
   font-size: 1.25em;
   display: inline-block;
   vertical-align: -0.08em;
+}
+
+body.page-schrijfclub .arrow-speels--left {
+  transform: scaleX(-1);
 }
 
 /* Kopbalk: elk kaartje krijgt een ingekleurd titelvlak over de volle
@@ -1001,6 +1043,7 @@ body.page-schrijven-voor-iedereen {
 body.page-schrijven-voor-iedereen .tile-hero {
   flex: 1 0 auto;
   min-height: 0;
+  align-items: flex-start;
 }
 
 body.page-schrijven-voor-iedereen footer.site-bottom {

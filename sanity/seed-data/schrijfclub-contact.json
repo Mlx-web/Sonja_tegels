@@ -6,7 +6,9 @@
   "werkplek": {
     "title": "Locatie",
     "lines": ["The Write Place (lokaal 9)", "de Cultuurwerkplaats", "Arboretumlaan 1", "Wageningen"],
-    "linkText": "Routebeschrijving & meer info",
-    "linkUrl": "https://decultuurwerkplaats.nl/ruimtes/the-write-place/"
+    "linkText": "Meer info over de Cultuurwerkplaats",
+    "linkUrl": "https://decultuurwerkplaats.nl/ruimtes/the-write-place/",
+    "routeText": "Routebeschrijving",
+    "routeUrl": "https://www.google.com/maps/search/?api=1&query=Arboretumlaan+1+Wageningen"
   }
 }

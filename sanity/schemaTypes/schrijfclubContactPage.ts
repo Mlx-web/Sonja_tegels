@@ -16,8 +16,10 @@ export default defineType({
       fields: [
         defineField({name: 'title', title: 'Titel', type: 'string'}),
         defineField({name: 'lines', title: 'Adresregels', type: 'array', of: [{type: 'string'}]}),
-        defineField({name: 'linkText', title: 'Linktekst', type: 'string'}),
-        defineField({name: 'linkUrl', title: 'Link-URL', type: 'url'}),
+        defineField({name: 'linkText', title: 'Linktekst (info over de locatie)', type: 'string'}),
+        defineField({name: 'linkUrl', title: 'Link-URL (info over de locatie)', type: 'url'}),
+        defineField({name: 'routeText', title: 'Linktekst (routebeschrijving)', type: 'string'}),
+        defineField({name: 'routeUrl', title: 'Link-URL (routebeschrijving, bv. Google Maps)', type: 'url'}),
       ],
     }),
   ],

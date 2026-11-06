@@ -17,32 +17,23 @@
   },
   "binnenkort": [
     {
-      "title": "KrisKrasKlup (9–12 jaar)",
-      "doelgroep": "kinderen-en-scholen",
-      "body": [
-        "Nieuwe club in Wageningen waar kinderen hun eigen verhalen leren schrijven en tekenen, samen met Sonja (schrijven) en Carlijn van WentinkArt (tekenen). Start na de herfstvakantie."
-      ],
-      "linkText": "Meer info & aanmelden",
-      "linkUrl": "https://wentinkart.nl/kriskrasklup/"
-    },
-    {
       "title": "Tweede Wageningse Schrijversborrel",
-      "doelgroep": "vakgenoten",
+      "doelgroep": "schrijven-voor-iedereen",
       "body": [
-        "Een informele borrel voor iedereen in Wageningen die schrijft of met schrijven bezig is: ontmoet andere (vak)schrijvers.",
+        "Een informele borrel voor iedereen in Wageningen die schrijft of met schrijven bezig is: ontmoet andere schrijvers.",
         "Datum volgt."
       ],
-      "linkText": null,
-      "linkUrl": null
+      "linkText": "Lees het artikel in Stad Wageningen",
+      "linkUrl": "https://www.stadwageningen.nl/lokaal/lokaal/1323815/nieuwe-traditie-wageningse-schrijversborrel"
     },
     {
       "title": "Kinderpagina’s in de krant",
       "doelgroep": "kinderen-en-scholen",
       "body": [
-        "Leerlingen maakten hun eigen Kinderpagina in de Stad Wageningen: binnenkort te lezen."
+        "Leerlingen maakten hun eigen Kinderpagina in de Stad Wageningen: nu te lezen."
       ],
-      "linkText": null,
-      "linkUrl": null
+      "linkText": "Bekijk de Kinderpagina",
+      "linkUrl": "https://www.stadwageningen.nl/reader/87901#p=26"
     },
     {
       "title": "Ontwerpatelier: Oeps/Omdenken",

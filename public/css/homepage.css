@@ -20,6 +20,7 @@
   --schrijfclub-roze: #db3550;
   --schrijfclub-roze-zacht: #f28ba0;
   --schrijfclub-navy: #16284d;
+  --schrijfclub-navy-zacht: #4a5d82;
   --schrijfclub-lichtroze: #fce1e4;
   --schrijfclub-paper: #fbf7ee;
   --schrijfclub-card-bg: #fffcf5;
@@ -424,46 +425,58 @@ body.page-schrijfclub .offer-card {
 }
 
 /* Elk kaartje krijgt zijn eigen, iets sterkere kanteling in plaats van
-   de standaard afwisseling — oogt losser, minder uniform. */
+   de standaard afwisseling — oogt losser, minder uniform. Kaartje 1 is
+   de Schrijversborrel (automatisch toegevoegd vanaf de homepage), dan
+   Write Here Write Now, Schrijfclub Wageningen, KrisKrasKlup, Waga. */
 body.page-schrijfclub .offer-grid--schrijven .offer-card:nth-child(1) {
-  transform: rotate(-1deg);
+  transform: rotate(-0.5deg);
 }
 
 body.page-schrijfclub .offer-grid--schrijven .offer-card:nth-child(2) {
-  transform: rotate(0.7deg);
+  transform: rotate(-1deg);
 }
 
 body.page-schrijfclub .offer-grid--schrijven .offer-card:nth-child(3) {
-  transform: rotate(-0.6deg);
+  transform: rotate(0.7deg);
 }
 
 body.page-schrijfclub .offer-grid--schrijven .offer-card:nth-child(4) {
+  transform: rotate(-0.6deg);
+}
+
+body.page-schrijfclub .offer-grid--schrijven .offer-card:nth-child(5) {
   transform: rotate(0.4deg);
 }
 
 body.page-schrijfclub .offer-grid--schrijven .offer-card:nth-child(1):hover,
 body.page-schrijfclub .offer-grid--schrijven .offer-card:nth-child(2):hover,
 body.page-schrijfclub .offer-grid--schrijven .offer-card:nth-child(3):hover,
-body.page-schrijfclub .offer-grid--schrijven .offer-card:nth-child(4):hover {
+body.page-schrijfclub .offer-grid--schrijven .offer-card:nth-child(4):hover,
+body.page-schrijfclub .offer-grid--schrijven .offer-card:nth-child(5):hover {
   transform: rotate(0deg);
 }
 
-/* Op mobiel (één kolom) een andere volgorde dan op desktop: Schrijfclub
-   Wageningen, Write Here Write Now, Waga Write Club, KrisKrasKlup. */
+/* Op mobiel (één kolom) een vaste volgorde: Schrijfclub Wageningen,
+   Write Here Write Now, Waga Write Club, KrisKrasKlup, en de
+   Schrijversborrel-aankondiging onderaan. */
 @media (max-width: 720px) {
   body.page-schrijfclub .offer-grid--schrijven .offer-card:nth-child(1) {
-    order: 2;
+    order: 5;
   }
 
   body.page-schrijfclub .offer-grid--schrijven .offer-card:nth-child(2) {
-    order: 1;
+    order: 2;
   }
 
   body.page-schrijfclub .offer-grid--schrijven .offer-card:nth-child(3) {
-    order: 4;
+    order: 1;
   }
 
   body.page-schrijfclub .offer-grid--schrijven .offer-card:nth-child(4) {
+    order: 4;
+  }
+
+  body.page-schrijfclub .offer-grid--schrijven .offer-card:nth-child(5) {
     order: 3;
   }
 }
@@ -493,7 +506,7 @@ body.page-schrijfclub .offer-card.kopbalk-navy h3 {
 
 body.page-schrijfclub .offer-card.kopbalk-lichtroze h3 {
   background: var(--schrijfclub-lichtroze);
-  color: var(--schrijfclub-navy);
+  color: var(--schrijfclub-navy-zacht);
 }
 
 /* Op mobiel: de naam altijd bovenaan, alle knoppen (Terug naar homepage,
@@ -717,7 +730,6 @@ main.home-main {
   margin-top: 2px;
   font-weight: 600;
   text-decoration: underline;
-  white-space: nowrap;
 }
 
 @media (max-width: 900px) {

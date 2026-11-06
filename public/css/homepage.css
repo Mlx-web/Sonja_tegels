@@ -201,6 +201,23 @@ body.page-schrijfclub {
   font-family: 'Barlow', -apple-system, sans-serif;
 }
 
+/* Linkjes zijn standaard niet onderstreept; de streep verschijnt pas
+   bij hoveren, net als bij de "Curious?"-knop. */
+body.page-schrijfclub a {
+  text-decoration: none;
+}
+
+body.page-schrijfclub a:hover {
+  text-decoration: underline;
+}
+
+/* De link naar de agenda van de Cultuurwerkplaats was de enige link
+   zonder het vette gewicht dat de andere links (in de kaartjes) wel
+   hebben. */
+body.page-schrijfclub .link-plain {
+  font-weight: 600;
+}
+
 body.page-schrijfclub .site-name--schrijfclub {
   font-family: 'Archivo Narrow', 'Fraunces', Georgia, serif;
   font-weight: 600;
@@ -342,7 +359,7 @@ body.page-schrijfclub-contact .contact-card h3 {
   font-family: 'Archivo Black', sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.02em;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 body.page-schrijfclub-contact .contact-card p {
@@ -425,27 +442,27 @@ body.page-schrijfclub .offer-card {
 }
 
 /* Elk kaartje krijgt zijn eigen, iets sterkere kanteling in plaats van
-   de standaard afwisseling — oogt losser, minder uniform. Kaartje 1 is
-   de Schrijversborrel (automatisch toegevoegd vanaf de homepage), dan
-   Write Here Write Now, Schrijfclub Wageningen, KrisKrasKlup, Waga. */
+   de standaard afwisseling — oogt losser, minder uniform. Volgorde:
+   Write Here Write Now, Schrijfclub Wageningen, Schrijversborrel
+   (automatisch toegevoegd vanaf de homepage), Waga, KrisKrasKlup. */
 body.page-schrijfclub .offer-grid--schrijven .offer-card:nth-child(1) {
-  transform: rotate(-0.5deg);
-}
-
-body.page-schrijfclub .offer-grid--schrijven .offer-card:nth-child(2) {
   transform: rotate(-1deg);
 }
 
-body.page-schrijfclub .offer-grid--schrijven .offer-card:nth-child(3) {
+body.page-schrijfclub .offer-grid--schrijven .offer-card:nth-child(2) {
   transform: rotate(0.7deg);
 }
 
+body.page-schrijfclub .offer-grid--schrijven .offer-card:nth-child(3) {
+  transform: rotate(-0.5deg);
+}
+
 body.page-schrijfclub .offer-grid--schrijven .offer-card:nth-child(4) {
-  transform: rotate(-0.6deg);
+  transform: rotate(0.4deg);
 }
 
 body.page-schrijfclub .offer-grid--schrijven .offer-card:nth-child(5) {
-  transform: rotate(0.4deg);
+  transform: rotate(-0.6deg);
 }
 
 body.page-schrijfclub .offer-grid--schrijven .offer-card:nth-child(1):hover,
@@ -461,23 +478,23 @@ body.page-schrijfclub .offer-grid--schrijven .offer-card:nth-child(5):hover {
    Schrijversborrel-aankondiging onderaan. */
 @media (max-width: 720px) {
   body.page-schrijfclub .offer-grid--schrijven .offer-card:nth-child(1) {
-    order: 5;
-  }
-
-  body.page-schrijfclub .offer-grid--schrijven .offer-card:nth-child(2) {
     order: 2;
   }
 
-  body.page-schrijfclub .offer-grid--schrijven .offer-card:nth-child(3) {
+  body.page-schrijfclub .offer-grid--schrijven .offer-card:nth-child(2) {
     order: 1;
   }
 
+  body.page-schrijfclub .offer-grid--schrijven .offer-card:nth-child(3) {
+    order: 5;
+  }
+
   body.page-schrijfclub .offer-grid--schrijven .offer-card:nth-child(4) {
-    order: 4;
+    order: 3;
   }
 
   body.page-schrijfclub .offer-grid--schrijven .offer-card:nth-child(5) {
-    order: 3;
+    order: 4;
   }
 }
 
@@ -489,7 +506,7 @@ body.page-schrijfclub .offer-card h3 {
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 0.02em;
-  font-size: 1.2rem;
+  font-size: 1rem;
   background: var(--schrijfclub-navy);
   color: #fff;
 }
@@ -506,7 +523,7 @@ body.page-schrijfclub .offer-card.kopbalk-navy h3 {
 
 body.page-schrijfclub .offer-card.kopbalk-lichtroze h3 {
   background: var(--schrijfclub-lichtroze);
-  color: var(--schrijfclub-navy-zacht);
+  color: var(--schrijfclub-navy);
 }
 
 /* Op mobiel: de naam altijd bovenaan, alle knoppen (Terug naar homepage,

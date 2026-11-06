@@ -43,21 +43,6 @@
     </div>
 
     <div class="offer-grid offer-grid--schrijven">
-{{#each extraCards}}
-      <div class="offer-card">
-        <h3>{{title}}</h3>
-{{#each body}}
-        <p>
-          {{this}}
-        </p>
-{{/each}}
-{{#if linkUrl}}
-        <p>
-          <span class="pink-accent arrow-speels">&#10132;</span> <a href="{{linkUrl}}">{{linkText}}</a>
-        </p>
-{{/if}}
-      </div>
-{{/each}}
       <div class="offer-card kopbalk-navy">
         <h3>Write Here <br class="hero-break-mobile">Write Now</h3>
         <p>
@@ -87,15 +72,21 @@
           <a href="schrijfclub-contact.html"><strong>{{schrijfclub.closing}}</strong> <span class="pink-accent arrow-speels">&#10132;</span></a>
         </p>
       </div>
-      <div class="offer-card kopbalk-lichtroze">
-        <h3>{{kriskrasklup.title}}</h3>
+{{#each extraCards}}
+      <div class="offer-card kopbalk-roze">
+        <h3>{{title}}</h3>
+{{#each body}}
         <p>
-          {{kriskrasklup.intro}}
+          {{this}}
         </p>
+{{/each}}
+{{#if linkUrl}}
         <p>
-          <a href="schrijfclub-contact.html">Interesse? Laat het weten</a> <span class="pink-accent arrow-speels">&#10132;</span>
+          <span class="pink-accent arrow-speels">&#10132;</span> <a href="{{linkUrl}}">{{linkText}}</a>
         </p>
+{{/if}}
       </div>
+{{/each}}
       <div class="offer-card card-cta-right kopbalk-navy">
         <h3>{{waga.title}}</h3>
 {{#each waga.lines}}
@@ -104,6 +95,15 @@
         </p>
 {{/each}}
         <a class="btn-dark" href="schrijfclub-contact.html">{{waga.ctaText}} <span class="pink-accent arrow-speels">&#10132;</span></a>
+      </div>
+      <div class="offer-card kopbalk-lichtroze">
+        <h3>{{kriskrasklup.title}}</h3>
+        <p>
+          {{kriskrasklup.intro}}
+        </p>
+        <p>
+          <a href="schrijfclub-contact.html">Interesse? Laat het weten</a> <span class="pink-accent arrow-speels">&#10132;</span>
+        </p>
       </div>
     </div>
 
